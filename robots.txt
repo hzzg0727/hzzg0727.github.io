@@ -1,1 +1,1 @@
-Sitemap: http://localhost:4000/sitemap.xml
+Sitemap: https://hzzg0727.github.io/sitemap.xml

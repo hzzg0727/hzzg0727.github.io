@@ -1,17 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-08-28T22:51:03+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2022/08/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2022-08-28T22:38:10+08:00</published><updated>2022-08-28T22:38:10+08:00</updated><id>http://localhost:4000/jekyll/update/2022/08/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2022/08/28/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-08-29T11:08:53+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Optics test</title><link href="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html" rel="alternate" type="text/html" title="Optics test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/08/29/optics-test</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html"><![CDATA[<h1 id="optics-test">Optics test.</h1>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="TEST" /><summary type="html"><![CDATA[Optics test.]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<h1 id="life-test">life test.</h1>]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[life test.]]></summary></entry><entry><title type="html">Code test</title><link href="https://hzzg0727.github.io/code/2022/08/29/code-test.html" rel="alternate" type="text/html" title="Code test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/code-test</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/code-test.html"><![CDATA[<h1 id="code-test">code test.</h1>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="TEST" /><summary type="html"><![CDATA[code test.]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<h1 id="wps-公式快捷输入的配置方法">WPS 公式快捷输入的配置方法</h1>
+<h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
+<p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p><img src="/assets/images/wec0.png" alt="0" /></p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
+<p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p><strong>常用 WPS 公式编辑器快捷键</strong></p>
+<ul>
+  <li>调出选项卡
+    <ul>
+      <li>Alt + F: 文件选项卡</li>
+      <li>Alt + E: 编辑选项卡</li>
+      <li>Alt + V: 视图选项卡</li>
+      <li>Alt + T: 格式选项卡</li>
+      <li>Alt + S: 样式选项卡</li>
+      <li>Alt + Z: 尺寸选项卡</li>
+      <li>Alt + H: 帮助选项卡</li>
+    </ul>
+  </li>
+  <li>退出公式编辑
+    <ul>
+      <li>Alt + F -&gt; X: 即文件选项卡中 <code class="language-plaintext highlighter-rouge">退出</code> 选项</li>
+      <li>其他选项同理</li>
+    </ul>
+  </li>
+  <li>希腊字母
+    <ul>
+      <li>Ctrl + G -&gt; 英文字母: 输入英文字母对应的小写希腊字母</li>
+      <li>Ctrl + G -&gt; Shift -&gt; 英文字母: 输入英文字母对应的大写希腊字母</li>
+    </ul>
+  </li>
+  <li>括号<br />
+<em>由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号</em>
+    <ul>
+      <li>Ctrl + 9 / 0: 小括号</li>
+      <li>Ctrl + [ / ]: 中括号</li>
+      <li>Ctrl + Shift + [ / ]: 大括号</li>
+    </ul>
+  </li>
+  <li>数学公式
+    <ul>
+      <li>Ctrl + F: 上下分式</li>
+      <li>Ctrl + /: 单行倾斜分式</li>
+      <li>Ctrl + R: 根式（省略2）</li>
+      <li>Ctrl + T -&gt; N : 任意阶根式</li>
+      <li>Ctrl + H: 上标</li>
+      <li>Ctrl + L: 下标</li>
+      <li>Ctrl + J: 上下标</li>
+      <li>Ctrl + K -&gt; &lt;: 小于等于</li>
+      <li>Ctrl + K -&gt; &gt;: 大于等于</li>
+      <li>Ctrl + Alt + ‘: 一阶导数</li>
+      <li>Ctrl + Shift + ‘: 二阶导数</li>
+      <li>Ctrl + I: 定积分</li>
+      <li>Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线</li>
+      <li>Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头</li>
+    </ul>
+  </li>
+  <li>其他
+    <ul>
+      <li>Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）</li>
+    </ul>
+  </li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<h2 id="reference">Reference</h2>
+<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[WPS 公式快捷输入的配置方法 1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
