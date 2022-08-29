@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-08-29T11:24:28+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Optics test</title><link href="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html" rel="alternate" type="text/html" title="Optics test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/08/29/optics-test</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html"><![CDATA[<h1 id="optics-test">Optics test.</h1>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="TEST" /><summary type="html"><![CDATA[Optics test.]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<h1 id="life-test">life test.</h1>]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[life test.]]></summary></entry><entry><title type="html">Code test</title><link href="https://hzzg0727.github.io/code/2022/08/29/code-test.html" rel="alternate" type="text/html" title="Code test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/code-test</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/code-test.html"><![CDATA[<h1 id="code-test">code test.</h1>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="TEST" /><summary type="html"><![CDATA[code test.]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<h1 id="wps-公式快捷输入的配置方法">WPS 公式快捷输入的配置方法</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-08-29T12:57:11+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<h1 id="基于-github-pages--jekyll-的个人博客搭建方法">基于 Github Pages &amp; Jekyll 的个人博客搭建方法</h1>
+<h2 id="1-软件安装">1. 软件安装</h2>
+<p><strong>清单</strong></p>
+<ul>
+  <li>Git</li>
+  <li>Github Desktop (optional)</li>
+  <li>Ruby + Devkit
+其中，Ruby 安装有如下注意事项：</li>
+  <li>安装包下载地址：https://rubyinstaller.org/downloads/</li>
+  <li>以管理员身份运行安装文件</li>
+  <li>安装目录不要包含中文和空格（空格是一个<strong>坑</strong>，会导致下方的部分命令出现运行时错误）</li>
+  <li>其他选项可默认执行</li>
+  <li>MSYS 安装会耗时久一些，耐心
+Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。</li>
+</ul>
+
+<h2 id="2-github-pages">2. Github Pages</h2>
+<p>Github 上建立以用户 <code class="language-plaintext highlighter-rouge">id</code> 为第一级名称的 public 仓库：<code class="language-plaintext highlighter-rouge">id</code>.github.io, 如此获得域名为 https://<code class="language-plaintext highlighter-rouge">id</code>/github.io 的站点作为博客网站。</p>
+
+<h2 id="3-ruby-相关包安装">3. Ruby 相关包安装</h2>
+<p>在终端运行依次如下指令，安装如下包：</p>
+<ul>
+  <li>bundler</li>
+  <li>jekyll</li>
+  <li>webrick（也是一个<strong>坑</strong>：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">webrick</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</h2>
+<ol>
+  <li>进入自己选定的本地博客目录</li>
+  <li>安装项目依赖的所有 gem 包。运行<br />
+   <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br />
+<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code></li>
+  <li>本地预览。进入博客文件夹内后，运行<br />
+<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br />
+或者（区别在 bundle 的作用）<br />
+<code class="language-plaintext highlighter-rouge">jekyll server</code><br />
+浏览器进入网址 http://localhost:4000 查看效果。<code class="language-plaintext highlighter-rouge">Ctrl + c</code> 结束本地预览。</li>
+  <li>运行如下命令生成网页文件<br />
+<code class="language-plaintext highlighter-rouge">jekyll build</code><br />
+将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
+  <li>同步到 Github.</li>
+</ol>
+
+<h2 id="5-应用和修改-theme">5. 应用和修改 theme</h2>
+<p>在 Github 中搜索 <code class="language-plaintext highlighter-rouge">jekyll theme</code>，寻找感兴趣的主题，并按照其文档部署到自己的项目，以及自定义的修改。</p>
+
+<p>对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。</p>
+
+<h2 id="6-其他">6. 其他</h2>
+<p><code class="language-plaintext highlighter-rouge">jemoji</code> 包可以为 jekyll 提供 emoji 支持。</p>
+
+<h2 id="reference">Reference</h2>
+<p><em>本文介绍择其大纲，细节较为简略。可结合以下文章食用。由于更新时间问题，下述文章的部分内容如今是可能产生问题的，参考时注意规避本文提到的两个坑。</em></p>
+
+<p>[1] Github Pages + jekyll 全面介绍极简搭建个人网站和博客  https://zhuanlan.zhihu.com/p/51240503</p>
+
+<p>[2] Jekyll + Github Pages 搭建个人免费博客  https://zhuanlan.zhihu.com/p/87225594</p>
+
+<p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
+
+<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[基于 Github Pages &amp; Jekyll 的个人博客搭建方法 1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Optics test</title><link href="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html" rel="alternate" type="text/html" title="Optics test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/08/29/optics-test</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html"><![CDATA[<h1 id="optics-test">Optics test.</h1>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="TEST" /><summary type="html"><![CDATA[Optics test.]]></summary></entry><entry><title type="html">Code test</title><link href="https://hzzg0727.github.io/code/2022/08/29/code-test.html" rel="alternate" type="text/html" title="Code test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/code-test</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/code-test.html"><![CDATA[<h1 id="code-test">code test.</h1>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="TEST" /><summary type="html"><![CDATA[code test.]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<h1 id="life-test">life test.</h1>]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[life test.]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<h1 id="wps-公式快捷输入的配置方法">WPS 公式快捷输入的配置方法</h1>
 <h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
 <p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
 

@@ -22,4 +22,10 @@ var store = [{
         "tags": ["TEST"],
         "url": "/optics/2022/08/29/optics-test.html",
         "teaser": null
+      },{
+        "title": "基于 Github Pages & Jekyll 的个人博客搭建方法",
+        "excerpt":"基于 Github Pages &amp; Jekyll 的个人博客搭建方法 1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。 2. Github Pages Github 上建立以用户 id 为第一级名称的 public 仓库：id.github.io, 如此获得域名为 https://id/github.io 的站点作为博客网站。 3. Ruby 相关包安装 在终端运行依次如下指令，安装如下包： bundler jekyll webrick（也是一个坑：Ruby3.0.0...","categories": ["code"],
+        "tags": ["Github","Jekyll"],
+        "url": "/code/2022/08/29/blog-build.html",
+        "teaser": null
       }]
