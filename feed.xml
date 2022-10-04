@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-04T18:11:50+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-04T18:30:51+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
 <h2 id="1-far-field-projections">1. Far-field projections</h2>
 <p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
 
@@ -88,13 +88,10 @@
       <li>Periodic: used when structure, source, and field are all periodic</li>
       <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
       <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
-      <li>
-        <p><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.</p>
-
-        <p>经验法则（对照 CAD 彩色视图验证）：<br />
- <img src="../assets/images/2022-10-04-FDTD-basic-1.png" alt="" /></p>
-
-        <p>设置方法：</p>
+      <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
+ 经验法则（对照 CAD 彩色视图验证）：<br />
+ <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="" />
+ 设置方法：
         <ol>
           <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
           <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
@@ -117,12 +114,9 @@
       <li>Diffracting source type: The source span determines the aperture.</li>
       <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
       <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
-      <li>
-        <p><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.</p>
-
-        <p>经验选择：
- <img src="../assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></p>
-      </li>
+      <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
+经验选择：
+<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
     </ul>
   </li>
   <li>TFSF (total-field scattered field) source</li>
@@ -149,12 +143,8 @@
   </li>
   <li>Sources of errors (and corresponding solutions):
     <ul>
-      <li>Three factors:</li>
-    </ul>
-
-    <p><img src="../assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></p>
-
-    <ul>
+      <li>Three factors:
+<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
       <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
     </ul>
   </li>

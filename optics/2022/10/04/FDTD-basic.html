@@ -429,12 +429,10 @@
       <li>
 <em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
       <li>
-        <p><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.</p>
-
-        <p>经验法则（对照 CAD 彩色视图验证）：<br>
- <img src="../assets/images/2022-10-04-FDTD-basic-1.png" alt=""></p>
-
-        <p>设置方法：</p>
+<em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br>
+ 经验法则（对照 CAD 彩色视图验证）：<br>
+ <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="">
+ 设置方法：
         <ol>
           <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
           <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
@@ -460,11 +458,10 @@
       <li>
 <em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
       <li>
-        <p><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.</p>
-
-        <p>经验选择：
- <img src="../assets/images/2022-10-04-FDTD-basic-2.png" alt=""></p>
-      </li>
+<em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br>
+经验选择：
+<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="">
+</li>
     </ul>
   </li>
   <li>TFSF (total-field scattered field) source</li>
@@ -491,12 +488,9 @@
   </li>
   <li>Sources of errors (and corresponding solutions):
     <ul>
-      <li>Three factors:</li>
-    </ul>
-
-    <p><img src="../assets/images/2022-10-04-FDTD-basic-3.png" alt=""></p>
-
-    <ul>
+      <li>Three factors:
+<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="">
+</li>
       <li>
 <code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
     </ul>
