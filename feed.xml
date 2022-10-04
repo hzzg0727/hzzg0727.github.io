@@ -1,4 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-08-29T13:03:46+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<h1 id="基于-github-pages--jekyll-的个人博客搭建方法">基于 Github Pages &amp; Jekyll 的个人博客搭建方法</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-04T18:11:50+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
+<h2 id="1-far-field-projections">1. Far-field projections</h2>
+<p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
+
+<p>A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves propagating at different angles as the basis for the decomposition. The end result is that the far field projections functions provide a straightforward, accurate, and numerically efficient method for calculating the EM fields anywhere in the intermediate and far field regions.</p>
+
+<p><em>It seems that grating projections are the special case (for periodic structures) of far-field projections.</em></p>
+
+<p><strong>Application cases:</strong> fileds known on a plane or a closed surface.</p>
+
+<h2 id="12-the-mesh-order-property">1.2. The mesh order property</h2>
+<p><code class="language-plaintext highlighter-rouge">The mesh order property</code> governs how overlapping objects are meshed in the simulation. It serves no role for objects which do not overlap.</p>
+
+<p>The mesh order can be set at the material level (in the material database), or the object level (in the object properties).</p>
+
+<p>Materials with a lower mesh order take priority over materials with a higher priority number. Areas that overlap are assigned the material properties of the higher priority material.</p>
+
+<h2 id="3-pml-边界条件">3. PML 边界条件</h2>
+<p>PML 边界基本上被实现为吸收材料，该吸收材料也与周围的材料阻抗匹配，以最大程度地减少反射。 理想的PML边界会产生零反射，但是实际上，由于底层PML方程的离散化，总会有小反射。</p>
+
+<h3 id="31-types">3.1 Types</h3>
+<p><strong>Standard</strong></p>
+
+<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br />
+如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br />
+通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。</p>
+
+<p><strong>Stabilized</strong></p>
+
+<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br />
+使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br />
+稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。</p>
+
+<p><strong>Steep Angle</strong></p>
+
+<p>此配置文件与标准配置文件非常相似，并且意在将PML边界与周期性边界条件结合使用时使用。 它设计用于在光线沿几乎平行于PML边界的方向传播的情况下提供增强的吸收。 在非常粗糙的离散化下（每个波长少于十个点），该轮廓通常比标准轮廓的吸收率低。</p>
+
+<p><strong>Custom</strong></p>
+
+<p>标准的，稳定的和陡峭的侧面轮廓具有固定的PML参数。 自定义配置文件允许用户通过对所有PML参数值的完全控制来进行试验。 自定义配置文件的初始值是标准配置文件的初始值。</p>
+
+<h3 id="32-如何使用">3.2 如何使用</h3>
+<ol>
+  <li>boundary conditions 中的 <code class="language-plaintext highlighter-rouge">standard</code> 类型适用于在所有边界上使用PML的模拟。</li>
+  <li>如果是周期性的装置，可以将光的衍射，所以选择 <code class="language-plaintext highlighter-rouge">steep angle</code> 类型。</li>
+  <li>PML 边界与光与物质相互作用的平面的距离至少为均匀材料中光波波长的一半。</li>
+</ol>
+
+<h2 id="4-simulation-region">4. Simulation Region</h2>
+<ol>
+  <li>Dimension 2D vs 3D:<br />
+当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。</li>
+  <li>Mesh Refinement：
+    <ul>
+      <li>一般使用 Conformal Variant0 对非金属材质界面应用保形网格。</li>
+      <li>当有金属时可使用 Conformal Variant1 对金属界面应用保形网格。缺点：网格粗糙导致人工金属模态，因此需要加入额外的收敛性测试。</li>
+      <li>其他选项的鲁棒性不好。</li>
+    </ul>
+  </li>
+  <li>Simulation time:<br />
+较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br />
+仿真时间设置过小的可能结果：
+    <ul>
+      <li>频域监视器的伪影</li>
+      <li>投射谱的 artificial ripples</li>
+    </ul>
+  </li>
+  <li>The monitors besides the simulation region will not measure any data.</li>
+  <li>When the simulation is unstable, smaller time step may be helpful.</li>
+  <li>Mesh override region:
+    <ul>
+      <li>It can be used to define finer mesh on :
+        <ul>
+          <li>Small structures, e.g. thin layers and gaps</li>
+          <li>Plasmonic devices</li>
+          <li>The interface between the metal and dieletric materials to have the filed concentrated at the surface</li>
+        </ul>
+      </li>
+      <li>The thickness of a layer is recommended to includes at least 2 mesh cells.</li>
+      <li>The mesh override region contains only an interger number of mesh cells.</li>
+    </ul>
+  </li>
+  <li>Boundary condition:
+    <ul>
+      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code></li>
+      <li>metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary</li>
+      <li>PMC: perfect magnetic boundary that relects all</li>
+      <li>Periodic: used when structure, source, and field are all periodic</li>
+      <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
+      <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
+      <li>
+        <p><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.</p>
+
+        <p>经验法则（对照 CAD 彩色视图验证）：<br />
+ <img src="../assets/images/2022-10-04-FDTD-basic-1.png" alt="" /></p>
+
+        <p>设置方法：</p>
+        <ol>
+          <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
+          <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
+          <li>Enable <code class="language-plaintext highlighter-rouge">allow all symmetry on all boundaries</code>.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Mesh accuracy is considered high-accurate at the value 4 or 5.</li>
+  <li>If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.</li>
+</ol>
+
+<h2 id="source">Source</h2>
+<ol>
+  <li>The fileds measured in the two cells around the source injeciton plane may be unphysical.</li>
+  <li>Plane source:
+    <ul>
+      <li>Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.</li>
+      <li>BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.</li>
+      <li>Diffracting source type: The source span determines the aperture.</li>
+      <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
+      <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
+      <li>
+        <p><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.</p>
+
+        <p>经验选择：
+ <img src="../assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>TFSF (total-field scattered field) source</li>
+  <li>Beam source</li>
+  <li>Mode source</li>
+  <li>Dipole source</li>
+</ol>
+
+<h2 id="monitor">Monitor</h2>
+<ol>
+  <li>Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.</li>
+  <li>Time monitor can be used to check if the simulation time is long enough.</li>
+  <li>Use point time monitor can obtain spectrum.</li>
+</ol>
+
+<h2 id="analysis">Analysis</h2>
+<ol>
+  <li>Design workflow:
+    <ul>
+      <li>Start with a coarse mesh</li>
+      <li>Convergence testing</li>
+      <li>变精度搜索</li>
+    </ul>
+  </li>
+  <li>Sources of errors (and corresponding solutions):
+    <ul>
+      <li>Three factors:</li>
+    </ul>
+
+    <p><img src="../assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></p>
+
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
+    </ul>
+  </li>
+  <li>How to judge whether the simulation stop early?
+<em>(One method)</em> Status result of the FDTD solver region:
+    <ul>
+      <li>1 - Reached the maximum simulation time</li>
+      <li>2 - Early shut off, reached auto shutoff min threshold</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="tips">Tips</h2>
+<ol>
+  <li>要通过收敛性测试实现高精度计算。</li>
+  <li>When running, <code class="language-plaintext highlighter-rouge">Force quit</code> is not recommended since it may cause the problem that the license is not released normally.</li>
+</ol>
+
+<h2 id="reference-resources">Reference (Resources)</h2>
+<p><strong>Core</strong></p>
+
+<p>[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual</p>
+
+<p>[2] Python API: https://optics.ansys.com/hc/en-us/sections/360005039073-Automation-API</p>
+
+<p>[3] lsf Language: https://optics.ansys.com/hc/en-us/articles/360034923553</p>
+
+<p>[4] lsf Language Category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category</p>
+
+<p>[5] ANSYS Forum: https://forum.ansys.com/</p>
+
+<p><strong>Others</strong></p>
+
+<p>[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
+
+<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
 <h2 id="1-软件安装">1. 软件安装</h2>
 <p><strong>清单</strong></p>
 <ul>
@@ -64,7 +256,7 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
-<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[基于 Github Pages &amp; Jekyll 的个人博客搭建方法 1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Optics test</title><link href="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html" rel="alternate" type="text/html" title="Optics test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/08/29/optics-test</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/08/29/optics-test.html"><![CDATA[<h1 id="optics-test">Optics test.</h1>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="TEST" /><summary type="html"><![CDATA[Optics test.]]></summary></entry><entry><title type="html">Code test</title><link href="https://hzzg0727.github.io/code/2022/08/29/code-test.html" rel="alternate" type="text/html" title="Code test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/code-test</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/code-test.html"><![CDATA[<h1 id="code-test">code test.</h1>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="TEST" /><summary type="html"><![CDATA[code test.]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<h1 id="life-test">life test.</h1>]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[life test.]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<h1 id="wps-公式快捷输入的配置方法">WPS 公式快捷输入的配置方法</h1>
+<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
 <h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
 <p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
 
@@ -134,4 +326,4 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 </ul>
 
 <h2 id="reference">Reference</h2>
-<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[WPS 公式快捷输入的配置方法 1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
+<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
