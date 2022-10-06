@@ -22,4 +22,10 @@ var store = [{
         "tags": ["FDTD"],
         "url": "/optics/2022/10/04/FDTD-basic.html",
         "teaser": null
+      },{
+        "title": "FDTD Note: lsf Language",
+        "excerpt":"Useful commands in ScriptPrompt clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a clc; # clear all the commands in the window Variables Variable types Different types of variable a available in Lumerical’s scripting: Strings can be used to define a...","categories": ["optics"],
+        "tags": ["FDTD","lsf"],
+        "url": "/optics/2022/10/06/FDTD-lsf.html",
+        "teaser": null
       }]
