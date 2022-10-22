@@ -1,5 +1,369 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-06T12:14:09+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
-<h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FDTD Note: lsf Language - hzzg0727 Blog :squirrel:</title>
+<meta name="description" content="Useful commands in ScriptPrompt ```python clear;  # clear all the variables in the workspace a = 1; clear a;  # clear variable a">
+
+
+  <meta name="author" content="hzzg0727">
+  
+  <meta property="article:author" content="hzzg0727">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh">
+<meta property="og:site_name" content="hzzg0727 Blog :squirrel:">
+<meta property="og:title" content="FDTD Note: lsf Language">
+<meta property="og:url" content="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html">
+
+
+  <meta property="og:description" content="Useful commands in ScriptPrompt ```python clear;  # clear all the variables in the workspace a = 1; clear a;  # clear variable a">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-10-06T00:00:00+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "hzzg0727",
+      "url": "https://hzzg0727.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/categories/code/">Code</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/optics/">Optics</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/life/">Life</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/others/">Others</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/paddington_avatar.jpg" alt="hzzg0727" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">hzzg0727</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>On the road.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Hangzhou, China</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FDTD Note: lsf Language">
+    <meta itemprop="description" content="Useful commands in ScriptPrompt```pythonclear;  # clear all the variables in the workspacea = 1;clear a;  # clear variable a">
+    <meta itemprop="datePublished" content="2022-10-06T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">FDTD Note: lsf Language
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-06T00:00:00+08:00">October 6, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#useful-commands-in-scriptprompt">Useful commands in ScriptPrompt</a></li>
+<li>
+<a href="#variables">Variables</a><ul>
+<li><a href="#variable-types">Variable types</a></li>
+<li><a href="#predefined-constants">Predefined constants</a></li>
+<li><a href="#prinf-the-values">Prinf the values</a></li>
+<li><a href="#initialization-of-variables">Initialization of variables</a></li>
+<li><a href="#element-access">Element access</a></li>
+<li><a href="#operations">Operations</a></li>
+</ul>
+</li>
+<li>
+<a href="#simulation-objects">Simulation objects</a><ul>
+<li><a href="#simulation-modes">Simulation modes</a></li>
+<li><a href="#location-group-scope-in-the-objects-tree">Location (group scope) in the objects tree</a></li>
+<li><a href="#add-objects">Add objects</a></li>
+<li><a href="#getset-properties-of-objects">Get/Set properties of objects</a></li>
+</ul>
+</li>
+<li>
+<a href="#running-simulations">Running simulations</a><ul>
+<li><a href="#running-a-single-simulation">Running a single simulation</a></li>
+<li><a href="#running-multiple-simulations-using-the-job-manager">Running multiple simulations using the job manager</a></li>
+<li><a href="#running-parameter-sweep-and-optimization">Running parameter sweep and optimization</a></li>
+</ul>
+</li>
+<li>
+<a href="#accessing-and-visualizing-simulation-results">Accessing and visualizing simulation results</a><ul>
+<li><a href="#accessing-simulation-results">Accessing simulation results</a></li>
+<li><a href="#visualising-simulation-results">Visualising simulation results</a></li>
+</ul>
+</li>
+<li>
+<a href="#file-io">File I/O</a><ul><li><a href="#manipulating-project-files">Manipulating project files</a></li></ul>
+</li>
+<li><a href="#tips">Tips</a></li>
+<li>
+<a href="#reference">Reference</a><ul><li><a href="#core">Core</a></li></ul>
+</li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <!-- # FDTD Note: LSF Language -->
+<h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code>
+</h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
 </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="n">clear</span> <span class="n">a</span><span class="p">;</span>  <span class="c1"># clear variable a
@@ -29,7 +393,7 @@
 </ul>
 
 <h3 id="predefined-constants">Predefined constants</h3>
-<p><img src="/assets/images/20221005-FDTD-lsf-1.png" alt="1" /></p>
+<p><img src="/assets/images/20221005-FDTD-lsf-1.png" alt="1"></p>
 <ul>
   <li>endl - “\n”</li>
 </ul>
@@ -98,7 +462,7 @@
   <li>logical operators (pay attention to function <code class="language-plaintext highlighter-rouge">almostequal()</code>)</li>
 </ul>
 
-<p><img src="/assets/images/20221005-FDTD-lsf-2.png" alt="2" /></p>
+<p><img src="/assets/images/20221005-FDTD-lsf-2.png" alt="2"></p>
 
 <h2 id="simulation-objects">Simulation objects</h2>
 <h3 id="simulation-modes">Simulation modes</h3>
@@ -123,10 +487,14 @@
 
 <p>How to select objects?</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">select("NAME")</code>: select the object named “NAME”.</li>
-  <li><code class="language-plaintext highlighter-rouge">shiftselect("NAME")</code>: select new object named “NAME” while keeping the current selected objects.</li>
-  <li><code class="language-plaintext highlighter-rouge">selectall()</code>: select all the objects.</li>
-  <li><code class="language-plaintext highlighter-rouge">selectpartial("PNAME")</code>: select objects with the partial name “PNAME”.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">select("NAME")</code>: select the object named “NAME”.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">shiftselect("NAME")</code>: select new object named “NAME” while keeping the current selected objects.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">selectall()</code>: select all the objects.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">selectpartial("PNAME")</code>: select objects with the partial name “PNAME”.</li>
 </ul>
 
 <p>How to set property?</p>
@@ -160,7 +528,8 @@
 <p>Notes:</p>
 <ul>
   <li>The job manager can be used to run a parameter sweep by creating all the simulation files and add them to the queue firstly and then running the jobs in the queue.</li>
-  <li><em>(Advantage)</em> The job manager can run more than 1 simulation at a time.</li>
+  <li>
+<em>(Advantage)</em> The job manager can run more than 1 simulation at a time.</li>
 </ul>
 
 <h3 id="running-parameter-sweep-and-optimization">Running parameter sweep and optimization</h3>
@@ -222,7 +591,8 @@
 
 <h3 id="visualising-simulation-results">Visualising simulation results</h3>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">plot</code> creates a line plot. All data sets in its argument should be sampled on the same position vector.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">plot</code> creates a line plot. All data sets in its argument should be sampled on the same position vector.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
@@ -242,7 +612,8 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">plotxy</code> allows us to use datasets that are sampled on different position vectors.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">plotxy</code> allows us to use datasets that are sampled on different position vectors.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x1</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
@@ -256,9 +627,12 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">polar</code> visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.</li>
-  <li><code class="language-plaintext highlighter-rouge">polar2</code> adds multiple polar plots sampled on different angle values.</li>
-  <li><code class="language-plaintext highlighter-rouge">image</code> creates 2D color plots.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">polar</code> visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">polar2</code> adds multiple polar plots sampled on different angle values.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">image</code> creates 2D color plots.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
@@ -271,13 +645,18 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">polarimage</code> creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">polarimage</code> creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.</li>
   <li>Use command <code class="language-plaintext highlighter-rouge">setplot</code> to get the properties can be set for current figure window.</li>
   <li>Use command <code class="language-plaintext highlighter-rouge">setplot("PROPERTY_NAME", VALUE)</code> to set the property named “PROPERTY_NAME” of the current figure window with value <code class="language-plaintext highlighter-rouge">VALUE</code>.</li>
-  <li><code class="language-plaintext highlighter-rouge">holdon</code> switches the plotting mode to hold multiple functions on the same figure.</li>
-  <li><code class="language-plaintext highlighter-rouge">holdoff</code> switches off the holdon mode.</li>
-  <li><code class="language-plaintext highlighter-rouge">selectfigure(NUMBER)</code> selects a figure with a specified figure number <code class="language-plaintext highlighter-rouge">NUMBER</code>. When used without any argument, it selects the last figure created.</li>
-  <li><code class="language-plaintext highlighter-rouge">exportfigure("FILE_NAME", XRES, YRES)</code> exports the current figure to a JPG image with the name ‘filename’, the x resolution <code class="language-plaintext highlighter-rouge">XRES</code> and the y resolution <code class="language-plaintext highlighter-rouge">YRES</code>. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">holdon</code> switches the plotting mode to hold multiple functions on the same figure.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">holdoff</code> switches off the holdon mode.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">selectfigure(NUMBER)</code> selects a figure with a specified figure number <code class="language-plaintext highlighter-rouge">NUMBER</code>. When used without any argument, it selects the last figure created.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">exportfigure("FILE_NAME", XRES, YRES)</code> exports the current figure to a JPG image with the name ‘filename’, the x resolution <code class="language-plaintext highlighter-rouge">XRES</code> and the y resolution <code class="language-plaintext highlighter-rouge">YRES</code>. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.</li>
 </ul>
 
 <h2 id="file-io">File I/O</h2>
@@ -291,7 +670,8 @@
 
 <h2 id="tips">Tips</h2>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">""</code> is equal to <code class="language-plaintext highlighter-rouge">''</code>.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">""</code> is equal to <code class="language-plaintext highlighter-rouge">''</code>.</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
@@ -307,322 +687,343 @@
 <p><em>Note:</em></p>
 <ul>
   <li>You can learn Scripting100 Course using Ref.[3] with Ref.[4].</li>
-</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><summary type="html"><![CDATA[Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a]]></summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
-<h2 id="1-far-field-projections">1. Far-field projections</h2>
-<p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
-
-<p>A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves propagating at different angles as the basis for the decomposition. The end result is that the far field projections functions provide a straightforward, accurate, and numerically efficient method for calculating the EM fields anywhere in the intermediate and far field regions.</p>
-
-<p><em>It seems that grating projections are the special case (for periodic structures) of far-field projections.</em></p>
-
-<p><strong>Application cases:</strong> fileds known on a plane or a closed surface.</p>
-
-<h2 id="12-the-mesh-order-property">1.2. The mesh order property</h2>
-<p><code class="language-plaintext highlighter-rouge">The mesh order property</code> governs how overlapping objects are meshed in the simulation. It serves no role for objects which do not overlap.</p>
-
-<p>The mesh order can be set at the material level (in the material database), or the object level (in the object properties).</p>
-
-<p>Materials with a lower mesh order take priority over materials with a higher priority number. Areas that overlap are assigned the material properties of the higher priority material.</p>
-
-<h2 id="3-pml-边界条件">3. PML 边界条件</h2>
-<p>PML 边界基本上被实现为吸收材料，该吸收材料也与周围的材料阻抗匹配，以最大程度地减少反射。 理想的PML边界会产生零反射，但是实际上，由于底层PML方程的离散化，总会有小反射。</p>
-
-<h3 id="31-types">3.1 Types</h3>
-<p><strong>Standard</strong></p>
-
-<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br />
-如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br />
-通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。</p>
-
-<p><strong>Stabilized</strong></p>
-
-<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br />
-使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br />
-稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。</p>
-
-<p><strong>Steep Angle</strong></p>
-
-<p>此配置文件与标准配置文件非常相似，并且意在将PML边界与周期性边界条件结合使用时使用。 它设计用于在光线沿几乎平行于PML边界的方向传播的情况下提供增强的吸收。 在非常粗糙的离散化下（每个波长少于十个点），该轮廓通常比标准轮廓的吸收率低。</p>
-
-<p><strong>Custom</strong></p>
-
-<p>标准的，稳定的和陡峭的侧面轮廓具有固定的PML参数。 自定义配置文件允许用户通过对所有PML参数值的完全控制来进行试验。 自定义配置文件的初始值是标准配置文件的初始值。</p>
-
-<h3 id="32-如何使用">3.2 如何使用</h3>
-<ol>
-  <li>boundary conditions 中的 <code class="language-plaintext highlighter-rouge">standard</code> 类型适用于在所有边界上使用PML的模拟。</li>
-  <li>如果是周期性的装置，可以将光的衍射，所以选择 <code class="language-plaintext highlighter-rouge">steep angle</code> 类型。</li>
-  <li>PML 边界与光与物质相互作用的平面的距离至少为均匀材料中光波波长的一半。</li>
-</ol>
-
-<h2 id="4-simulation-region">4. Simulation Region</h2>
-<ol>
-  <li>Dimension 2D vs 3D:<br />
-当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。</li>
-  <li>Mesh Refinement：
-    <ul>
-      <li>一般使用 Conformal Variant0 对非金属材质界面应用保形网格。</li>
-      <li>当有金属时可使用 Conformal Variant1 对金属界面应用保形网格。缺点：网格粗糙导致人工金属模态，因此需要加入额外的收敛性测试。</li>
-      <li>其他选项的鲁棒性不好。</li>
-    </ul>
-  </li>
-  <li>Simulation time:<br />
-较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br />
-仿真时间设置过小的可能结果：
-    <ul>
-      <li>频域监视器的伪影</li>
-      <li>投射谱的 artificial ripples</li>
-    </ul>
-  </li>
-  <li>The monitors besides the simulation region will not measure any data.</li>
-  <li>When the simulation is unstable, smaller time step may be helpful.</li>
-  <li>Mesh override region:
-    <ul>
-      <li>It can be used to define finer mesh on :
-        <ul>
-          <li>Small structures, e.g. thin layers and gaps</li>
-          <li>Plasmonic devices</li>
-          <li>The interface between the metal and dieletric materials to have the filed concentrated at the surface</li>
-        </ul>
-      </li>
-      <li>The thickness of a layer is recommended to includes at least 2 mesh cells.</li>
-      <li>The mesh override region contains only an interger number of mesh cells.</li>
-    </ul>
-  </li>
-  <li>Boundary condition:
-    <ul>
-      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code></li>
-      <li>metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary</li>
-      <li>PMC: perfect magnetic boundary that relects all</li>
-      <li>Periodic: used when structure, source, and field are all periodic</li>
-      <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
-      <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
-      <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
- 经验法则（对照 CAD 彩色视图验证）：<br />
- <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="" />
- 设置方法：
-        <ol>
-          <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
-          <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
-          <li>Enable <code class="language-plaintext highlighter-rouge">allow all symmetry on all boundaries</code>.</li>
-        </ol>
-      </li>
-    </ul>
-  </li>
-  <li>Mesh accuracy is considered high-accurate at the value 4 or 5.</li>
-  <li>If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.</li>
-</ol>
-
-<h2 id="source">Source</h2>
-<ol>
-  <li>The fileds measured in the two cells around the source injeciton plane may be unphysical.</li>
-  <li>Plane source:
-    <ul>
-      <li>Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.</li>
-      <li>BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.</li>
-      <li>Diffracting source type: The source span determines the aperture.</li>
-      <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
-      <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
-      <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
-经验选择：
-<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
-    </ul>
-  </li>
-  <li>TFSF (total-field scattered field) source</li>
-  <li>Beam source</li>
-  <li>Mode source</li>
-  <li>Dipole source</li>
-</ol>
-
-<h2 id="monitor">Monitor</h2>
-<ol>
-  <li>Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.</li>
-  <li>Time monitor can be used to check if the simulation time is long enough.</li>
-  <li>Use point time monitor can obtain spectrum.</li>
-</ol>
-
-<h2 id="analysis">Analysis</h2>
-<ol>
-  <li>Design workflow:
-    <ul>
-      <li>Start with a coarse mesh</li>
-      <li>Convergence testing</li>
-      <li>变精度搜索</li>
-    </ul>
-  </li>
-  <li>Sources of errors (and corresponding solutions):
-    <ul>
-      <li>Three factors:
-<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
-      <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
-    </ul>
-  </li>
-  <li>How to judge whether the simulation stop early?
-<em>(One method)</em> Status result of the FDTD solver region:
-    <ul>
-      <li>1 - Reached the maximum simulation time</li>
-      <li>2 - Early shut off, reached auto shutoff min threshold</li>
-    </ul>
-  </li>
-</ol>
-
-<h2 id="tips">Tips</h2>
-<ol>
-  <li>要通过收敛性测试实现高精度计算。</li>
-  <li>When running, <code class="language-plaintext highlighter-rouge">Force quit</code> is not recommended since it may cause the problem that the license is not released normally.</li>
-</ol>
-
-<h2 id="reference-resources">Reference (Resources)</h2>
-<p><strong>Core</strong></p>
-
-<p>[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual</p>
-
-<p>[2] Python API: https://optics.ansys.com/hc/en-us/sections/360005039073-Automation-API</p>
-
-<p>[3] lsf Language: https://optics.ansys.com/hc/en-us/articles/360034923553</p>
-
-<p>[4] lsf Language Category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category</p>
-
-<p>[5] ANSYS Forum: https://forum.ansys.com/</p>
-
-<p><strong>Others</strong></p>
-
-<p>[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
-
-<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
-<h2 id="1-软件安装">1. 软件安装</h2>
-<p><strong>清单</strong></p>
-<ul>
-  <li>Git</li>
-  <li>Github Desktop (optional)</li>
-  <li>Ruby + Devkit
-其中，Ruby 安装有如下注意事项：</li>
-  <li>安装包下载地址：https://rubyinstaller.org/downloads/</li>
-  <li>以管理员身份运行安装文件</li>
-  <li>安装目录不要包含中文和空格（空格是一个<strong>坑</strong>，会导致下方的部分命令出现运行时错误）</li>
-  <li>其他选项可默认执行</li>
-  <li>MSYS 安装会耗时久一些，耐心
-Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。</li>
 </ul>
 
-<h2 id="2-github-pages">2. Github Pages</h2>
-<p>Github 上建立以用户 <code class="language-plaintext highlighter-rouge">id</code> 为第一级名称的 public 仓库：<code class="language-plaintext highlighter-rouge">id</code>.github.io, 如此获得域名为 https://<code class="language-plaintext highlighter-rouge">id</code>/github.io 的站点作为博客网站。</p>
+        
+      </section>
 
-<h2 id="3-ruby-相关包安装">3. Ruby 相关包安装</h2>
-<p>在终端运行依次如下指令，安装如下包：</p>
-<ul>
-  <li>bundler</li>
-  <li>jekyll</li>
-  <li>webrick（也是一个<strong>坑</strong>：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
-<span class="n">gem</span> <span class="n">install</span> <span class="n">webrick</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+      <footer class="page__meta">
+        
+        
+  
 
-<h2 id="4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</h2>
-<ol>
-  <li>进入自己选定的本地博客目录</li>
-  <li>安装项目依赖的所有 gem 包。运行<br />
-   <code class="language-plaintext highlighter-rouge">bundle install</code></li>
-  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br />
-<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code></li>
-  <li>本地预览。进入博客文件夹内后，运行<br />
-<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br />
-或者（区别在 bundle 的作用）<br />
-<code class="language-plaintext highlighter-rouge">jekyll server</code><br />
-浏览器进入网址 http://localhost:4000 查看效果。<code class="language-plaintext highlighter-rouge">Ctrl + c</code> 结束本地预览。</li>
-  <li>运行如下命令生成网页文件<br />
-<code class="language-plaintext highlighter-rouge">jekyll build</code><br />
-将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
-  <li>同步到 Github.</li>
-</ol>
 
-<h2 id="5-应用和修改-theme">5. 应用和修改 theme</h2>
-<p>在 Github 中搜索 <code class="language-plaintext highlighter-rouge">jekyll theme</code>，寻找感兴趣的主题，并按照其文档部署到自己的项目，以及自定义的修改。</p>
+  
 
-<p>对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。</p>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/fdtd" class="page__taxonomy-item" rel="tag">FDTD</a><span class="sep">, </span>
+    
+      <a href="/tags/lsf" class="page__taxonomy-item" rel="tag">lsf</a>
+    
+    </span>
+  </p>
 
-<h2 id="6-其他">6. 其他</h2>
-<p><code class="language-plaintext highlighter-rouge">jemoji</code> 包可以为 jekyll 提供 emoji 支持。</p>
 
-<h2 id="reference">Reference</h2>
-<p><em>本文介绍择其大纲，细节较为简略。可结合以下文章食用。由于更新时间问题，下述文章的部分内容如今是可能产生问题的，参考时注意规避本文提到的两个坑。</em></p>
 
-<p>[1] Github Pages + jekyll 全面介绍极简搭建个人网站和博客  https://zhuanlan.zhihu.com/p/51240503</p>
 
-<p>[2] Jekyll + Github Pages 搭建个人免费博客  https://zhuanlan.zhihu.com/p/87225594</p>
+  
 
-<p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
-<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
-<h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
-<p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
+  
 
-<p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/optics" class="page__taxonomy-item" rel="tag">optics</a>
+    
+    </span>
+  </p>
 
-<p><img src="/assets/images/wec0.png" alt="0" /></p>
 
-<h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
-<p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
+        
 
-<p><strong>常用 WPS 公式编辑器快捷键</strong></p>
-<ul>
-  <li>调出选项卡
-    <ul>
-      <li>Alt + F: 文件选项卡</li>
-      <li>Alt + E: 编辑选项卡</li>
-      <li>Alt + V: 视图选项卡</li>
-      <li>Alt + T: 格式选项卡</li>
-      <li>Alt + S: 样式选项卡</li>
-      <li>Alt + Z: 尺寸选项卡</li>
-      <li>Alt + H: 帮助选项卡</li>
-    </ul>
-  </li>
-  <li>退出公式编辑
-    <ul>
-      <li>Alt + F -&gt; X: 即文件选项卡中 <code class="language-plaintext highlighter-rouge">退出</code> 选项</li>
-      <li>其他选项同理</li>
-    </ul>
-  </li>
-  <li>希腊字母
-    <ul>
-      <li>Ctrl + G -&gt; 英文字母: 输入英文字母对应的小写希腊字母</li>
-      <li>Ctrl + G -&gt; Shift -&gt; 英文字母: 输入英文字母对应的大写希腊字母</li>
-    </ul>
-  </li>
-  <li>括号<br />
-<em>由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号</em>
-    <ul>
-      <li>Ctrl + 9 / 0: 小括号</li>
-      <li>Ctrl + [ / ]: 中括号</li>
-      <li>Ctrl + Shift + [ / ]: 大括号</li>
-    </ul>
-  </li>
-  <li>数学公式
-    <ul>
-      <li>Ctrl + F: 上下分式</li>
-      <li>Ctrl + /: 单行倾斜分式</li>
-      <li>Ctrl + R: 根式（省略2）</li>
-      <li>Ctrl + T -&gt; N : 任意阶根式</li>
-      <li>Ctrl + H: 上标</li>
-      <li>Ctrl + L: 下标</li>
-      <li>Ctrl + J: 上下标</li>
-      <li>Ctrl + K -&gt; &lt;: 小于等于</li>
-      <li>Ctrl + K -&gt; &gt;: 大于等于</li>
-      <li>Ctrl + Alt + ‘: 一阶导数</li>
-      <li>Ctrl + Shift + ‘: 二阶导数</li>
-      <li>Ctrl + I: 定积分</li>
-      <li>Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线</li>
-      <li>Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头</li>
-    </ul>
-  </li>
-  <li>其他
-    <ul>
-      <li>Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）</li>
-    </ul>
-  </li>
-</ul>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-10-06T00:00:00+08:00">October 6, 2022</time></p>
 
-<h2 id="reference">Reference</h2>
-<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/optics/2022/10/04/FDTD-basic.html" class="pagination--pager" title="FDTD Note: Basic
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/04/FDTD-basic.html" rel="permalink">FDTD Note: Basic
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-04T00:00:00+08:00">October 4, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+1. Far-field projections
+If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-fi...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/code/2022/08/29/blog-build.html" rel="permalink">基于 Github Pages &amp; Jekyll 的个人博客搭建方法
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-08-29T11:33:00+08:00">August 29, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+1. 软件安装
+清单
+
+  Git
+  Github Desktop (optional)
+  Ruby + Devkit
+其中，Ruby 安装有如下注意事项：
+  安装包下载地址：https://rubyinstaller.org/downloads/
+  以管理员身份运行安装文件
+  安装目录不要包含中文和...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/life/2022/08/29/life-test.html" rel="permalink">Life test
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-08-29T00:00:00+08:00">August 29, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/others/2022/08/28/wps-equation-configure.html" rel="permalink">WPS 公式快捷输入的配置方法
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-08-28T19:16:03+08:00">August 28, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+1. 设置插入公式快捷键
+不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
