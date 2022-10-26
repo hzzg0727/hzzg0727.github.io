@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-26T11:09:59+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-26T12:27:45+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
 <h2 id="achromatic-focusing-theory">Achromatic focusing theory</h2>
 <p>To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</p>
 
@@ -207,7 +207,7 @@ python setup.py -develop
 </ul>
 
 <h3 id="predefined-constants">Predefined constants</h3>
-<p><img src="/assets/images/20221005-FDTD-lsf-1.png" alt="1" /></p>
+<p><img src="/assets/images/2022-10-06-FDTD-lsf-1.png" alt="1" /></p>
 <ul>
   <li>endl - “\n”</li>
 </ul>
@@ -276,7 +276,7 @@ python setup.py -develop
   <li>logical operators (pay attention to function <code class="language-plaintext highlighter-rouge">almostequal()</code>)</li>
 </ul>
 
-<p><img src="/assets/images/20221005-FDTD-lsf-2.png" alt="2" /></p>
+<p><img src="/assets/images/2022-10-06-FDTD-lsf-2.png" alt="2" /></p>
 
 <h2 id="simulation-objects">Simulation objects</h2>
 <h3 id="simulation-modes">Simulation modes</h3>
@@ -714,15 +714,24 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <code class="language-plaintext highlighter-rouge">jekyll build</code><br />
 将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
   <li>同步到 Github.</li>
+  <li>查看 Github Pages 发布状态</li>
 </ol>
+
+<p>网页迟迟没有更新，可能是发布流程中的某一步骤未能成功。</p>
+
+<p>选择 tab: <code class="language-plaintext highlighter-rouge">Actions</code> -&gt; 查看 <code class="language-plaintext highlighter-rouge">pages build and deployment</code>.</p>
 
 <h2 id="5-应用和修改-theme">5. 应用和修改 theme</h2>
 <p>在 Github 中搜索 <code class="language-plaintext highlighter-rouge">jekyll theme</code>，寻找感兴趣的主题，并按照其文档部署到自己的项目，以及自定义的修改。</p>
 
-<p>对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。</p>
+<p>对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。我使用的是 <code class="language-plaintext highlighter-rouge">minimal-mistakes-jekyll</code>。</p>
 
 <h2 id="6-其他">6. 其他</h2>
+<h3 id="61-相关库">6.1 相关库</h3>
 <p><code class="language-plaintext highlighter-rouge">jemoji</code> 包可以为 jekyll 提供 emoji 支持。</p>
+
+<h3 id="62-remote-theme">6.2 Remote theme</h3>
+<p>我尝试按照某些主题的参考文档，使用 <code class="language-plaintext highlighter-rouge">remote theme</code> 而非直接指定 <code class="language-plaintext highlighter-rouge">theme</code>，但遇到了未能解决的 SSL Connect 问题（尽管参考了很多材料）。建议还是使用本地主题，在 github 仓库中只存储 <code class="language-plaintext highlighter-rouge">_site</code> 文件夹中生成的网页和资源，而非利用 Github Pages 提供的远程服务去远程生成网页（此时就要用到 <code class="language-plaintext highlighter-rouge">remote theme</code> 的技术）。</p>
 
 <h2 id="reference">Reference</h2>
 <p><em>本文介绍择其大纲，细节较为简略。可结合以下文章食用。由于更新时间问题，下述文章的部分内容如今是可能产生问题的，参考时注意规避本文提到的两个坑。</em></p>
@@ -733,13 +742,14 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
-<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
+<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486
+fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
 <h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
 <p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
 
 <p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
 
-<p><img src="/assets/images/wec0.png" alt="0" /></p>
+<p><img src="/assets/images/2022-08-28-wps-equation-configure-1.png" alt="0" /></p>
 
 <h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
 <p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
