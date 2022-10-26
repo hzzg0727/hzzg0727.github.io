@@ -1,4 +1,318 @@
-<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>基于 Github Pages &amp; Jekyll 的个人博客搭建方法 - hzzg0727 Blog :squirrel:</title>
+<meta name="description" content="1. 软件安装 清单    Git   Github Desktop (optional)   Ruby + Devkit 其中，Ruby 安装有如下注意事项：   安装包下载地址：https://rubyinstaller.org/downloads/   以管理员身份运行安装文件   安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误）   其他选项可默认执行   MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。">
+
+
+  <meta name="author" content="hzzg0727">
+  
+  <meta property="article:author" content="hzzg0727">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh">
+<meta property="og:site_name" content="hzzg0727 Blog :squirrel:">
+<meta property="og:title" content="基于 Github Pages &amp; Jekyll 的个人博客搭建方法">
+<meta property="og:url" content="https://hzzg0727.github.io/code/2022/08/29/blog-build.html">
+
+
+  <meta property="og:description" content="1. 软件安装 清单    Git   Github Desktop (optional)   Ruby + Devkit 其中，Ruby 安装有如下注意事项：   安装包下载地址：https://rubyinstaller.org/downloads/   以管理员身份运行安装文件   安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误）   其他选项可默认执行   MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-29T11:33:00+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "hzzg0727",
+      "url": "https://hzzg0727.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+</script>
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/paddington_avatar.jpg" alt="hzzg0727" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">hzzg0727</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>On the road.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Hangzhou, China</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="基于 Github Pages &amp; Jekyll 的个人博客搭建方法">
+    <meta itemprop="description" content="1. 软件安装清单  Git  Github Desktop (optional)  Ruby + Devkit其中，Ruby 安装有如下注意事项：  安装包下载地址：https://rubyinstaller.org/downloads/  以管理员身份运行安装文件  安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误）  其他选项可默认执行  MSYS 安装会耗时久一些，耐心Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。">
+    <meta itemprop="datePublished" content="2022-08-29T11:33:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">基于 Github Pages &amp; Jekyll 的个人博客搭建方法
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-08-29T11:33:00+08:00">August 29, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu">
+<li><a href="#1-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">1. 软件安装</a></li>
+<li><a href="#2-github-pages">2. Github Pages</a></li>
+<li><a href="#3-ruby-%E7%9B%B8%E5%85%B3%E5%8C%85%E5%AE%89%E8%A3%85">3. Ruby 相关包安装</a></li>
+<li><a href="#4-%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%92%8C%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages">4. 建立博客文件和部署到 Github pages</a></li>
+<li><a href="#5-%E5%BA%94%E7%94%A8%E5%92%8C%E4%BF%AE%E6%94%B9-theme">5. 应用和修改 theme</a></li>
+<li><a href="#6-%E5%85%B6%E4%BB%96">6. 其他</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
 <h2 id="1-软件安装">1. 软件安装</h2>
 <p><strong>清单</strong></p>
 <ul>
@@ -23,7 +337,8 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
   <li>bundler</li>
   <li>jekyll</li>
   <li>webrick（也是一个<strong>坑</strong>：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
-    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+    <div class="language-ruby highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
 <span class="n">gem</span> <span class="n">install</span> <span class="n">webrick</span>
 </code></pre></div>    </div>
   </li>
@@ -32,17 +347,19 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <h2 id="4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</h2>
 <ol>
   <li>进入自己选定的本地博客目录</li>
-  <li>安装项目依赖的所有 gem 包。运行<br />
-   <code class="language-plaintext highlighter-rouge">bundle install</code></li>
-  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br />
-<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code></li>
-  <li>本地预览。进入博客文件夹内后，运行<br />
-<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br />
-或者（区别在 bundle 的作用）<br />
-<code class="language-plaintext highlighter-rouge">jekyll server</code><br />
+  <li>安装项目依赖的所有 gem 包。运行<br>
+   <code class="language-plaintext highlighter-rouge">bundle install</code>
+</li>
+  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br>
+<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code>
+</li>
+  <li>本地预览。进入博客文件夹内后，运行<br>
+<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br>
+或者（区别在 bundle 的作用）<br>
+<code class="language-plaintext highlighter-rouge">jekyll server</code><br>
 浏览器进入网址 http://localhost:4000 查看效果。<code class="language-plaintext highlighter-rouge">Ctrl + c</code> 结束本地预览。</li>
-  <li>运行如下命令生成网页文件<br />
-<code class="language-plaintext highlighter-rouge">jekyll build</code><br />
+  <li>运行如下命令生成网页文件<br>
+<code class="language-plaintext highlighter-rouge">jekyll build</code><br>
 将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
   <li>同步到 Github.</li>
 </ol>
@@ -65,3 +382,342 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
 <p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/github" class="page__taxonomy-item" rel="tag">Github</a><span class="sep">, </span>
+    
+      <a href="/tags/jekyll" class="page__taxonomy-item" rel="tag">Jekyll</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/code" class="page__taxonomy-item" rel="tag">code</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-08-29T11:33:00+08:00">August 29, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/life/2022/08/29/life-test.html" class="pagination--pager" title="Life test
+">Previous</a>
+    
+    
+      <a href="/optics/2022/10/04/FDTD-basic.html" class="pagination--pager" title="FDTD Note: Basic
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/20/Metasurface-design.html" rel="permalink">Metasurface design
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-20T00:00:00+08:00">October 20, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          11 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Achromatic focusing theory
+To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequenc...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/08/Meta-relatives.html" rel="permalink">Meta relatives
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-08T00:00:00+08:00">October 8, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Optimization
+Deterministic and stochastic optimization methods
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/08/FDTD-lumopt.html" rel="permalink">FDTD Note: LumOpt
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-08T00:00:00+08:00">October 8, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Install
+1. Choose your install directory and run
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/06/FDTD-lsf.html" rel="permalink">FDTD Note: lsf Language
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-06T00:00:00+08:00">October 6, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          16 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Useful commands in ScriptPrompt
+```python
+clear;  # clear all the variables in the workspace
+a = 1;
+clear a;  # clear variable a
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

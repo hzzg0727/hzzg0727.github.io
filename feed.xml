@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-10-26T10:46:12+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="http://localhost:4000/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>http://localhost:4000/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="http://localhost:4000/optics/2022/10/20/Metasurface-design.html">&lt;!-- # Metasurface design --&gt;
-&lt;h2 id=&quot;achromatic-focusing-theory&quot;&gt;Achromatic focusing theory&lt;/h2&gt;
-&lt;p&gt;To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-26T11:09:59+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
+<h2 id="achromatic-focusing-theory">Achromatic focusing theory</h2>
+<p>To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</p>
 
 \[\begin{equation}
     \varphi(r, \omega) = -\frac{\omega}{c}(\sqrt{r^2+f^2}-f)
 \end{equation}\]
 
-&lt;p&gt;where $\varphi$, $\omega$, $c$, $r$, and $f$ are phase, radial coordinate, velocity in the backgroud, angular frequency, and focal length, respectively.&lt;/p&gt;
+<p>where $\varphi$, $\omega$, $c$, $r$, and $f$ are phase, radial coordinate, velocity in the backgroud, angular frequency, and focal length, respectively.</p>
 
-&lt;p&gt;Eq (1) can be further written as&lt;/p&gt;
+<p>Eq (1) can be further written as</p>
 
 \[\begin{equation}
     \varphi(r, \omega) = -\frac{\omega}{c}(\sqrt{r^2+f^2}-f) + C(\omega)
 \end{equation}\]
 
-&lt;p&gt;where $C(\omega)$ is a reference phase whose value depends on the angular frequency only. This value offers an extra degree of freedom for multi-wavelength design, but has no influence on the focus effect of metalens.&lt;/p&gt;
+<p>where $C(\omega)$ is a reference phase whose value depends on the angular frequency only. This value offers an extra degree of freedom for multi-wavelength design, but has no influence on the focus effect of metalens.</p>
 
-&lt;p&gt;The Taylor expansion of $\varphi(r, \omega)$ can be written as&lt;/p&gt;
+<p>The Taylor expansion of $\varphi(r, \omega)$ can be written as</p>
 
 \[\begin{equation}
     \varphi(r, \omega) = \varphi(r, \omega_{d}) + \left. \frac{\partial \varphi}{\partial \omega}\right |_{\omega = \omega_{d}}(\omega - \omega_{d}) + \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} \frac{(\omega - \omega_{d})^2}{2} + ...
 \end{equation}\]
 
-&lt;p&gt;where the three terms in the right are the required phase, group delay, and group delay dispersion, respectively.&lt;/p&gt;
+<p>where the three terms in the right are the required phase, group delay, and group delay dispersion, respectively.</p>
 
-&lt;p&gt;Compare Eq (3) with Eq (1), we have&lt;/p&gt;
+<p>Compare Eq (3) with Eq (1), we have</p>
 
 \[\begin{equation}
     \varphi(r, \omega_{d})=-\frac{\omega_{d}}{c}(\sqrt{r^2+f^2}-f)
@@ -38,102 +38,102 @@
     \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} = 0
 \end{equation}\]
 
-&lt;p&gt;Compare Eq (3) with Eq (2), we have&lt;/p&gt;
+<p>Compare Eq (3) with Eq (2), we have</p>
 
 \[\begin{equation}
     \varphi(r, \omega_{d}) = -\frac{\omega_{d}}{c}(\sqrt{r^2+f^2}-f) + C(\omega_{d})
 \end{equation}\]
 
 \[\begin{equation}
-    \left. \frac{\partial \varphi}{\partial \omega} \right |_{\omega = \omega_{d}} = -\frac{1}{c}(\sqrt{r^2+f^2}-f) + \left. C&apos;(\omega) \right |_{\omega=\omega_d}
+    \left. \frac{\partial \varphi}{\partial \omega} \right |_{\omega = \omega_{d}} = -\frac{1}{c}(\sqrt{r^2+f^2}-f) + \left. C'(\omega) \right |_{\omega=\omega_d}
 \end{equation}\]
 
 \[\begin{equation}
-    \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} = \left. C&apos;&apos;(\omega) \right |_{\omega=\omega_d}
+    \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} = \left. C''(\omega) \right |_{\omega=\omega_d}
 \end{equation}\]
 
-&lt;p&gt;Eq (7-9) provide more design freedom than Eq (4-6).&lt;/p&gt;
+<p>Eq (7-9) provide more design freedom than Eq (4-6).</p>
 
-&lt;h2 id=&quot;forward-modelling&quot;&gt;Forward modelling&lt;/h2&gt;
-&lt;h3 id=&quot;full-wave-solvers&quot;&gt;Full wave solvers&lt;/h3&gt;
-&lt;p&gt;The design of these metasurfaces requires a full solution of Maxwell’s equations in three dimensions. For such sub-wavelength calculations there are (in general) no exact solutions. Their design is thus done by numerical method, known as &lt;strong&gt;full-wave solvers&lt;/strong&gt;. Some of the most common methods are FEM, FDTD and RCWA.&lt;/p&gt;
+<h2 id="forward-modelling">Forward modelling</h2>
+<h3 id="full-wave-solvers">Full wave solvers</h3>
+<p>The design of these metasurfaces requires a full solution of Maxwell’s equations in three dimensions. For such sub-wavelength calculations there are (in general) no exact solutions. Their design is thus done by numerical method, known as <strong>full-wave solvers</strong>. Some of the most common methods are FEM, FDTD and RCWA.</p>
 
-&lt;h3 id=&quot;fdtd-vs-rcwa&quot;&gt;FDTD vs RCWA&lt;/h3&gt;
-&lt;p&gt;FDTD and RCWA both model the same underlying physical laws, and solve the Maxwell equations via a different mathematical and numerical approach. In FDTD the Maxwell equations are discretized directly in both time and space. RCWA first transforms the equations to the frequency domain (both time-frequency and spatial frequency). Nevertheless, the solutions found by both methods should be the same.&lt;/p&gt;
+<h3 id="fdtd-vs-rcwa">FDTD vs RCWA</h3>
+<p>FDTD and RCWA both model the same underlying physical laws, and solve the Maxwell equations via a different mathematical and numerical approach. In FDTD the Maxwell equations are discretized directly in both time and space. RCWA first transforms the equations to the frequency domain (both time-frequency and spatial frequency). Nevertheless, the solutions found by both methods should be the same.</p>
 
-&lt;p&gt;In a single frequency calculation, the RCWA calculation will be much faster because it is naturally suited to single frequency calculations. Time domain methods (FDTD) automatically calculate multiple frequencies, but the downside is that this calculation will be slower when only a few wavelengths are of interest.&lt;/p&gt;
+<p>In a single frequency calculation, the RCWA calculation will be much faster because it is naturally suited to single frequency calculations. Time domain methods (FDTD) automatically calculate multiple frequencies, but the downside is that this calculation will be slower when only a few wavelengths are of interest.</p>
 
-&lt;h3 id=&quot;rcwa&quot;&gt;RCWA&lt;/h3&gt;
-&lt;p&gt;RCWA is a rigorous method and is able to provide any information you want, such as transmission, reflection, diffraction, field profiles, etc. Since it decomposes fields into set of plane waves, it is most efficient when the field profile approaches that of plane waves. This happens in structures with low to moderate index contrast, but the method can also be applied to metal structures albeit less efficiently. This means you can get very accurate results with very few terms to be solved so the simulations are fast. It is also very good for layered media. You will see it applied to diffraction gratings, resonant gratings, and sometimes to photonic crystals.&lt;/p&gt;
+<h3 id="rcwa">RCWA</h3>
+<p>RCWA is a rigorous method and is able to provide any information you want, such as transmission, reflection, diffraction, field profiles, etc. Since it decomposes fields into set of plane waves, it is most efficient when the field profile approaches that of plane waves. This happens in structures with low to moderate index contrast, but the method can also be applied to metal structures albeit less efficiently. This means you can get very accurate results with very few terms to be solved so the simulations are fast. It is also very good for layered media. You will see it applied to diffraction gratings, resonant gratings, and sometimes to photonic crystals.</p>
 
-&lt;p&gt;To get a deeper understanding, it is necessary to know a little more about the method.  It is a semi-analytical technique, meaning it picks one direction (longitudinal) to solve analytically and the other two (transverse) to be solved numerically.  RCWA uses a discrete Fourier transform to discretize the fields in the transverse direction. This means it represents the fields and materials as a set of plane waves (or planar gratings), so RCWA is extremely fast and efficient for devices with low to moderate index contrast where the waves are more like pure plane waves. The longitudinal direction is solved analytically so the layers can be any thickness without affecting the computational burden. A layer can be picometers to megameters without affecting speed for efficiency at all. It can also very efficiently handle multilayer devices and devices with thousands or even millions of layers.&lt;/p&gt;
+<p>To get a deeper understanding, it is necessary to know a little more about the method.  It is a semi-analytical technique, meaning it picks one direction (longitudinal) to solve analytically and the other two (transverse) to be solved numerically.  RCWA uses a discrete Fourier transform to discretize the fields in the transverse direction. This means it represents the fields and materials as a set of plane waves (or planar gratings), so RCWA is extremely fast and efficient for devices with low to moderate index contrast where the waves are more like pure plane waves. The longitudinal direction is solved analytically so the layers can be any thickness without affecting the computational burden. A layer can be picometers to megameters without affecting speed for efficiency at all. It can also very efficiently handle multilayer devices and devices with thousands or even millions of layers.</p>
 
-&lt;h3 id=&quot;convergence-test&quot;&gt;Convergence test&lt;/h3&gt;
-&lt;p&gt;In practice the appropriate discretization level is determined by a convergence test. That is to simulate the same configuration with increasingly small discretization steps until the calculation result no longer changes. The discretization can then be set to the level which gives an acceptable deviation from the converged result.&lt;/p&gt;
+<h3 id="convergence-test">Convergence test</h3>
+<p>In practice the appropriate discretization level is determined by a convergence test. That is to simulate the same configuration with increasingly small discretization steps until the calculation result no longer changes. The discretization can then be set to the level which gives an acceptable deviation from the converged result.</p>
 
-&lt;p&gt;In the case of RCWA, the controlling parameter is the truncation of the spatial frequency series (determined by the Accuracy setting). In FDTD, the resolution is controlled by the spatial step size in three dimensions x, y, and z (The stepsize in time is derived from the spatial discretization stepsize).&lt;/p&gt;
+<p>In the case of RCWA, the controlling parameter is the truncation of the spatial frequency series (determined by the Accuracy setting). In FDTD, the resolution is controlled by the spatial step size in three dimensions x, y, and z (The stepsize in time is derived from the spatial discretization stepsize).</p>
 
-&lt;h2 id=&quot;metalens-design-process&quot;&gt;Metalens Design Process&lt;/h2&gt;
-&lt;h3 id=&quot;1-target-phase-definition&quot;&gt;1. Target phase definition&lt;/h3&gt;
-&lt;p&gt;How to define the target phase profile for the metalens?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;(common lens types) Analytical solving.&lt;/li&gt;
-  &lt;li&gt;(complex systems) Designing the ideal phase (the spatial phase data on a rectilinear grid) mask in OpticStudio using the ray tracing and optimization capabilities.&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="metalens-design-process">Metalens Design Process</h2>
+<h3 id="1-target-phase-definition">1. Target phase definition</h3>
+<p>How to define the target phase profile for the metalens?</p>
+<ul>
+  <li>(common lens types) Analytical solving.</li>
+  <li>(complex systems) Designing the ideal phase (the spatial phase data on a rectilinear grid) mask in OpticStudio using the ray tracing and optimization capabilities.</li>
+</ul>
 
-&lt;p&gt;In OpticStudio, the metasurface can be described by the diffractive surface type, which applies an additional phase on top of the base refractive or reflective surface.&lt;/p&gt;
+<p>In OpticStudio, the metasurface can be described by the diffractive surface type, which applies an additional phase on top of the base refractive or reflective surface.</p>
 
-&lt;h3 id=&quot;2-unit-cell-simulations&quot;&gt;2. Unit cell simulations&lt;/h3&gt;
-&lt;p&gt;The parameters of unit cells are optimized to satisfy the desired transmission and phase properties. The phase and field vs. radius results are then saved to build a meta-atom library.&lt;/p&gt;
+<h3 id="2-unit-cell-simulations">2. Unit cell simulations</h3>
+<p>The parameters of unit cells are optimized to satisfy the desired transmission and phase properties. The phase and field vs. radius results are then saved to build a meta-atom library.</p>
 
-&lt;p&gt;The RCWA solver is introduced as a recommended/complementary tool for unit cell simulations, and a comparison is made with FDTD for verification.&lt;/p&gt;
+<p>The RCWA solver is introduced as a recommended/complementary tool for unit cell simulations, and a comparison is made with FDTD for verification.</p>
 
-&lt;h3 id=&quot;3-full-lens-design&quot;&gt;3. Full lens design&lt;/h3&gt;
-&lt;p&gt;How to design and analyse the full metalens?&lt;/p&gt;
-&lt;h4 id=&quot;direct-simulations&quot;&gt;Direct simulations&lt;/h4&gt;
-&lt;p&gt;Construct and simulate the full metalens in FDTD based on the  target phase profile and the phase vs. radius data from the previous step.&lt;/p&gt;
+<h3 id="3-full-lens-design">3. Full lens design</h3>
+<p>How to design and analyse the full metalens?</p>
+<h4 id="direct-simulations">Direct simulations</h4>
+<p>Construct and simulate the full metalens in FDTD based on the  target phase profile and the phase vs. radius data from the previous step.</p>
 
-&lt;p&gt;While this approach is more straightforward, it can pose challenges in terms of memory and simulation time, especially for larger metalens.&lt;/p&gt;
+<p>While this approach is more straightforward, it can pose challenges in terms of memory and simulation time, especially for larger metalens.</p>
 
-&lt;p&gt;The nearfield from the simulation can be exported to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ZBF&lt;/code&gt; file for further propagation in the Ansys OpticStudio for farfield analysis.&lt;/p&gt;
+<p>The nearfield from the simulation can be exported to a <code class="language-plaintext highlighter-rouge">.ZBF</code> file for further propagation in the Ansys OpticStudio for farfield analysis.</p>
 
-&lt;h4 id=&quot;reconstruction-of-full-fields&quot;&gt;Reconstruction of full fields&lt;/h4&gt;
-&lt;p&gt;The nearfield/farfield of the full metalens can be reconstructed with a script using the nearfield library from the meta-atom library, which avoids the time-consuming simulation of the full lens and hence can be much more efficient than the direct simulation approach.&lt;/p&gt;
+<h4 id="reconstruction-of-full-fields">Reconstruction of full fields</h4>
+<p>The nearfield/farfield of the full metalens can be reconstructed with a script using the nearfield library from the meta-atom library, which avoids the time-consuming simulation of the full lens and hence can be much more efficient than the direct simulation approach.</p>
 
-&lt;h3 id=&quot;4-propagation-of-imported-beam-nearfield-rightarrow-farfield&quot;&gt;4. Propagation of imported beam (nearfield $\rightarrow$ farfield)&lt;/h3&gt;
-&lt;p&gt;Once the near-field for the metalens is exported to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.ZBF&lt;/code&gt; file, the Physical Optics Propagation (POP) tool in OpticStudio can be used to propagate the beam through the entire system, even including any bulk optical elements as well. Using POP, the phase and irradiance profile can be analyzed at every surface, and the system performance can be evaluated.&lt;/p&gt;
+<h3 id="4-propagation-of-imported-beam-nearfield-rightarrow-farfield">4. Propagation of imported beam (nearfield $\rightarrow$ farfield)</h3>
+<p>Once the near-field for the metalens is exported to a <code class="language-plaintext highlighter-rouge">.ZBF</code> file, the Physical Optics Propagation (POP) tool in OpticStudio can be used to propagate the beam through the entire system, even including any bulk optical elements as well. Using POP, the phase and irradiance profile can be analyzed at every surface, and the system performance can be evaluated.</p>
 
-&lt;p&gt;The actual beam can be compared with an ideal beam propagated through the target phase mask in OpticStudio to verify the metalens model. If necessary, the optical setup can be re-optimized in OpticStudio based on the propagation results.&lt;/p&gt;
+<p>The actual beam can be compared with an ideal beam propagated through the target phase mask in OpticStudio to verify the metalens model. If necessary, the optical setup can be re-optimized in OpticStudio based on the propagation results.</p>
 
-&lt;h3 id=&quot;5-gds-export&quot;&gt;5. GDS export&lt;/h3&gt;
-&lt;p&gt;Once the design of the physical shapes and the positions of the meta-atoms over the whole lens is finished, the pattern is typically exported to a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GDS&lt;/code&gt; format for fabrication.&lt;/p&gt;
+<h3 id="5-gds-export">5. GDS export</h3>
+<p>Once the design of the physical shapes and the positions of the meta-atoms over the whole lens is finished, the pattern is typically exported to a <code class="language-plaintext highlighter-rouge">GDS</code> format for fabrication.</p>
 
-&lt;h2 id=&quot;porlarization&quot;&gt;Porlarization&lt;/h2&gt;
-&lt;h3 id=&quot;porlarized-source-and-response-simulation&quot;&gt;Porlarized source and response simulation&lt;/h3&gt;
-&lt;p&gt;To create a circular polarized source, we can combine an x polarized plane wave source with its phase set to 0, and a y polarized plane wave source with its phase set to 90 degrees.&lt;/p&gt;
+<h2 id="porlarization">Porlarization</h2>
+<h3 id="porlarized-source-and-response-simulation">Porlarized source and response simulation</h3>
+<p>To create a circular polarized source, we can combine an x polarized plane wave source with its phase set to 0, and a y polarized plane wave source with its phase set to 90 degrees.</p>
 
-&lt;p&gt;&lt;em&gt;A recommended way:&lt;/em&gt;&lt;/p&gt;
+<p><em>A recommended way:</em></p>
 
-&lt;p&gt;It is possible to obtain the response of a system to a beam with arbitrary polarization by running two simulations (each with a single source). The point is that any polarization can be combined with x polarization and y polarization components.&lt;/p&gt;
+<p>It is possible to obtain the response of a system to a beam with arbitrary polarization by running two simulations (each with a single source). The point is that any polarization can be combined with x polarization and y polarization components.</p>
 
-&lt;p&gt;&lt;em&gt;My idea:&lt;/em&gt;&lt;/p&gt;
+<p><em>My idea:</em></p>
 
-&lt;p&gt;Jones matrix can be utilized to realize polarization synthesis and decomposition. For instance, in this way, a x polarization plane wave (or a y polarization plane wave) can be decomposed into left circularly polarized light and right circularly polarized light to make further analysis.&lt;/p&gt;
+<p>Jones matrix can be utilized to realize polarization synthesis and decomposition. For instance, in this way, a x polarization plane wave (or a y polarization plane wave) can be decomposed into left circularly polarized light and right circularly polarized light to make further analysis.</p>
 
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;[1] Getting accurate and fast nano-structure simulations: A benchmark of RCWA and FDTD for meta-surface calculation: https://planopsim.com/simulation/getting-accurate-and-fast-nano-structure-simulations-a-benchmark-of-rcwa-and-fdtd-for-meta-surface-calculation/#:~:text=FDTD%20and%20RCWA%20both%20model%20the%20same%20underlying,the%20frequency%20domain%20%28both%20time-frequency%20and%20spatial%20frequency%29.&lt;/p&gt;
+<h2 id="reference">Reference</h2>
+<p>[1] Getting accurate and fast nano-structure simulations: A benchmark of RCWA and FDTD for meta-surface calculation: https://planopsim.com/simulation/getting-accurate-and-fast-nano-structure-simulations-a-benchmark-of-rcwa-and-fdtd-for-meta-surface-calculation/#:~:text=FDTD%20and%20RCWA%20both%20model%20the%20same%20underlying,the%20frequency%20domain%20%28both%20time-frequency%20and%20spatial%20frequency%29.</p>
 
-&lt;p&gt;[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures&lt;/p&gt;</content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html">Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</summary></entry><entry><title type="html">Meta relatives</title><link href="http://localhost:4000/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>http://localhost:4000/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="http://localhost:4000/optics/2022/10/08/Meta-relatives.html">&lt;!-- # Meta Relatives --&gt;
-&lt;h2 id=&quot;optimization&quot;&gt;Optimization&lt;/h2&gt;
-&lt;h3 id=&quot;deterministic-and-stochastic-optimization-methods&quot;&gt;Deterministic and stochastic optimization methods&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-10-08-Meta-relatives-1.svg&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by]]></summary></entry><entry><title type="html">Meta relatives</title><link href="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html"><![CDATA[<!-- # Meta Relatives -->
+<h2 id="optimization">Optimization</h2>
+<h3 id="deterministic-and-stochastic-optimization-methods">Deterministic and stochastic optimization methods</h3>
+<p><img src="/assets/images/2022-10-08-Meta-relatives-1.svg" alt="1" /></p>
 
-&lt;p&gt;For more, see Ref.[1].&lt;/p&gt;
+<p>For more, see Ref.[1].</p>
 
-&lt;h2 id=&quot;complex-permittivity-leftrightarrow-complex-refractive-index&quot;&gt;Complex permittivity $\leftrightarrow$ complex refractive index&lt;/h2&gt;
-&lt;p&gt;Assume dealing with optical frequencies, in which case we can treat $\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies.&lt;/p&gt;
+<h2 id="complex-permittivity-leftrightarrow-complex-refractive-index">Complex permittivity $\leftrightarrow$ complex refractive index</h2>
+<p>Assume dealing with optical frequencies, in which case we can treat $\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies.</p>
 
-&lt;p&gt;In this case, the relationship between the complex relative permittivity (also known as the complex dialectric constant) and the complex refractive index is given by&lt;/p&gt;
+<p>In this case, the relationship between the complex relative permittivity (also known as the complex dialectric constant) and the complex refractive index is given by</p>
 
 \[\begin{equation}
     \epsilon_{\mathrm{real}} + i\ \epsilon_{\mathrm{im}} = (n + i\ k)^2
@@ -147,660 +147,660 @@
     \epsilon_{\mathrm{im}} = 2nk
 \end{equation}\]
 
-&lt;p&gt;From Ref.[2].&lt;/p&gt;
+<p>From Ref.[2].</p>
 
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-&lt;p&gt;[1] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances&lt;/p&gt;
+<h2 id="references">References</h2>
+<p>[1] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances</p>
 
-&lt;p&gt;[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21&lt;/p&gt;</content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html">Optimization Deterministic and stochastic optimization methods</summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="http://localhost:4000/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>http://localhost:4000/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="http://localhost:4000/optics/2022/10/08/FDTD-lumopt.html">&lt;!-- # LumOpt Notes --&gt;
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
-&lt;h3 id=&quot;1-choose-your-install-directory-and-run&quot;&gt;1. Choose your install directory and run&lt;/h3&gt;
+<p>[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html"><![CDATA[Optimization Deterministic and stochastic optimization methods]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html"><![CDATA[<!-- # LumOpt Notes -->
+<h2 id="install">Install</h2>
+<h3 id="1-choose-your-install-directory-and-run">1. Choose your install directory and run</h3>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/chriskeraly/LumOpt.git
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chriskeraly/LumOpt.git
 python setup.py -develop
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h3 id=&quot;2-add-the-lumerical-api-lumapi-to-your-python-path&quot;&gt;2. Add the Lumerical API lumapi to your Python path&lt;/h3&gt;
-&lt;p&gt;In the LumOpt install directory, go into the “lumopt” directory, and then open “&lt;strong&gt;init&lt;/strong&gt;.py”. Modify the path of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lumapi&lt;/code&gt; according to your platform and install directory, as follows.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# __init__.py
+<h3 id="2-add-the-lumerical-api-lumapi-to-your-python-path">2. Add the Lumerical API lumapi to your Python path</h3>
+<p>In the LumOpt install directory, go into the “lumopt” directory, and then open “<strong>init</strong>.py”. Modify the path of <code class="language-plaintext highlighter-rouge">lumapi</code> according to your platform and install directory, as follows.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># __init__.py
 # ...
-&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Windows&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;default_api_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;/Program Files/Lumerical/v202/api/python&apos;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Darwin&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;default_api_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;/Applications/Lumerical/FDTD/FDTD.app/Contents/MacOS/&apos;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current_platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Linux&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;default_api_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;/opt/lumerical/fdtd/api/python&apos;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# ...
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;Notes:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html">Install 1. Choose your install directory and run</summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="http://localhost:4000/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>http://localhost:4000/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="http://localhost:4000/optics/2022/10/06/FDTD-lsf.html">&lt;!-- # FDTD Note: LSF Language --&gt;
-&lt;h2 id=&quot;useful-commands-in-scriptprompt&quot;&gt;Useful commands in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ScriptPrompt&lt;/code&gt;&lt;/h2&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# clear all the variables in the workspace
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clear&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# clear variable a
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;clc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# clear all the commands in the window
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;variables&quot;&gt;Variables&lt;/h2&gt;
-&lt;h3 id=&quot;variable-types&quot;&gt;Variable types&lt;/h3&gt;
-&lt;p&gt;Different types of variable a available in Lumerical’s scripting:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Strings can be used to define a file name, for instance, or a material.&lt;/li&gt;
-  &lt;li&gt;Numbers can be used to define dimensions, wavelength, etc.&lt;/li&gt;
-  &lt;li&gt;Arrays or matrices can be used, for instance, to define a frequency vector or to store a field profile.&lt;/li&gt;
-  &lt;li&gt;Structure array and cell array can store any type of data elements.&lt;/li&gt;
-  &lt;li&gt;Matrix datasets contain a data without spatial parameters&lt;/li&gt;
-  &lt;li&gt;Rectilinear datasets contain data with spatial information from a ectilinear grid (such as the FDTD mesh).&lt;/li&gt;
-  &lt;li&gt;Unstructured spatial datasets can be used to store data with spatial information on a finite element mesh (for instance, a calculation result from DEVICE) and arbitrary unstructured datasets can store any kind of data type.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Datasets are typically used to store results from monitors.&lt;/li&gt;
-  &lt;li&gt;Cell arrays have a defined number of elements.&lt;/li&gt;
-  &lt;li&gt;Cell matrixes are not supported.&lt;/li&gt;
-  &lt;li&gt;Array is special matrix (1 * N or N * 1 matrix).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;predefined-constants&quot;&gt;Predefined constants&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/images/20221005-FDTD-lsf-1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;endl - “\n”&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;prinf-the-values&quot;&gt;Prinf the values&lt;/h3&gt;
-&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print()&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;?&lt;/code&gt; to see the value of variables.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt; result:
-# &amp;gt; 1
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt; result:
-# &amp;gt; 1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;initialization-of-variables&quot;&gt;Initialization of variables&lt;/h3&gt;
-&lt;p&gt;Use operator &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&lt;/code&gt; to initialize the variables.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;string_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Rectangle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;number_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;array1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 1*3 
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 3*1 
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# equal to [1; 3; 5]
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# [5, 3, 1]
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Create an array with 3 numebrs from 1 to 5.
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;matrix1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
-           &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-           &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# 3*2
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Use the “matrix” and the “zeros” functions to create an array filled with 0.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Use the “ones” function to create an array filled with ones.
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;struct_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;struct&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# To create a structure array, use the &quot;struct&quot; command.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;struct_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Add and access the structure array’s elements using the “.” operator.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;struct_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Rectangle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;cell_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# to create a cell array, use the &quot;cell&quot; command and specify the number of elements.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cell_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;String&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# The elements can be accessed using &quot;{}&quot; and the index of the element.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cell_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# The elements can be accessed using &quot;{}&quot; and the index of the element.
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;element-access&quot;&gt;Element access&lt;/h3&gt;
-&lt;p&gt;The matrix(array)’s elements can be accessed using operator &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;()&lt;/code&gt; with their index. Note the index starts at &lt;strong&gt;1&lt;/strong&gt; and not 0.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;matrix1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matrix1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt; result: 
-# &amp;gt; 0
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The structure array’s elements can be accessed using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.&lt;/code&gt; operator.&lt;/p&gt;
-
-&lt;p&gt;The cell’s elements can be accessed using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{}&lt;/code&gt; and the index of the element.&lt;/p&gt;
-
-&lt;h3 id=&quot;operations&quot;&gt;Operations&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;num2str()&lt;/li&gt;
-  &lt;li&gt;str2num()&lt;/li&gt;
-  &lt;li&gt;unwrap(): remove the changes of more than $2\pi$ from the phase that can be got with the angle function.&lt;/li&gt;
-  &lt;li&gt;All the angles are expressed in radians in these functions.&lt;/li&gt;
-  &lt;li&gt;When using mathematical functions on matrixex, the function is applied on each element of the matrixes.&lt;/li&gt;
-  &lt;li&gt;mult(): matrix multiplication.&lt;/li&gt;
-  &lt;li&gt;find(): find a value in arrays or matrixes.&lt;/li&gt;
-  &lt;li&gt;findpeaks(): find array peaks.&lt;/li&gt;
-  &lt;li&gt;logical operators (pay attention to function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;almostequal()&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/20221005-FDTD-lsf-2.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;simulation-objects&quot;&gt;Simulation objects&lt;/h2&gt;
-&lt;h3 id=&quot;simulation-modes&quot;&gt;Simulation modes&lt;/h3&gt;
-&lt;p&gt;To add a simulation object and set its properties, you first have to be in layoutmode.&lt;/p&gt;
-
-&lt;p&gt;You can do the same by using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layoutmode&lt;/code&gt;. It returns ‘1’ if you are in layoutmode and ‘0’ when in analysis mode.&lt;/p&gt;
-
-&lt;p&gt;To set the simulation into layoutmode, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;switchtolayout&lt;/code&gt; command.&lt;/p&gt;
-
-&lt;h3 id=&quot;location-group-scope-in-the-objects-tree&quot;&gt;Location (group scope) in the objects tree&lt;/h3&gt;
-&lt;p&gt;Default group scope is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;model&lt;/code&gt;, which is the root of the object tree.&lt;/p&gt;
-
-&lt;p&gt;When you add an object using script, it is placed under the current group scope.&lt;/p&gt;
-
-&lt;p&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;groupscope(&quot;::model::NAME&quot;)&lt;/code&gt; to go into one group named “NAME” or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;groupscope(&quot;NAME&quot;)&lt;/code&gt; if in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;model&lt;/code&gt; scope now.&lt;/p&gt;
-
-&lt;h3 id=&quot;add-objects&quot;&gt;Add objects&lt;/h3&gt;
-&lt;p&gt;Command: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addOBJECT_TYPE_NAME&lt;/code&gt; if the name of the object’s type is “OBJECT_TYPE_NAME”. For instance, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addrect&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;getset-properties-of-objects&quot;&gt;Get/Set properties of objects&lt;/h3&gt;
-&lt;p&gt;To set the properties of an object, you first have to select it and then set the properties. But when you add an object, it is automatically selected as shown here with addcircle. So there is no need to select the object if you are to set its properties right after adding it.&lt;/p&gt;
-
-&lt;p&gt;How to select objects?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;select(&quot;NAME&quot;)&lt;/code&gt;: select the object named “NAME”.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shiftselect(&quot;NAME&quot;)&lt;/code&gt;: select new object named “NAME” while keeping the current selected objects.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;selectall()&lt;/code&gt;: select all the objects.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;selectpartial(&quot;PNAME&quot;)&lt;/code&gt;: select objects with the partial name “PNAME”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How to set property?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set(&quot;PROPERTY_NAME&quot;, VALUE)&lt;/code&gt; to set the property named “PROPERTY_NAME” of selected objects with value represented by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VALUE&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setnamed(&quot;OBJECT_NAME&quot;, &quot;PROPERTY_NAME&quot;, VALUE)&lt;/code&gt; to set the property named “PROPERTY_NAME” of the object named “OBJECT_NAME” with value represented by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VALUE&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;How to get property?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;get(&quot;PROPERTY_NAME&quot;, VALUE)&lt;/code&gt; to get the property named “PROPERTY_NAME” of selected objects.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getnamed(&quot;OBJECT_NAME&quot;, &quot;PROPERTY_NAME&quot;)&lt;/code&gt; to get the property named “PROPERTY_NAME” of the object named “OBJECT_NAME”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;running-simulations&quot;&gt;Running simulations&lt;/h2&gt;
-&lt;h3 id=&quot;running-a-single-simulation&quot;&gt;Running a single simulation&lt;/h3&gt;
-&lt;p&gt;To start a simulation, simply use the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run&lt;/code&gt;. It will launch the current project using the resources set in the resource manager.&lt;/p&gt;
-
-&lt;p&gt;Once the simulation is finished, the project is in analysis mode. Modification of any simulation settings is not allowed in this mode.So, if you want to change some of the settings for another simulation, you first need to get back to layout mode, using the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;switchtolayout&lt;/code&gt;. Note you can use the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layoutmode&lt;/code&gt; to check if the project is in layout or analysis mode. It returns ‘1’ if you are in layoutmode and ‘0’ when in analysis mode.&lt;/p&gt;
-
-&lt;h3 id=&quot;running-multiple-simulations-using-the-job-manager&quot;&gt;Running multiple simulations using the job manager&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The job manager&lt;/code&gt; allows you to run concurrent calculations using the resources set in the resource manager.&lt;/p&gt;
-
-&lt;p&gt;Commands:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;addjob(&quot;FILENAME&quot;)&lt;/code&gt; to add the specified project named “FILENAME” to the queue of simulations to be run.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;clearjobs&lt;/code&gt; to remove all jobs from the queue.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runjobs&lt;/code&gt; to run all the jobs in the queue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The job manager can be used to run a parameter sweep by creating all the simulation files and add them to the queue firstly and then running the jobs in the queue.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Advantage)&lt;/em&gt; The job manager can run more than 1 simulation at a time.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;running-parameter-sweep-and-optimization&quot;&gt;Running parameter sweep and optimization&lt;/h3&gt;
-&lt;p&gt;When using parameter sweep, the selected task is run by first creating simulation files corresponding to the sweep parameter values and then adding them to the job manager.&lt;/p&gt;
-
-&lt;p&gt;Commands:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runsweep(&quot;TASKNAME&quot;)&lt;/code&gt; to start the specified task named “TASKNAME” in the Optimizations and Sweeps window.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;runsweep&lt;/code&gt; to start all the tasks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;accessing-and-visualizing-simulation-results&quot;&gt;Accessing and visualizing simulation results&lt;/h2&gt;
-&lt;h3 id=&quot;accessing-simulation-results&quot;&gt;Accessing simulation results&lt;/h3&gt;
-&lt;p&gt;There are two types of data available in an object: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;results&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rawdata&lt;/code&gt;. While &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;results&lt;/code&gt; contains datasets formed by related data, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rawdata&lt;/code&gt; contains individual data elements in matrix form. In comparison to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rawdata&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;results&lt;/code&gt; have the advantage that they can be opened in the visualizer to generate plots with proper axes.&lt;/p&gt;
-
-&lt;p&gt;Basic commands:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getdata(&quot;OBJECT_NAME&quot;, &quot;PROPERTY_NAME&quot;)&lt;/code&gt; to get a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rawdata&lt;/code&gt; named “PROPERTY_NAME” from the object named “OBJECT_NAME”.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getresult(&quot;OBJECT_NAME&quot;, &quot;PROPERTY_NAME&quot;)&lt;/code&gt; to get a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;results&lt;/code&gt; named “PROPERTY_NAME” from the object named “OBJECT_NAME”.&lt;/li&gt;
-  &lt;li&gt;Omit the parameter “PROPERTY_NAME” to get all.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;profile&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# rawdata
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;x&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;y&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Ex&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Ey&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ez&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getdata&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;Ez&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# results (equal)
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;E&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getresult&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;E&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Ez&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;E&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ez&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Commands for retrieving specific data from monitor:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getelectric(&quot;MONITOR_NAME&quot;)&lt;/code&gt; to get the intensity of electric field from the monitor named “MONITOR_NAME”.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getmagnetic(&quot;MONITOR_NAME&quot;)&lt;/code&gt; to get the intensity of magnetic field from the monitor named “MONITOR_NAME”.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transmission(&quot;MONITOR_NAME&quot;)&lt;/code&gt; to get the fraction of power transmitted through the monitor named “MONITOR_NAME” with respect to the source power.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Commands for retrieving data from parameter sweep, optimization, yield analysis, and S-parameter sweep objects:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getsweepdata(&quot;SWEEP_NAME&quot;, &quot;PROPERTY_NAME&quot;)&lt;/code&gt; to get a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rawdata&lt;/code&gt; named “PROPERTY_NAME” from the Optimization and Sweeps object named “SWEEP_NAME”.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;getsweepresult(&quot;SWEEP_NAME&quot;)&lt;/code&gt; to get a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;result&lt;/code&gt; named “PROPERTY_NAME” from the Optimization and Sweeps object named “SWEEP_NAME”.&lt;/li&gt;
-  &lt;li&gt;Omit the parameter “PROPERTY_NAME” to get all.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;The sign of the transmission depends on the direction of propagation. The transmission is positive when the power is flowing through the monitor in the positive direction, that is in the +x, +y, or +z direction. So for a planewave propagating in backward (negative) direction, a negative transmission will be returned.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;visualising-simulation-results&quot;&gt;Visualising simulation results&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plot&lt;/code&gt; creates a line plot. All data sets in its argument should be sampled on the same position vector.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;x label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;y label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sin(x)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cos(x)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Plotting options
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;plot type = point, color = red, marker style = o&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plotxy&lt;/code&gt; allows us to use datasets that are sampled on different position vectors.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;plotxy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;x label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;y label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;legend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sin(x1)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;cos(x2)&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polar&lt;/code&gt; visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polar2&lt;/code&gt; adds multiple polar plots sampled on different angle values.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image&lt;/code&gt; creates 2D color plots.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;meshgridx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;meshgridy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;x label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;y label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# &amp;gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polarimage&lt;/code&gt; creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setplot&lt;/code&gt; to get the properties can be set for current figure window.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setplot(&quot;PROPERTY_NAME&quot;, VALUE)&lt;/code&gt; to set the property named “PROPERTY_NAME” of the current figure window with value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VALUE&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holdon&lt;/code&gt; switches the plotting mode to hold multiple functions on the same figure.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;holdoff&lt;/code&gt; switches off the holdon mode.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;selectfigure(NUMBER)&lt;/code&gt; selects a figure with a specified figure number &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NUMBER&lt;/code&gt;. When used without any argument, it selects the last figure created.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exportfigure(&quot;FILE_NAME&quot;, XRES, YRES)&lt;/code&gt; exports the current figure to a JPG image with the name ‘filename’, the x resolution &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XRES&lt;/code&gt; and the y resolution &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YRES&lt;/code&gt;. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;file-io&quot;&gt;File I/O&lt;/h2&gt;
-&lt;h3 id=&quot;manipulating-project-files&quot;&gt;Manipulating project files&lt;/h3&gt;
-&lt;p&gt;Commands:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;newproject&lt;/code&gt; without argument will create a new project based on the default template. You can also create a new simulation project based on another template with an argument, for instance to use materials from an existing simulation file.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;save(&quot;PATH_FILENAME&quot;)&lt;/code&gt; to save the current simulation project in a file specified with “PATH_FILENAME”. You can specify a path, otherwise the file will be saved in the current directory. If you don’t specify the file name, a file browser window will open.&lt;/li&gt;
-  &lt;li&gt;Use command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;load(PATH_FILENAME)&lt;/code&gt; to load another project with “PATH_FILENAME”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;Tips&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;&quot;&lt;/code&gt; is equal to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&apos;&apos;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;h3 id=&quot;core&quot;&gt;Core&lt;/h3&gt;
-&lt;p&gt;[1] Lumerical scripting language - Alphabetical list: https://optics.ansys.com/hc/en-us/articles/360034923553&lt;/p&gt;
-
-&lt;p&gt;[2] Lumerical scripting language - By category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category&lt;/p&gt;
-
-&lt;p&gt;[3] Scripting100 videos: https://www.bilibili.com/video/BV1hr4y1w7Ze?p=1&amp;amp;vd_source=c24841bbb7f5d10925aeadfcbf43b52f&lt;/p&gt;
-
-&lt;p&gt;[4] Scripting100 transcripts: https://optics.ansys.com/hc/en-us/sections/360007813714-SCRIPTING100-List-of-videos&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;You can learn Scripting100 Course using Ref.[3] with Ref.[4].&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><category term="meta" /><summary type="html">Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a</summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="http://localhost:4000/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>http://localhost:4000/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="http://localhost:4000/optics/2022/10/04/FDTD-basic.html">&lt;!-- # FDTD Note: Basic --&gt;
-&lt;h2 id=&quot;1-far-field-projections&quot;&gt;1. Far-field projections&lt;/h2&gt;
-&lt;p&gt;If your structure is periodic, consider using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the grating projections&lt;/code&gt;. If your structure is not periodic, consider using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;the far-field projections&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves propagating at different angles as the basis for the decomposition. The end result is that the far field projections functions provide a straightforward, accurate, and numerically efficient method for calculating the EM fields anywhere in the intermediate and far field regions.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;It seems that grating projections are the special case (for periodic structures) of far-field projections.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Application cases:&lt;/strong&gt; fileds known on a plane or a closed surface.&lt;/p&gt;
-
-&lt;h2 id=&quot;12-the-mesh-order-property&quot;&gt;1.2. The mesh order property&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;The mesh order property&lt;/code&gt; governs how overlapping objects are meshed in the simulation. It serves no role for objects which do not overlap.&lt;/p&gt;
-
-&lt;p&gt;The mesh order can be set at the material level (in the material database), or the object level (in the object properties).&lt;/p&gt;
-
-&lt;p&gt;Materials with a lower mesh order take priority over materials with a higher priority number. Areas that overlap are assigned the material properties of the higher priority material.&lt;/p&gt;
-
-&lt;h2 id=&quot;3-pml-边界条件&quot;&gt;3. PML 边界条件&lt;/h2&gt;
-&lt;p&gt;PML 边界基本上被实现为吸收材料，该吸收材料也与周围的材料阻抗匹配，以最大程度地减少反射。 理想的PML边界会产生零反射，但是实际上，由于底层PML方程的离散化，总会有小反射。&lt;/p&gt;
-
-&lt;h3 id=&quot;31-types&quot;&gt;3.1 Types&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Standard&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。&lt;br /&gt;
-如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。&lt;br /&gt;
-通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Stabilized&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。&lt;br /&gt;
-使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。&lt;br /&gt;
-稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Steep Angle&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;此配置文件与标准配置文件非常相似，并且意在将PML边界与周期性边界条件结合使用时使用。 它设计用于在光线沿几乎平行于PML边界的方向传播的情况下提供增强的吸收。 在非常粗糙的离散化下（每个波长少于十个点），该轮廓通常比标准轮廓的吸收率低。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Custom&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;标准的，稳定的和陡峭的侧面轮廓具有固定的PML参数。 自定义配置文件允许用户通过对所有PML参数值的完全控制来进行试验。 自定义配置文件的初始值是标准配置文件的初始值。&lt;/p&gt;
-
-&lt;h3 id=&quot;32-如何使用&quot;&gt;3.2 如何使用&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;boundary conditions 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;standard&lt;/code&gt; 类型适用于在所有边界上使用PML的模拟。&lt;/li&gt;
-  &lt;li&gt;如果是周期性的装置，可以将光的衍射，所以选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;steep angle&lt;/code&gt; 类型。&lt;/li&gt;
-  &lt;li&gt;PML 边界与光与物质相互作用的平面的距离至少为均匀材料中光波波长的一半。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;4-simulation-region&quot;&gt;4. Simulation Region&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Dimension 2D vs 3D:&lt;br /&gt;
-当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。&lt;/li&gt;
-  &lt;li&gt;Mesh Refinement：
-    &lt;ul&gt;
-      &lt;li&gt;一般使用 Conformal Variant0 对非金属材质界面应用保形网格。&lt;/li&gt;
-      &lt;li&gt;当有金属时可使用 Conformal Variant1 对金属界面应用保形网格。缺点：网格粗糙导致人工金属模态，因此需要加入额外的收敛性测试。&lt;/li&gt;
-      &lt;li&gt;其他选项的鲁棒性不好。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Simulation time:&lt;br /&gt;
-较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。&lt;br /&gt;
+</span><span class="k">if</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Windows'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Program Files/Lumerical/v202/api/python'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Darwin'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Applications/Lumerical/FDTD/FDTD.app/Contents/MacOS/'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Linux'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/opt/lumerical/fdtd/api/python'</span>
+<span class="c1"># ...
+</span></code></pre></div></div>
+
+<p><em>Notes:</em></p>
+<ul>
+  <li>Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.</li>
+</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Install 1. Choose your install directory and run]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
+<h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
+</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="n">clear</span> <span class="n">a</span><span class="p">;</span>  <span class="c1"># clear variable a
+</span>
+<span class="n">clc</span><span class="p">;</span>  <span class="c1"># clear all the commands in the window
+</span></code></pre></div></div>
+
+<h2 id="variables">Variables</h2>
+<h3 id="variable-types">Variable types</h3>
+<p>Different types of variable a available in Lumerical’s scripting:</p>
+<ul>
+  <li>Strings can be used to define a file name, for instance, or a material.</li>
+  <li>Numbers can be used to define dimensions, wavelength, etc.</li>
+  <li>Arrays or matrices can be used, for instance, to define a frequency vector or to store a field profile.</li>
+  <li>Structure array and cell array can store any type of data elements.</li>
+  <li>Matrix datasets contain a data without spatial parameters</li>
+  <li>Rectilinear datasets contain data with spatial information from a ectilinear grid (such as the FDTD mesh).</li>
+  <li>Unstructured spatial datasets can be used to store data with spatial information on a finite element mesh (for instance, a calculation result from DEVICE) and arbitrary unstructured datasets can store any kind of data type.</li>
+</ul>
+
+<p><em>Note:</em></p>
+<ul>
+  <li>Datasets are typically used to store results from monitors.</li>
+  <li>Cell arrays have a defined number of elements.</li>
+  <li>Cell matrixes are not supported.</li>
+  <li>Array is special matrix (1 * N or N * 1 matrix).</li>
+</ul>
+
+<h3 id="predefined-constants">Predefined constants</h3>
+<p><img src="/assets/images/20221005-FDTD-lsf-1.png" alt="1" /></p>
+<ul>
+  <li>endl - “\n”</li>
+</ul>
+
+<h3 id="prinf-the-values">Prinf the values</h3>
+<p>Use <code class="language-plaintext highlighter-rouge">print()</code> or <code class="language-plaintext highlighter-rouge">?</code> to see the value of variables.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+<span class="c1"># &gt; result:
+# &gt; 1
+</span><span class="err">?</span><span class="n">a</span><span class="p">;</span>
+<span class="c1"># &gt; result:
+# &gt; 1
+</span></code></pre></div></div>
+
+<h3 id="initialization-of-variables">Initialization of variables</h3>
+<p>Use operator <code class="language-plaintext highlighter-rouge">=</code> to initialize the variables.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string_</span> <span class="o">=</span> <span class="s">"Rectangle"</span><span class="p">;</span>
+
+<span class="n">number_</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+<span class="n">array1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>  <span class="c1"># 1*3 
+</span><span class="n">array2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">5</span><span class="p">];</span>  <span class="c1"># 3*1 
+</span><span class="n">array3</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">;</span>  <span class="c1"># equal to [1; 3; 5]
+</span><span class="n">array4</span> <span class="o">=</span> <span class="mi">5</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>  <span class="c1"># [5, 3, 1]
+</span><span class="n">array5</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1"># Create an array with 3 numebrs from 1 to 5.
+</span>
+<span class="n">matrix1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">;</span> 
+           <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">;</span>
+           <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>  <span class="c1"># 3*2
+</span><span class="n">matrix2</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1"># Use the “matrix” and the “zeros” functions to create an array filled with 0.
+</span><span class="n">matrix3</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1"># Use the “ones” function to create an array filled with ones.
+</span>
+<span class="n">struct_</span> <span class="o">=</span> <span class="n">struct</span><span class="p">;</span> <span class="c1"># To create a structure array, use the "struct" command.
+</span><span class="n">struct_</span><span class="p">.</span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1"># Add and access the structure array’s elements using the “.” operator.
+</span><span class="n">struct_</span><span class="p">.</span><span class="n">b</span> <span class="o">=</span> <span class="s">"Rectangle"</span><span class="p">;</span>
+
+<span class="n">cell_</span> <span class="o">=</span> <span class="n">cell</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>  <span class="c1"># to create a cell array, use the "cell" command and specify the number of elements.
+</span><span class="n">cell_</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span> <span class="o">=</span> <span class="s">"String"</span><span class="p">;</span>  <span class="c1"># The elements can be accessed using "{}" and the index of the element.
+</span><span class="n">cell_</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>  <span class="c1"># The elements can be accessed using "{}" and the index of the element.
+</span></code></pre></div></div>
+
+<h3 id="element-access">Element access</h3>
+<p>The matrix(array)’s elements can be accessed using operator <code class="language-plaintext highlighter-rouge">()</code> with their index. Note the index starts at <strong>1</strong> and not 0.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">matrix1</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="k">print</span><span class="p">(</span><span class="n">matrix1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
+<span class="c1"># &gt; result: 
+# &gt; 0
+</span></code></pre></div></div>
+
+<p>The structure array’s elements can be accessed using the <code class="language-plaintext highlighter-rouge">.</code> operator.</p>
+
+<p>The cell’s elements can be accessed using <code class="language-plaintext highlighter-rouge">{}</code> and the index of the element.</p>
+
+<h3 id="operations">Operations</h3>
+<ul>
+  <li>num2str()</li>
+  <li>str2num()</li>
+  <li>unwrap(): remove the changes of more than $2\pi$ from the phase that can be got with the angle function.</li>
+  <li>All the angles are expressed in radians in these functions.</li>
+  <li>When using mathematical functions on matrixex, the function is applied on each element of the matrixes.</li>
+  <li>mult(): matrix multiplication.</li>
+  <li>find(): find a value in arrays or matrixes.</li>
+  <li>findpeaks(): find array peaks.</li>
+  <li>logical operators (pay attention to function <code class="language-plaintext highlighter-rouge">almostequal()</code>)</li>
+</ul>
+
+<p><img src="/assets/images/20221005-FDTD-lsf-2.png" alt="2" /></p>
+
+<h2 id="simulation-objects">Simulation objects</h2>
+<h3 id="simulation-modes">Simulation modes</h3>
+<p>To add a simulation object and set its properties, you first have to be in layoutmode.</p>
+
+<p>You can do the same by using <code class="language-plaintext highlighter-rouge">layoutmode</code>. It returns ‘1’ if you are in layoutmode and ‘0’ when in analysis mode.</p>
+
+<p>To set the simulation into layoutmode, you can use <code class="language-plaintext highlighter-rouge">switchtolayout</code> command.</p>
+
+<h3 id="location-group-scope-in-the-objects-tree">Location (group scope) in the objects tree</h3>
+<p>Default group scope is <code class="language-plaintext highlighter-rouge">model</code>, which is the root of the object tree.</p>
+
+<p>When you add an object using script, it is placed under the current group scope.</p>
+
+<p>Use command <code class="language-plaintext highlighter-rouge">groupscope("::model::NAME")</code> to go into one group named “NAME” or <code class="language-plaintext highlighter-rouge">groupscope("NAME")</code> if in <code class="language-plaintext highlighter-rouge">model</code> scope now.</p>
+
+<h3 id="add-objects">Add objects</h3>
+<p>Command: <code class="language-plaintext highlighter-rouge">addOBJECT_TYPE_NAME</code> if the name of the object’s type is “OBJECT_TYPE_NAME”. For instance, <code class="language-plaintext highlighter-rouge">addrect</code></p>
+
+<h3 id="getset-properties-of-objects">Get/Set properties of objects</h3>
+<p>To set the properties of an object, you first have to select it and then set the properties. But when you add an object, it is automatically selected as shown here with addcircle. So there is no need to select the object if you are to set its properties right after adding it.</p>
+
+<p>How to select objects?</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">select("NAME")</code>: select the object named “NAME”.</li>
+  <li><code class="language-plaintext highlighter-rouge">shiftselect("NAME")</code>: select new object named “NAME” while keeping the current selected objects.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectall()</code>: select all the objects.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectpartial("PNAME")</code>: select objects with the partial name “PNAME”.</li>
+</ul>
+
+<p>How to set property?</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">set("PROPERTY_NAME", VALUE)</code> to set the property named “PROPERTY_NAME” of selected objects with value represented by <code class="language-plaintext highlighter-rouge">VALUE</code>.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">setnamed("OBJECT_NAME", "PROPERTY_NAME", VALUE)</code> to set the property named “PROPERTY_NAME” of the object named “OBJECT_NAME” with value represented by <code class="language-plaintext highlighter-rouge">VALUE</code>.</li>
+</ul>
+
+<p>How to get property?</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">get("PROPERTY_NAME", VALUE)</code> to get the property named “PROPERTY_NAME” of selected objects.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getnamed("OBJECT_NAME", "PROPERTY_NAME")</code> to get the property named “PROPERTY_NAME” of the object named “OBJECT_NAME”.</li>
+</ul>
+
+<h2 id="running-simulations">Running simulations</h2>
+<h3 id="running-a-single-simulation">Running a single simulation</h3>
+<p>To start a simulation, simply use the command <code class="language-plaintext highlighter-rouge">run</code>. It will launch the current project using the resources set in the resource manager.</p>
+
+<p>Once the simulation is finished, the project is in analysis mode. Modification of any simulation settings is not allowed in this mode.So, if you want to change some of the settings for another simulation, you first need to get back to layout mode, using the command <code class="language-plaintext highlighter-rouge">switchtolayout</code>. Note you can use the command <code class="language-plaintext highlighter-rouge">layoutmode</code> to check if the project is in layout or analysis mode. It returns ‘1’ if you are in layoutmode and ‘0’ when in analysis mode.</p>
+
+<h3 id="running-multiple-simulations-using-the-job-manager">Running multiple simulations using the job manager</h3>
+<p><code class="language-plaintext highlighter-rouge">The job manager</code> allows you to run concurrent calculations using the resources set in the resource manager.</p>
+
+<p>Commands:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">addjob("FILENAME")</code> to add the specified project named “FILENAME” to the queue of simulations to be run.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">clearjobs</code> to remove all jobs from the queue.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">runjobs</code> to run all the jobs in the queue.</li>
+</ul>
+
+<p>Notes:</p>
+<ul>
+  <li>The job manager can be used to run a parameter sweep by creating all the simulation files and add them to the queue firstly and then running the jobs in the queue.</li>
+  <li><em>(Advantage)</em> The job manager can run more than 1 simulation at a time.</li>
+</ul>
+
+<h3 id="running-parameter-sweep-and-optimization">Running parameter sweep and optimization</h3>
+<p>When using parameter sweep, the selected task is run by first creating simulation files corresponding to the sweep parameter values and then adding them to the job manager.</p>
+
+<p>Commands:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">runsweep("TASKNAME")</code> to start the specified task named “TASKNAME” in the Optimizations and Sweeps window.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">runsweep</code> to start all the tasks.</li>
+</ul>
+
+<h2 id="accessing-and-visualizing-simulation-results">Accessing and visualizing simulation results</h2>
+<h3 id="accessing-simulation-results">Accessing simulation results</h3>
+<p>There are two types of data available in an object: <code class="language-plaintext highlighter-rouge">results</code> and <code class="language-plaintext highlighter-rouge">rawdata</code>. While <code class="language-plaintext highlighter-rouge">results</code> contains datasets formed by related data, <code class="language-plaintext highlighter-rouge">rawdata</code> contains individual data elements in matrix form. In comparison to <code class="language-plaintext highlighter-rouge">rawdata</code>, <code class="language-plaintext highlighter-rouge">results</code> have the advantage that they can be opened in the visualizer to generate plots with proper axes.</p>
+
+<p>Basic commands:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getdata("OBJECT_NAME", "PROPERTY_NAME")</code> to get a <code class="language-plaintext highlighter-rouge">rawdata</code> named “PROPERTY_NAME” from the object named “OBJECT_NAME”.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getresult("OBJECT_NAME", "PROPERTY_NAME")</code> to get a <code class="language-plaintext highlighter-rouge">results</code> named “PROPERTY_NAME” from the object named “OBJECT_NAME”.</li>
+  <li>Omit the parameter “PROPERTY_NAME” to get all.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mname</span> <span class="o">=</span> <span class="s">'profile'</span><span class="p">;</span>
+
+<span class="c1"># rawdata
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">getdata</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'x'</span><span class="p">);</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">getdata</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'y'</span><span class="p">);</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="n">getdata</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'Ex'</span><span class="p">);</span>
+<span class="n">Ey</span> <span class="o">=</span> <span class="n">getdata</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'Ey'</span><span class="p">);</span>
+<span class="n">Ez</span> <span class="o">=</span> <span class="n">getdata</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'Ez'</span><span class="p">);</span>
+
+<span class="c1"># results (equal)
+</span><span class="n">E</span> <span class="o">=</span> <span class="n">getresult</span><span class="p">(</span><span class="n">mname</span><span class="p">,</span> <span class="s">'E'</span><span class="p">);</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">E</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">E</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+<span class="n">Ex</span> <span class="o">=</span> <span class="n">E</span><span class="p">.</span><span class="n">Ex</span><span class="p">;</span>
+<span class="n">Ey</span> <span class="o">=</span> <span class="n">E</span><span class="p">.</span><span class="n">Ey</span><span class="p">;</span>
+<span class="n">Ez</span> <span class="o">=</span> <span class="n">E</span><span class="p">.</span><span class="n">Ez</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Commands for retrieving specific data from monitor:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getelectric("MONITOR_NAME")</code> to get the intensity of electric field from the monitor named “MONITOR_NAME”.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getmagnetic("MONITOR_NAME")</code> to get the intensity of magnetic field from the monitor named “MONITOR_NAME”.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">transmission("MONITOR_NAME")</code> to get the fraction of power transmitted through the monitor named “MONITOR_NAME” with respect to the source power.</li>
+</ul>
+
+<p>Commands for retrieving data from parameter sweep, optimization, yield analysis, and S-parameter sweep objects:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getsweepdata("SWEEP_NAME", "PROPERTY_NAME")</code> to get a <code class="language-plaintext highlighter-rouge">rawdata</code> named “PROPERTY_NAME” from the Optimization and Sweeps object named “SWEEP_NAME”.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">getsweepresult("SWEEP_NAME")</code> to get a <code class="language-plaintext highlighter-rouge">result</code> named “PROPERTY_NAME” from the Optimization and Sweeps object named “SWEEP_NAME”.</li>
+  <li>Omit the parameter “PROPERTY_NAME” to get all.</li>
+</ul>
+
+<p>Notes:</p>
+<ul>
+  <li>The sign of the transmission depends on the direction of propagation. The transmission is positive when the power is flowing through the monitor in the positive direction, that is in the +x, +y, or +z direction. So for a planewave propagating in backward (negative) direction, a negative transmission will be returned.</li>
+</ul>
+
+<h3 id="visualising-simulation-results">Visualising simulation results</h3>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">plot</code> creates a line plot. All data sets in its argument should be sampled on the same position vector.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">);</span>
+<span class="c1"># &gt;
+</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s">"x label"</span><span class="p">,</span> <span class="s">"y label"</span><span class="p">,</span> <span class="s">"title"</span><span class="p">);</span>
+<span class="n">legend</span><span class="p">(</span><span class="s">"sin(x)"</span><span class="p">,</span> <span class="s">"cos(x)"</span><span class="p">);</span>
+<span class="c1"># &gt;
+</span>
+<span class="c1"># Plotting options
+</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="s">"x"</span><span class="p">,</span> <span class="s">"y"</span><span class="p">,</span> <span class="s">"title"</span><span class="p">,</span> <span class="s">"plot type = point, color = red, marker style = o"</span><span class="p">)</span>
+<span class="c1"># &gt;
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">plotxy</code> allows us to use datasets that are sampled on different position vectors.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x1</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">);</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">x2</span><span class="p">);</span>
+
+<span class="n">plotxy</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s">"x label"</span><span class="p">,</span> <span class="s">"y label"</span><span class="p">,</span> <span class="s">"title"</span><span class="p">);</span>
+<span class="n">legend</span><span class="p">(</span><span class="s">"sin(x1)"</span><span class="p">,</span> <span class="s">"cos(x2)"</span><span class="p">)</span>
+<span class="c1"># &gt;
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">polar</code> visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.</li>
+  <li><code class="language-plaintext highlighter-rouge">polar2</code> adds multiple polar plots sampled on different angle values.</li>
+  <li><code class="language-plaintext highlighter-rouge">image</code> creates 2D color plots.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">meshgridx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">meshgridy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">^</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">^</span> <span class="mi">2</span><span class="p">;</span>
+<span class="n">image</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="s">"x label"</span><span class="p">,</span> <span class="s">"y label"</span><span class="p">,</span> <span class="s">"title"</span><span class="p">);</span>
+<span class="c1"># &gt;
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">polarimage</code> creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">setplot</code> to get the properties can be set for current figure window.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">setplot("PROPERTY_NAME", VALUE)</code> to set the property named “PROPERTY_NAME” of the current figure window with value <code class="language-plaintext highlighter-rouge">VALUE</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">holdon</code> switches the plotting mode to hold multiple functions on the same figure.</li>
+  <li><code class="language-plaintext highlighter-rouge">holdoff</code> switches off the holdon mode.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectfigure(NUMBER)</code> selects a figure with a specified figure number <code class="language-plaintext highlighter-rouge">NUMBER</code>. When used without any argument, it selects the last figure created.</li>
+  <li><code class="language-plaintext highlighter-rouge">exportfigure("FILE_NAME", XRES, YRES)</code> exports the current figure to a JPG image with the name ‘filename’, the x resolution <code class="language-plaintext highlighter-rouge">XRES</code> and the y resolution <code class="language-plaintext highlighter-rouge">YRES</code>. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.</li>
+</ul>
+
+<h2 id="file-io">File I/O</h2>
+<h3 id="manipulating-project-files">Manipulating project files</h3>
+<p>Commands:</p>
+<ul>
+  <li>Use command <code class="language-plaintext highlighter-rouge">newproject</code> without argument will create a new project based on the default template. You can also create a new simulation project based on another template with an argument, for instance to use materials from an existing simulation file.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">save("PATH_FILENAME")</code> to save the current simulation project in a file specified with “PATH_FILENAME”. You can specify a path, otherwise the file will be saved in the current directory. If you don’t specify the file name, a file browser window will open.</li>
+  <li>Use command <code class="language-plaintext highlighter-rouge">load(PATH_FILENAME)</code> to load another project with “PATH_FILENAME”.</li>
+</ul>
+
+<h2 id="tips">Tips</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">""</code> is equal to <code class="language-plaintext highlighter-rouge">''</code>.</li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<h3 id="core">Core</h3>
+<p>[1] Lumerical scripting language - Alphabetical list: https://optics.ansys.com/hc/en-us/articles/360034923553</p>
+
+<p>[2] Lumerical scripting language - By category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category</p>
+
+<p>[3] Scripting100 videos: https://www.bilibili.com/video/BV1hr4y1w7Ze?p=1&amp;vd_source=c24841bbb7f5d10925aeadfcbf43b52f</p>
+
+<p>[4] Scripting100 transcripts: https://optics.ansys.com/hc/en-us/sections/360007813714-SCRIPTING100-List-of-videos</p>
+
+<p><em>Note:</em></p>
+<ul>
+  <li>You can learn Scripting100 Course using Ref.[3] with Ref.[4].</li>
+</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><category term="meta" /><summary type="html"><![CDATA[Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a]]></summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
+<h2 id="1-far-field-projections">1. Far-field projections</h2>
+<p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
+
+<p>A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves propagating at different angles as the basis for the decomposition. The end result is that the far field projections functions provide a straightforward, accurate, and numerically efficient method for calculating the EM fields anywhere in the intermediate and far field regions.</p>
+
+<p><em>It seems that grating projections are the special case (for periodic structures) of far-field projections.</em></p>
+
+<p><strong>Application cases:</strong> fileds known on a plane or a closed surface.</p>
+
+<h2 id="12-the-mesh-order-property">1.2. The mesh order property</h2>
+<p><code class="language-plaintext highlighter-rouge">The mesh order property</code> governs how overlapping objects are meshed in the simulation. It serves no role for objects which do not overlap.</p>
+
+<p>The mesh order can be set at the material level (in the material database), or the object level (in the object properties).</p>
+
+<p>Materials with a lower mesh order take priority over materials with a higher priority number. Areas that overlap are assigned the material properties of the higher priority material.</p>
+
+<h2 id="3-pml-边界条件">3. PML 边界条件</h2>
+<p>PML 边界基本上被实现为吸收材料，该吸收材料也与周围的材料阻抗匹配，以最大程度地减少反射。 理想的PML边界会产生零反射，但是实际上，由于底层PML方程的离散化，总会有小反射。</p>
+
+<h3 id="31-types">3.1 Types</h3>
+<p><strong>Standard</strong></p>
+
+<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br />
+如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br />
+通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。</p>
+
+<p><strong>Stabilized</strong></p>
+
+<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br />
+使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br />
+稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。</p>
+
+<p><strong>Steep Angle</strong></p>
+
+<p>此配置文件与标准配置文件非常相似，并且意在将PML边界与周期性边界条件结合使用时使用。 它设计用于在光线沿几乎平行于PML边界的方向传播的情况下提供增强的吸收。 在非常粗糙的离散化下（每个波长少于十个点），该轮廓通常比标准轮廓的吸收率低。</p>
+
+<p><strong>Custom</strong></p>
+
+<p>标准的，稳定的和陡峭的侧面轮廓具有固定的PML参数。 自定义配置文件允许用户通过对所有PML参数值的完全控制来进行试验。 自定义配置文件的初始值是标准配置文件的初始值。</p>
+
+<h3 id="32-如何使用">3.2 如何使用</h3>
+<ol>
+  <li>boundary conditions 中的 <code class="language-plaintext highlighter-rouge">standard</code> 类型适用于在所有边界上使用PML的模拟。</li>
+  <li>如果是周期性的装置，可以将光的衍射，所以选择 <code class="language-plaintext highlighter-rouge">steep angle</code> 类型。</li>
+  <li>PML 边界与光与物质相互作用的平面的距离至少为均匀材料中光波波长的一半。</li>
+</ol>
+
+<h2 id="4-simulation-region">4. Simulation Region</h2>
+<ol>
+  <li>Dimension 2D vs 3D:<br />
+当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。</li>
+  <li>Mesh Refinement：
+    <ul>
+      <li>一般使用 Conformal Variant0 对非金属材质界面应用保形网格。</li>
+      <li>当有金属时可使用 Conformal Variant1 对金属界面应用保形网格。缺点：网格粗糙导致人工金属模态，因此需要加入额外的收敛性测试。</li>
+      <li>其他选项的鲁棒性不好。</li>
+    </ul>
+  </li>
+  <li>Simulation time:<br />
+较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br />
 仿真时间设置过小的可能结果：
-    &lt;ul&gt;
-      &lt;li&gt;频域监视器的伪影&lt;/li&gt;
-      &lt;li&gt;投射谱的 artificial ripples&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The monitors besides the simulation region will not measure any data.&lt;/li&gt;
-  &lt;li&gt;When the simulation is unstable, smaller time step may be helpful.&lt;/li&gt;
-  &lt;li&gt;Mesh override region:
-    &lt;ul&gt;
-      &lt;li&gt;It can be used to define finer mesh on :
-        &lt;ul&gt;
-          &lt;li&gt;Small structures, e.g. thin layers and gaps&lt;/li&gt;
-          &lt;li&gt;Plasmonic devices&lt;/li&gt;
-          &lt;li&gt;The interface between the metal and dieletric materials to have the filed concentrated at the surface&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;The thickness of a layer is recommended to includes at least 2 mesh cells.&lt;/li&gt;
-      &lt;li&gt;The mesh override region contains only an interger number of mesh cells.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Boundary condition:
-    &lt;ul&gt;
-      &lt;li&gt;PML: absorb all; more details see &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3. PML 边界条件&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary&lt;/li&gt;
-      &lt;li&gt;PMC: perfect magnetic boundary that relects all&lt;/li&gt;
-      &lt;li&gt;Periodic: used when structure, source, and field are all periodic&lt;/li&gt;
-      &lt;li&gt;Symmetry or anti-symmetry: used when structure, source, and field are all symmetric&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Tip:&lt;/em&gt; 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Tip:&lt;/em&gt; How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.&lt;br /&gt;
- 经验法则（对照 CAD 彩色视图验证）：&lt;br /&gt;
- &lt;img src=&quot;/assets/images/2022-10-04-FDTD-basic-1.png&quot; alt=&quot;&quot; /&gt;
+    <ul>
+      <li>频域监视器的伪影</li>
+      <li>投射谱的 artificial ripples</li>
+    </ul>
+  </li>
+  <li>The monitors besides the simulation region will not measure any data.</li>
+  <li>When the simulation is unstable, smaller time step may be helpful.</li>
+  <li>Mesh override region:
+    <ul>
+      <li>It can be used to define finer mesh on :
+        <ul>
+          <li>Small structures, e.g. thin layers and gaps</li>
+          <li>Plasmonic devices</li>
+          <li>The interface between the metal and dieletric materials to have the filed concentrated at the surface</li>
+        </ul>
+      </li>
+      <li>The thickness of a layer is recommended to includes at least 2 mesh cells.</li>
+      <li>The mesh override region contains only an interger number of mesh cells.</li>
+    </ul>
+  </li>
+  <li>Boundary condition:
+    <ul>
+      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code></li>
+      <li>metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary</li>
+      <li>PMC: perfect magnetic boundary that relects all</li>
+      <li>Periodic: used when structure, source, and field are all periodic</li>
+      <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
+      <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
+      <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
+ 经验法则（对照 CAD 彩色视图验证）：<br />
+ <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="" />
  设置方法：
-        &lt;ol&gt;
-          &lt;li&gt;2D symmetric structure: Set Symmetry of Anti-symmetry options in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x min bc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y min bc&lt;/code&gt;, and set non-symmetry BC (generally PML) in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x max bc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y max bc&lt;/code&gt;.&lt;/li&gt;
-          &lt;li&gt;1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x min bc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x max bc&lt;/code&gt;.&lt;/li&gt;
-          &lt;li&gt;Enable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;allow all symmetry on all boundaries&lt;/code&gt;.&lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Mesh accuracy is considered high-accurate at the value 4 or 5.&lt;/li&gt;
-  &lt;li&gt;If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.&lt;/li&gt;
-&lt;/ol&gt;
+        <ol>
+          <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
+          <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
+          <li>Enable <code class="language-plaintext highlighter-rouge">allow all symmetry on all boundaries</code>.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Mesh accuracy is considered high-accurate at the value 4 or 5.</li>
+  <li>If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.</li>
+</ol>
 
-&lt;h2 id=&quot;source&quot;&gt;Source&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;The fileds measured in the two cells around the source injeciton plane may be unphysical.&lt;/li&gt;
-  &lt;li&gt;Plane source:
-    &lt;ul&gt;
-      &lt;li&gt;Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.&lt;/li&gt;
-      &lt;li&gt;BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.&lt;/li&gt;
-      &lt;li&gt;Diffracting source type: The source span determines the aperture.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Tip&lt;/em&gt;: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Error:&lt;/em&gt; When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.&lt;/li&gt;
-      &lt;li&gt;&lt;em&gt;Error:&lt;/em&gt; The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.&lt;br /&gt;
+<h2 id="source">Source</h2>
+<ol>
+  <li>The fileds measured in the two cells around the source injeciton plane may be unphysical.</li>
+  <li>Plane source:
+    <ul>
+      <li>Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.</li>
+      <li>BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.</li>
+      <li>Diffracting source type: The source span determines the aperture.</li>
+      <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
+      <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
+      <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
 经验选择：
-&lt;img src=&quot;/assets/images/2022-10-04-FDTD-basic-2.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;TFSF (total-field scattered field) source&lt;/li&gt;
-  &lt;li&gt;Beam source&lt;/li&gt;
-  &lt;li&gt;Mode source&lt;/li&gt;
-  &lt;li&gt;Dipole source&lt;/li&gt;
-&lt;/ol&gt;
+<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
+    </ul>
+  </li>
+  <li>TFSF (total-field scattered field) source</li>
+  <li>Beam source</li>
+  <li>Mode source</li>
+  <li>Dipole source</li>
+</ol>
 
-&lt;h2 id=&quot;monitor&quot;&gt;Monitor&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.&lt;/li&gt;
-  &lt;li&gt;Time monitor can be used to check if the simulation time is long enough.&lt;/li&gt;
-  &lt;li&gt;Use point time monitor can obtain spectrum.&lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="monitor">Monitor</h2>
+<ol>
+  <li>Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.</li>
+  <li>Time monitor can be used to check if the simulation time is long enough.</li>
+  <li>Use point time monitor can obtain spectrum.</li>
+</ol>
 
-&lt;h2 id=&quot;analysis&quot;&gt;Analysis&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Design workflow:
-    &lt;ul&gt;
-      &lt;li&gt;Start with a coarse mesh&lt;/li&gt;
-      &lt;li&gt;Convergence testing&lt;/li&gt;
-      &lt;li&gt;变精度搜索&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Sources of errors (and corresponding solutions):
-    &lt;ul&gt;
-      &lt;li&gt;Three factors:
-&lt;img src=&quot;/assets/images/2022-10-04-FDTD-basic-3.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Simulation time&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;early shutoff&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;auto shutoff min&lt;/code&gt; (in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Edit FDTD simulation&lt;/code&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How to judge whether the simulation stop early?
-&lt;em&gt;(One method)&lt;/em&gt; Status result of the FDTD solver region:
-    &lt;ul&gt;
-      &lt;li&gt;1 - Reached the maximum simulation time&lt;/li&gt;
-      &lt;li&gt;2 - Early shut off, reached auto shutoff min threshold&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="analysis">Analysis</h2>
+<ol>
+  <li>Design workflow:
+    <ul>
+      <li>Start with a coarse mesh</li>
+      <li>Convergence testing</li>
+      <li>变精度搜索</li>
+    </ul>
+  </li>
+  <li>Sources of errors (and corresponding solutions):
+    <ul>
+      <li>Three factors:
+<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
+      <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
+    </ul>
+  </li>
+  <li>How to judge whether the simulation stop early?
+<em>(One method)</em> Status result of the FDTD solver region:
+    <ul>
+      <li>1 - Reached the maximum simulation time</li>
+      <li>2 - Early shut off, reached auto shutoff min threshold</li>
+    </ul>
+  </li>
+</ol>
 
-&lt;h2 id=&quot;tips&quot;&gt;Tips&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;要通过收敛性测试实现高精度计算。&lt;/li&gt;
-  &lt;li&gt;When running, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Force quit&lt;/code&gt; is not recommended since it may cause the problem that the license is not released normally.&lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="tips">Tips</h2>
+<ol>
+  <li>要通过收敛性测试实现高精度计算。</li>
+  <li>When running, <code class="language-plaintext highlighter-rouge">Force quit</code> is not recommended since it may cause the problem that the license is not released normally.</li>
+</ol>
 
-&lt;h2 id=&quot;reference-resources&quot;&gt;Reference (Resources)&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Core&lt;/strong&gt;&lt;/p&gt;
+<h2 id="reference-resources">Reference (Resources)</h2>
+<p><strong>Core</strong></p>
 
-&lt;p&gt;[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual&lt;/p&gt;
+<p>[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual</p>
 
-&lt;p&gt;[2] Python API: https://optics.ansys.com/hc/en-us/sections/360005039073-Automation-API&lt;/p&gt;
+<p>[2] Python API: https://optics.ansys.com/hc/en-us/sections/360005039073-Automation-API</p>
 
-&lt;p&gt;[3] lsf Language: https://optics.ansys.com/hc/en-us/articles/360034923553&lt;/p&gt;
+<p>[3] lsf Language: https://optics.ansys.com/hc/en-us/articles/360034923553</p>
 
-&lt;p&gt;[4] lsf Language Category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category&lt;/p&gt;
+<p>[4] lsf Language Category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category</p>
 
-&lt;p&gt;[5] ANSYS Forum: https://forum.ansys.com/&lt;/p&gt;
+<p>[5] ANSYS Forum: https://forum.ansys.com/</p>
 
-&lt;p&gt;&lt;strong&gt;Others&lt;/strong&gt;&lt;/p&gt;
+<p><strong>Others</strong></p>
 
-&lt;p&gt;[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html&lt;/p&gt;
+<p>[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
 
-&lt;p&gt;[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485&lt;/p&gt;</content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html">1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.</summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="http://localhost:4000/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>http://localhost:4000/code/2022/08/29/blog-build</id><content type="html" xml:base="http://localhost:4000/code/2022/08/29/blog-build.html">&lt;!-- # 基于 Github Pages &amp; Jekyll 的个人博客搭建方法 --&gt;
-&lt;h2 id=&quot;1-软件安装&quot;&gt;1. 软件安装&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;清单&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Git&lt;/li&gt;
-  &lt;li&gt;Github Desktop (optional)&lt;/li&gt;
-  &lt;li&gt;Ruby + Devkit
-其中，Ruby 安装有如下注意事项：&lt;/li&gt;
-  &lt;li&gt;安装包下载地址：https://rubyinstaller.org/downloads/&lt;/li&gt;
-  &lt;li&gt;以管理员身份运行安装文件&lt;/li&gt;
-  &lt;li&gt;安装目录不要包含中文和空格（空格是一个&lt;strong&gt;坑&lt;/strong&gt;，会导致下方的部分命令出现运行时错误）&lt;/li&gt;
-  &lt;li&gt;其他选项可默认执行&lt;/li&gt;
-  &lt;li&gt;MSYS 安装会耗时久一些，耐心
-Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。&lt;/li&gt;
-&lt;/ul&gt;
+<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
+<h2 id="1-软件安装">1. 软件安装</h2>
+<p><strong>清单</strong></p>
+<ul>
+  <li>Git</li>
+  <li>Github Desktop (optional)</li>
+  <li>Ruby + Devkit
+其中，Ruby 安装有如下注意事项：</li>
+  <li>安装包下载地址：https://rubyinstaller.org/downloads/</li>
+  <li>以管理员身份运行安装文件</li>
+  <li>安装目录不要包含中文和空格（空格是一个<strong>坑</strong>，会导致下方的部分命令出现运行时错误）</li>
+  <li>其他选项可默认执行</li>
+  <li>MSYS 安装会耗时久一些，耐心
+Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。</li>
+</ul>
 
-&lt;h2 id=&quot;2-github-pages&quot;&gt;2. Github Pages&lt;/h2&gt;
-&lt;p&gt;Github 上建立以用户 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt; 为第一级名称的 public 仓库：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;.github.io, 如此获得域名为 https://&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;id&lt;/code&gt;/github.io 的站点作为博客网站。&lt;/p&gt;
+<h2 id="2-github-pages">2. Github Pages</h2>
+<p>Github 上建立以用户 <code class="language-plaintext highlighter-rouge">id</code> 为第一级名称的 public 仓库：<code class="language-plaintext highlighter-rouge">id</code>.github.io, 如此获得域名为 https://<code class="language-plaintext highlighter-rouge">id</code>/github.io 的站点作为博客网站。</p>
 
-&lt;h2 id=&quot;3-ruby-相关包安装&quot;&gt;3. Ruby 相关包安装&lt;/h2&gt;
-&lt;p&gt;在终端运行依次如下指令，安装如下包：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;bundler&lt;/li&gt;
-  &lt;li&gt;jekyll&lt;/li&gt;
-  &lt;li&gt;webrick（也是一个&lt;strong&gt;坑&lt;/strong&gt;：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
-    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jekyll&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bundler&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;webrick&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="3-ruby-相关包安装">3. Ruby 相关包安装</h2>
+<p>在终端运行依次如下指令，安装如下包：</p>
+<ul>
+  <li>bundler</li>
+  <li>jekyll</li>
+  <li>webrick（也是一个<strong>坑</strong>：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">webrick</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-&lt;h2 id=&quot;4-建立博客文件和部署到-github-pages&quot;&gt;4. 建立博客文件和部署到 Github pages&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;进入自己选定的本地博客目录&lt;/li&gt;
-  &lt;li&gt;安装项目依赖的所有 gem 包。运行&lt;br /&gt;
-   &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;创建博客文件夹。设 [blog name] 为博客名称。运行&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll new [blog name]&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;本地预览。进入博客文件夹内后，运行&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll server&lt;/code&gt;&lt;br /&gt;
-或者（区别在 bundle 的作用）&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll server&lt;/code&gt;&lt;br /&gt;
-浏览器进入网址 http://localhost:4000 查看效果。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + c&lt;/code&gt; 结束本地预览。&lt;/li&gt;
-  &lt;li&gt;运行如下命令生成网页文件&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;&lt;br /&gt;
-将 _site 文件夹&lt;strong&gt;内&lt;/strong&gt;的所有文件复制到本地 Github Pages 仓库根目录下。&lt;/li&gt;
-  &lt;li&gt;同步到 Github.&lt;/li&gt;
-&lt;/ol&gt;
+<h2 id="4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</h2>
+<ol>
+  <li>进入自己选定的本地博客目录</li>
+  <li>安装项目依赖的所有 gem 包。运行<br />
+   <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br />
+<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code></li>
+  <li>本地预览。进入博客文件夹内后，运行<br />
+<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br />
+或者（区别在 bundle 的作用）<br />
+<code class="language-plaintext highlighter-rouge">jekyll server</code><br />
+浏览器进入网址 http://localhost:4000 查看效果。<code class="language-plaintext highlighter-rouge">Ctrl + c</code> 结束本地预览。</li>
+  <li>运行如下命令生成网页文件<br />
+<code class="language-plaintext highlighter-rouge">jekyll build</code><br />
+将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
+  <li>同步到 Github.</li>
+</ol>
 
-&lt;h2 id=&quot;5-应用和修改-theme&quot;&gt;5. 应用和修改 theme&lt;/h2&gt;
-&lt;p&gt;在 Github 中搜索 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll theme&lt;/code&gt;，寻找感兴趣的主题，并按照其文档部署到自己的项目，以及自定义的修改。&lt;/p&gt;
+<h2 id="5-应用和修改-theme">5. 应用和修改 theme</h2>
+<p>在 Github 中搜索 <code class="language-plaintext highlighter-rouge">jekyll theme</code>，寻找感兴趣的主题，并按照其文档部署到自己的项目，以及自定义的修改。</p>
 
-&lt;p&gt;对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。&lt;/p&gt;
+<p>对相关知识不熟悉的朋友，建议选择 star 较多的项目，可能会 bug 更少，效果更好。</p>
 
-&lt;h2 id=&quot;6-其他&quot;&gt;6. 其他&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jemoji&lt;/code&gt; 包可以为 jekyll 提供 emoji 支持。&lt;/p&gt;
+<h2 id="6-其他">6. 其他</h2>
+<p><code class="language-plaintext highlighter-rouge">jemoji</code> 包可以为 jekyll 提供 emoji 支持。</p>
 
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;本文介绍择其大纲，细节较为简略。可结合以下文章食用。由于更新时间问题，下述文章的部分内容如今是可能产生问题的，参考时注意规避本文提到的两个坑。&lt;/em&gt;&lt;/p&gt;
+<h2 id="reference">Reference</h2>
+<p><em>本文介绍择其大纲，细节较为简略。可结合以下文章食用。由于更新时间问题，下述文章的部分内容如今是可能产生问题的，参考时注意规避本文提到的两个坑。</em></p>
 
-&lt;p&gt;[1] Github Pages + jekyll 全面介绍极简搭建个人网站和博客  https://zhuanlan.zhihu.com/p/51240503&lt;/p&gt;
+<p>[1] Github Pages + jekyll 全面介绍极简搭建个人网站和博客  https://zhuanlan.zhihu.com/p/51240503</p>
 
-&lt;p&gt;[2] Jekyll + Github Pages 搭建个人免费博客  https://zhuanlan.zhihu.com/p/87225594&lt;/p&gt;
+<p>[2] Jekyll + Github Pages 搭建个人免费博客  https://zhuanlan.zhihu.com/p/87225594</p>
 
-&lt;p&gt;[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec&lt;/p&gt;
+<p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
-&lt;p&gt;[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486&lt;/p&gt;</content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html">1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。</summary></entry><entry><title type="html">Life test</title><link href="http://localhost:4000/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>http://localhost:4000/life/2022/08/29/life-test</id><content type="html" xml:base="http://localhost:4000/life/2022/08/29/life-test.html">&lt;!-- # life test. --&gt;</content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="http://localhost:4000/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>http://localhost:4000/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="http://localhost:4000/others/2022/08/28/wps-equation-configure.html">&lt;!-- # WPS 公式快捷输入的配置方法 --&gt;
-&lt;h2 id=&quot;1-设置插入公式快捷键&quot;&gt;1. 设置插入公式快捷键&lt;/h2&gt;
-&lt;p&gt;不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。&lt;/p&gt;
+<p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
+<h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
+<p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
 
-&lt;p&gt;在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;类别&lt;/code&gt; 中选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;“插入”选项卡&lt;/code&gt;，在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;命令&lt;/code&gt; 中选择 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EquationInsert&lt;/code&gt;，在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;当前快捷键窗口&lt;/code&gt; 可以查看当前已定义的快捷键（默认为空），在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;请按新的快捷键&lt;/code&gt; 区域录入新的快捷键。如：Alt + =。&lt;/p&gt;
+<p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/wec0.png&quot; alt=&quot;0&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/wec0.png" alt="0" /></p>
 
-&lt;h2 id=&quot;2-掌握-wps-公式编辑器的快捷键&quot;&gt;2. 掌握 WPS 公式编辑器的快捷键&lt;/h2&gt;
-&lt;p&gt;WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。&lt;/p&gt;
+<h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
+<p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
 
-&lt;p&gt;&lt;strong&gt;常用 WPS 公式编辑器快捷键&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;调出选项卡
-    &lt;ul&gt;
-      &lt;li&gt;Alt + F: 文件选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + E: 编辑选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + V: 视图选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + T: 格式选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + S: 样式选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + Z: 尺寸选项卡&lt;/li&gt;
-      &lt;li&gt;Alt + H: 帮助选项卡&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;退出公式编辑
-    &lt;ul&gt;
-      &lt;li&gt;Alt + F -&amp;gt; X: 即文件选项卡中 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;退出&lt;/code&gt; 选项&lt;/li&gt;
-      &lt;li&gt;其他选项同理&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;希腊字母
-    &lt;ul&gt;
-      &lt;li&gt;Ctrl + G -&amp;gt; 英文字母: 输入英文字母对应的小写希腊字母&lt;/li&gt;
-      &lt;li&gt;Ctrl + G -&amp;gt; Shift -&amp;gt; 英文字母: 输入英文字母对应的大写希腊字母&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;括号&lt;br /&gt;
-&lt;em&gt;由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Ctrl + 9 / 0: 小括号&lt;/li&gt;
-      &lt;li&gt;Ctrl + [ / ]: 中括号&lt;/li&gt;
-      &lt;li&gt;Ctrl + Shift + [ / ]: 大括号&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;数学公式
-    &lt;ul&gt;
-      &lt;li&gt;Ctrl + F: 上下分式&lt;/li&gt;
-      &lt;li&gt;Ctrl + /: 单行倾斜分式&lt;/li&gt;
-      &lt;li&gt;Ctrl + R: 根式（省略2）&lt;/li&gt;
-      &lt;li&gt;Ctrl + T -&amp;gt; N : 任意阶根式&lt;/li&gt;
-      &lt;li&gt;Ctrl + H: 上标&lt;/li&gt;
-      &lt;li&gt;Ctrl + L: 下标&lt;/li&gt;
-      &lt;li&gt;Ctrl + J: 上下标&lt;/li&gt;
-      &lt;li&gt;Ctrl + K -&amp;gt; &amp;lt;: 小于等于&lt;/li&gt;
-      &lt;li&gt;Ctrl + K -&amp;gt; &amp;gt;: 大于等于&lt;/li&gt;
-      &lt;li&gt;Ctrl + Alt + ‘: 一阶导数&lt;/li&gt;
-      &lt;li&gt;Ctrl + Shift + ‘: 二阶导数&lt;/li&gt;
-      &lt;li&gt;Ctrl + I: 定积分&lt;/li&gt;
-      &lt;li&gt;Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线&lt;/li&gt;
-      &lt;li&gt;Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;其他
-    &lt;ul&gt;
-      &lt;li&gt;Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<p><strong>常用 WPS 公式编辑器快捷键</strong></p>
+<ul>
+  <li>调出选项卡
+    <ul>
+      <li>Alt + F: 文件选项卡</li>
+      <li>Alt + E: 编辑选项卡</li>
+      <li>Alt + V: 视图选项卡</li>
+      <li>Alt + T: 格式选项卡</li>
+      <li>Alt + S: 样式选项卡</li>
+      <li>Alt + Z: 尺寸选项卡</li>
+      <li>Alt + H: 帮助选项卡</li>
+    </ul>
+  </li>
+  <li>退出公式编辑
+    <ul>
+      <li>Alt + F -&gt; X: 即文件选项卡中 <code class="language-plaintext highlighter-rouge">退出</code> 选项</li>
+      <li>其他选项同理</li>
+    </ul>
+  </li>
+  <li>希腊字母
+    <ul>
+      <li>Ctrl + G -&gt; 英文字母: 输入英文字母对应的小写希腊字母</li>
+      <li>Ctrl + G -&gt; Shift -&gt; 英文字母: 输入英文字母对应的大写希腊字母</li>
+    </ul>
+  </li>
+  <li>括号<br />
+<em>由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号</em>
+    <ul>
+      <li>Ctrl + 9 / 0: 小括号</li>
+      <li>Ctrl + [ / ]: 中括号</li>
+      <li>Ctrl + Shift + [ / ]: 大括号</li>
+    </ul>
+  </li>
+  <li>数学公式
+    <ul>
+      <li>Ctrl + F: 上下分式</li>
+      <li>Ctrl + /: 单行倾斜分式</li>
+      <li>Ctrl + R: 根式（省略2）</li>
+      <li>Ctrl + T -&gt; N : 任意阶根式</li>
+      <li>Ctrl + H: 上标</li>
+      <li>Ctrl + L: 下标</li>
+      <li>Ctrl + J: 上下标</li>
+      <li>Ctrl + K -&gt; &lt;: 小于等于</li>
+      <li>Ctrl + K -&gt; &gt;: 大于等于</li>
+      <li>Ctrl + Alt + ‘: 一阶导数</li>
+      <li>Ctrl + Shift + ‘: 二阶导数</li>
+      <li>Ctrl + I: 定积分</li>
+      <li>Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线</li>
+      <li>Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头</li>
+    </ul>
+  </li>
+  <li>其他
+    <ul>
+      <li>Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）</li>
+    </ul>
+  </li>
+</ul>
 
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;p&gt;[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html&lt;/p&gt;</content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html">1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</summary></entry></feed>
+<h2 id="reference">Reference</h2>
+<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
