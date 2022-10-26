@@ -19,13 +19,31 @@ var store = [{
       },{
         "title": "FDTD Note: Basic",
         "excerpt":"1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections. A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves...","categories": ["optics"],
-        "tags": ["FDTD"],
+        "tags": ["FDTD","meta"],
         "url": "/optics/2022/10/04/FDTD-basic.html",
         "teaser": null
       },{
         "title": "FDTD Note: lsf Language",
         "excerpt":"Useful commands in ScriptPrompt clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a clc; # clear all the commands in the window Variables Variable types Different types of variable a available in Lumerical’s scripting: Strings can be used to define a...","categories": ["optics"],
-        "tags": ["FDTD","lsf"],
+        "tags": ["FDTD","lsf","meta"],
         "url": "/optics/2022/10/06/FDTD-lsf.html",
+        "teaser": null
+      },{
+        "title": "FDTD Note: LumOpt",
+        "excerpt":"Install 1. Choose your install directory and run git clone https://github.com/chriskeraly/LumOpt.git python setup.py -develop 2. Add the Lumerical API lumapi to your Python path In the LumOpt install directory, go into the “lumopt” directory, and then open “init.py”. Modify the path of lumapi according to your platform and install directory,...","categories": ["optics"],
+        "tags": ["FDTD","lumopt","meta"],
+        "url": "/optics/2022/10/08/FDTD-lumopt.html",
+        "teaser": null
+      },{
+        "title": "Meta relatives",
+        "excerpt":"Optimization Deterministic and stochastic optimization methods For more, see Ref.[1]. Complex permittivity $\\leftrightarrow$ complex refractive index Assume dealing with optical frequencies, in which case we can treat $\\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies. In this case, the relationship between the complex relative permittivity (also...","categories": ["optics"],
+        "tags": ["meta"],
+        "url": "/optics/2022/10/08/Meta-relatives.html",
+        "teaser": null
+      },{
+        "title": "Metasurface design",
+        "excerpt":"Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by \\[\\begin{equation} \\varphi(r, \\omega) = -\\frac{\\omega}{c}(\\sqrt{r^2+f^2}-f) \\end{equation}\\] where $\\varphi$, $\\omega$, $c$, $r$, and $f$ are phase, radial coordinate, velocity in the backgroud, angular frequency,...","categories": ["optics"],
+        "tags": ["meta","FDTD"],
+        "url": "/optics/2022/10/20/Metasurface-design.html",
         "teaser": null
       }]

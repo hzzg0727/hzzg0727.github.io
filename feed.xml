@@ -1,4 +1,182 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-06T12:14:09+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-26T09:31:44+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
+<h2 id="achromatic-focusing-theory">Achromatic focusing theory</h2>
+<p>To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</p>
+
+\[\begin{equation}
+    \varphi(r, \omega) = -\frac{\omega}{c}(\sqrt{r^2+f^2}-f)
+\end{equation}\]
+
+<p>where $\varphi$, $\omega$, $c$, $r$, and $f$ are phase, radial coordinate, velocity in the backgroud, angular frequency, and focal length, respectively.</p>
+
+<p>Eq (1) can be further written as</p>
+
+\[\begin{equation}
+    \varphi(r, \omega) = -\frac{\omega}{c}(\sqrt{r^2+f^2}-f) + C(\omega)
+\end{equation}\]
+
+<p>where $C(\omega)$ is a reference phase whose value depends on the angular frequency only. This value offers an extra degree of freedom for multi-wavelength design, but has no influence on the focus effect of metalens.</p>
+
+<p>The Taylor expansion of $\varphi(r, \omega)$ can be written as</p>
+
+\[\begin{equation}
+    \varphi(r, \omega) = \varphi(r, \omega_{d}) + \left. \frac{\partial \varphi}{\partial \omega}\right |_{\omega = \omega_{d}}(\omega - \omega_{d}) + \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} \frac{(\omega - \omega_{d})^2}{2} + ...
+\end{equation}\]
+
+<p>where the three terms in the right are the required phase, group delay, and group delay dispersion, respectively.</p>
+
+<p>Compare Eq (3) with Eq (1), we have</p>
+
+\[\begin{equation}
+    \varphi(r, \omega_{d})=-\frac{\omega_{d}}{c}(\sqrt{r^2+f^2}-f)
+\end{equation}\]
+
+\[\begin{equation}
+    \left. \frac{\partial \varphi}{\partial \omega} \right |_{\omega = \omega_{d}} = -\frac{1}{c}(\sqrt{r^2+f^2}-f)
+\end{equation}\]
+
+\[\begin{equation}
+    \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} = 0
+\end{equation}\]
+
+<p>Compare Eq (3) with Eq (2), we have</p>
+
+\[\begin{equation}
+    \varphi(r, \omega_{d}) = -\frac{\omega_{d}}{c}(\sqrt{r^2+f^2}-f) + C(\omega_{d})
+\end{equation}\]
+
+\[\begin{equation}
+    \left. \frac{\partial \varphi}{\partial \omega} \right |_{\omega = \omega_{d}} = -\frac{1}{c}(\sqrt{r^2+f^2}-f) + \left. C'(\omega) \right |_{\omega=\omega_d}
+\end{equation}\]
+
+\[\begin{equation}
+    \left. \frac{\partial^2\varphi}{\partial \omega^2} \right |_{\omega = \omega_{d}} = \left. C''(\omega) \right |_{\omega=\omega_d}
+\end{equation}\]
+
+<p>Eq (7-9) provide more design freedom than Eq (4-6).</p>
+
+<h2 id="forward-modelling">Forward modelling</h2>
+<h3 id="full-wave-solvers">Full wave solvers</h3>
+<p>The design of these metasurfaces requires a full solution of Maxwell’s equations in three dimensions. For such sub-wavelength calculations there are (in general) no exact solutions. Their design is thus done by numerical method, known as <strong>full-wave solvers</strong>. Some of the most common methods are FEM, FDTD and RCWA.</p>
+
+<h3 id="fdtd-vs-rcwa">FDTD vs RCWA</h3>
+<p>FDTD and RCWA both model the same underlying physical laws, and solve the Maxwell equations via a different mathematical and numerical approach. In FDTD the Maxwell equations are discretized directly in both time and space. RCWA first transforms the equations to the frequency domain (both time-frequency and spatial frequency). Nevertheless, the solutions found by both methods should be the same.</p>
+
+<p>In a single frequency calculation, the RCWA calculation will be much faster because it is naturally suited to single frequency calculations. Time domain methods (FDTD) automatically calculate multiple frequencies, but the downside is that this calculation will be slower when only a few wavelengths are of interest.</p>
+
+<h3 id="rcwa">RCWA</h3>
+<p>RCWA is a rigorous method and is able to provide any information you want, such as transmission, reflection, diffraction, field profiles, etc. Since it decomposes fields into set of plane waves, it is most efficient when the field profile approaches that of plane waves. This happens in structures with low to moderate index contrast, but the method can also be applied to metal structures albeit less efficiently. This means you can get very accurate results with very few terms to be solved so the simulations are fast. It is also very good for layered media. You will see it applied to diffraction gratings, resonant gratings, and sometimes to photonic crystals.</p>
+
+<p>To get a deeper understanding, it is necessary to know a little more about the method.  It is a semi-analytical technique, meaning it picks one direction (longitudinal) to solve analytically and the other two (transverse) to be solved numerically.  RCWA uses a discrete Fourier transform to discretize the fields in the transverse direction. This means it represents the fields and materials as a set of plane waves (or planar gratings), so RCWA is extremely fast and efficient for devices with low to moderate index contrast where the waves are more like pure plane waves. The longitudinal direction is solved analytically so the layers can be any thickness without affecting the computational burden. A layer can be picometers to megameters without affecting speed for efficiency at all. It can also very efficiently handle multilayer devices and devices with thousands or even millions of layers.</p>
+
+<h3 id="convergence-test">Convergence test</h3>
+<p>In practice the appropriate discretization level is determined by a convergence test. That is to simulate the same configuration with increasingly small discretization steps until the calculation result no longer changes. The discretization can then be set to the level which gives an acceptable deviation from the converged result.</p>
+
+<p>In the case of RCWA, the controlling parameter is the truncation of the spatial frequency series (determined by the Accuracy setting). In FDTD, the resolution is controlled by the spatial step size in three dimensions x, y, and z (The stepsize in time is derived from the spatial discretization stepsize).</p>
+
+<h2 id="metalens-design-process">Metalens Design Process</h2>
+<h3 id="1-target-phase-definition">1. Target phase definition</h3>
+<p>How to define the target phase profile for the metalens?</p>
+<ul>
+  <li>(common lens types) Analytical solving.</li>
+  <li>(complex systems) Designing the ideal phase (the spatial phase data on a rectilinear grid) mask in OpticStudio using the ray tracing and optimization capabilities.</li>
+</ul>
+
+<p>In OpticStudio, the metasurface can be described by the diffractive surface type, which applies an additional phase on top of the base refractive or reflective surface.</p>
+
+<h3 id="2-unit-cell-simulations">2. Unit cell simulations</h3>
+<p>The parameters of unit cells are optimized to satisfy the desired transmission and phase properties. The phase and field vs. radius results are then saved to build a meta-atom library.</p>
+
+<p>The RCWA solver is introduced as a recommended/complementary tool for unit cell simulations, and a comparison is made with FDTD for verification.</p>
+
+<h3 id="3-full-lens-design">3. Full lens design</h3>
+<p>How to design and analyse the full metalens?</p>
+<h4 id="direct-simulations">Direct simulations</h4>
+<p>Construct and simulate the full metalens in FDTD based on the  target phase profile and the phase vs. radius data from the previous step.</p>
+
+<p>While this approach is more straightforward, it can pose challenges in terms of memory and simulation time, especially for larger metalens.</p>
+
+<p>The nearfield from the simulation can be exported to a <code class="language-plaintext highlighter-rouge">.ZBF</code> file for further propagation in the Ansys OpticStudio for farfield analysis.</p>
+
+<h4 id="reconstruction-of-full-fields">Reconstruction of full fields</h4>
+<p>The nearfield/farfield of the full metalens can be reconstructed with a script using the nearfield library from the meta-atom library, which avoids the time-consuming simulation of the full lens and hence can be much more efficient than the direct simulation approach.</p>
+
+<h3 id="4-propagation-of-imported-beam-nearfield-rightarrow-farfield">4. Propagation of imported beam (nearfield $\rightarrow$ farfield)</h3>
+<p>Once the near-field for the metalens is exported to a <code class="language-plaintext highlighter-rouge">.ZBF</code> file, the Physical Optics Propagation (POP) tool in OpticStudio can be used to propagate the beam through the entire system, even including any bulk optical elements as well. Using POP, the phase and irradiance profile can be analyzed at every surface, and the system performance can be evaluated.</p>
+
+<p>The actual beam can be compared with an ideal beam propagated through the target phase mask in OpticStudio to verify the metalens model. If necessary, the optical setup can be re-optimized in OpticStudio based on the propagation results.</p>
+
+<h3 id="5-gds-export">5. GDS export</h3>
+<p>Once the design of the physical shapes and the positions of the meta-atoms over the whole lens is finished, the pattern is typically exported to a <code class="language-plaintext highlighter-rouge">GDS</code> format for fabrication.</p>
+
+<h2 id="porlarization">Porlarization</h2>
+<h3 id="porlarized-source-and-response-simulation">Porlarized source and response simulation</h3>
+<p>To create a circular polarized source, we can combine an x polarized plane wave source with its phase set to 0, and a y polarized plane wave source with its phase set to 90 degrees.</p>
+
+<p><em>A recommended way:</em></p>
+
+<p>It is possible to obtain the response of a system to a beam with arbitrary polarization by running two simulations (each with a single source). The point is that any polarization can be combined with x polarization and y polarization components.</p>
+
+<p><em>My idea:</em></p>
+
+<p>Jones matrix can be utilized to realize polarization synthesis and decomposition. For instance, in this way, a x polarization plane wave (or a y polarization plane wave) can be decomposed into left circularly polarized light and right circularly polarized light to make further analysis.</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] Getting accurate and fast nano-structure simulations: A benchmark of RCWA and FDTD for meta-surface calculation: https://planopsim.com/simulation/getting-accurate-and-fast-nano-structure-simulations-a-benchmark-of-rcwa-and-fdtd-for-meta-surface-calculation/#:~:text=FDTD%20and%20RCWA%20both%20model%20the%20same%20underlying,the%20frequency%20domain%20%28both%20time-frequency%20and%20spatial%20frequency%29.</p>
+
+<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by]]></summary></entry><entry><title type="html">Meta relatives</title><link href="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html"><![CDATA[<!-- # Meta Relatives -->
+<h2 id="optimization">Optimization</h2>
+<h3 id="deterministic-and-stochastic-optimization-methods">Deterministic and stochastic optimization methods</h3>
+<p><img src="/assets/images/2022-10-08-Meta-relatives-1.svg" alt="1" /></p>
+
+<p>For more, see Ref.[1].</p>
+
+<h2 id="complex-permittivity-leftrightarrow-complex-refractive-index">Complex permittivity $\leftrightarrow$ complex refractive index</h2>
+<p>Assume dealing with optical frequencies, in which case we can treat $\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies.</p>
+
+<p>In this case, the relationship between the complex relative permittivity (also known as the complex dialectric constant) and the complex refractive index is given by</p>
+
+\[\begin{equation}
+    \epsilon_{\mathrm{real}} + i\ \epsilon_{\mathrm{im}} = (n + i\ k)^2
+\end{equation}\]
+
+\[\begin{equation}
+    \epsilon_{\mathrm{real}} = n^2 - k^2
+\end{equation}\]
+
+\[\begin{equation}
+    \epsilon_{\mathrm{im}} = 2nk
+\end{equation}\]
+
+<p>From Ref.[2].</p>
+
+<h2 id="references">References</h2>
+<p>[1] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances</p>
+
+<p>[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html"><![CDATA[Optimization Deterministic and stochastic optimization methods]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html"><![CDATA[<!-- # LumOpt Notes -->
+<h2 id="install">Install</h2>
+<h3 id="1-choose-your-install-directory-and-run">1. Choose your install directory and run</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chriskeraly/LumOpt.git
+python setup.py -develop
+</code></pre></div></div>
+
+<h3 id="2-add-the-lumerical-api-lumapi-to-your-python-path">2. Add the Lumerical API lumapi to your Python path</h3>
+<p>In the LumOpt install directory, go into the “lumopt” directory, and then open “<strong>init</strong>.py”. Modify the path of <code class="language-plaintext highlighter-rouge">lumapi</code> according to your platform and install directory, as follows.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># __init__.py
+# ...
+</span><span class="k">if</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Windows'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Program Files/Lumerical/v202/api/python'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Darwin'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Applications/Lumerical/FDTD/FDTD.app/Contents/MacOS/'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Linux'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/opt/lumerical/fdtd/api/python'</span>
+<span class="c1"># ...
+</span></code></pre></div></div>
+
+<p><em>Notes:</em></p>
+<ul>
+  <li>Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.</li>
+</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Install 1. Choose your install directory and run]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
 <h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
 </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -307,7 +485,7 @@
 <p><em>Note:</em></p>
 <ul>
   <li>You can learn Scripting100 Course using Ref.[3] with Ref.[4].</li>
-</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><summary type="html"><![CDATA[Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a]]></summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
+</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><category term="meta" /><summary type="html"><![CDATA[Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a]]></summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
 <h2 id="1-far-field-projections">1. Far-field projections</h2>
 <p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
 
@@ -489,7 +667,7 @@
 
 <p>[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
 
-<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
+<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
 <h2 id="1-软件安装">1. 软件安装</h2>
 <p><strong>清单</strong></p>
 <ul>
