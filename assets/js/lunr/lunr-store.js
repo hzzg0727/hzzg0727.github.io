@@ -46,4 +46,22 @@ var store = [{
         "tags": ["meta","FDTD"],
         "url": "/optics/2022/10/20/Metasurface-design.html",
         "teaser": null
+      },{
+        "title": "FDTD Note: Advanced FDTD",
+        "excerpt":" 1. Determine the optimum resource configuration  The key parameter is Processes. See Ref. [1].   Reference (Resources)  [1] https://optics.ansys.com/hc/en-us/articles/6491711906195-Determine-the-optimum-resource-configuration-to-run-Lumerical-FDTD-simulations  ","categories": ["optics"],
+        "tags": ["FDTD","meta"],
+        "url": "/optics/2022/10/26/FDTD-advanced.html",
+        "teaser": null
+      },{
+        "title": "Ubuntu 22.04 with VMWare virtual machine",
+        "excerpt":"Installation Configuration: Main system: Windows 11 Ubuntu 22.04 LTS VMWare Workstation 16 问题描述 安装时可能遇到的问题是，若 Windows 开启了 Hyper-V 服务，会与虚拟机的虚拟化发生冲突，可能导致系统关机会引发 vcpu-0 等多个不可恢复错误。 解决方案 实际上，对此问题，VMWare Workstation 已有合适的解决方案。选择修复（Windows 应用管理）或者重装（因为修复需要管理员权限，但是难以定位应用程序无法赋予），会发现 VMWare Workstation 会自动检测到此问题和提示解决方案（开启 Windows 功能中的某一项，可能需要重启生效）。 Configuration 换源 Ubuntu 22.04 已支持图形界面换源。选择 Software &amp; Updates -&gt; Ubuntu Software 选项卡，在 Download from 选项选择 Other，而后在中国区域内选择合适的源。可以自动测试中国区域内速度最快的源。 中文输入法 参考 [1] 和...","categories": ["code"],
+        "tags": ["linux","ubuntu"],
+        "url": "/code/2022/11/06/ubuntu-virtual-machine.html",
+        "teaser": null
+      },{
+        "title": "文献阅读管理环境配置不完全指南",
+        "excerpt":"Part1. 文献阅读 1.1 精读文献 BookxNote Pro：参见 Ref. [1]. 1.2 速读外文文献 知云文献翻译：参见 Ref. [2]. Part2. 文献管理 2.0 Zotero 简介 几个要点： Zotero 的组成：PC 等设备上的独立程序 &amp; 浏览器扩展 （&amp; Microsoft Word 插件） 优点1：支持从浏览器网页直接获取文献信息建立文献索引，避免文献信息录入之苦 优点2：借助 Zotero 的 Word 插件，方便地撰写和修改论文的参考文献部分内容 优点3：与网盘配合可实现跨设备的协同 优点4：功能丰富强大 优点5：开源免费 2.1 Zotero 安装和一些基本配置 2.1.1 下载安装文件 下载地址：参见 Ref. [3]. 备注：右侧的 Zotero Connector（浏览器插件）可先不安装。 2.1.2 安装应用程序和浏览器插件...","categories": ["others"],
+        "tags": ["文献阅读","文献管理"],
+        "url": "/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html",
+        "teaser": null
       }]

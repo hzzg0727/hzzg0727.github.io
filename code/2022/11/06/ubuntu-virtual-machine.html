@@ -9,25 +9,24 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>meta - hzzg0727 Blog :squirrel:</title>
-<meta name="description" content="Record the life, techniques, and others on the road.   »  欢迎领导莅临本站 : )">
+<!-- begin _includes/seo.html --><title>Ubuntu 22.04 with VMWare virtual machine - hzzg0727 Blog :squirrel:</title>
+<meta name="description" content="">
 
 
   <meta name="author" content="hzzg0727">
   
+  <meta property="article:author" content="hzzg0727">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="zh">
 <meta property="og:site_name" content="hzzg0727 Blog :squirrel:">
-<meta property="og:title" content="meta">
-<meta property="og:url" content="https://hzzg0727.github.io/tags/meta/">
+<meta property="og:title" content="Ubuntu 22.04 with VMWare virtual machine">
+<meta property="og:url" content="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html">
 
 
-  <meta property="og:description" content="Record the life, techniques, and others on the road.   »  欢迎领导莅临本站 : )">
-
-
-
+  <meta property="og:description" content="">
 
 
 
@@ -35,9 +34,14 @@
 
 
 
+  <meta property="article:published_time" content="2022-11-06T00:00:00+08:00">
 
 
-<link rel="canonical" href="https://hzzg0727.github.io/tags/meta/">
+
+
+
+
+<link rel="canonical" href="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html">
 
 
 
@@ -91,7 +95,7 @@
 
   </head>
 
-  <body class="layout--archive-taxonomy">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -266,25 +270,18 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Ubuntu 22.04 with VMWare virtual machine">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-11-06T00:00:00+08:00">
     
-      <h1 id="page-title" class="page__title">meta</h1>
-    
-    
-      
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <div class="page__inner-wrap">
       
-        <a href="/optics/2022/10/26/FDTD-advanced.html" rel="permalink">FDTD Note: Advanced FDTD
-</a>
-      
-    </h2>
-    
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Ubuntu 22.04 with VMWare virtual machine
+</h1>
+          
 
   <p class="page__meta">
     
@@ -292,7 +289,7 @@
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-10-26T00:00:00+08:00">October 26, 2022</time>
+        <time datetime="2022-11-06T00:00:00+08:00">November 6, 2022</time>
       </span>
     
 
@@ -312,6 +309,237 @@
   </p>
 
 
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu">
+<li>
+<a href="#installation">Installation</a><ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">问题描述</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">解决方案</a></li>
+</ul>
+</li>
+<li>
+<a href="#configuration">Configuration</a><ul>
+<li><a href="#%E6%8D%A2%E6%BA%90">换源</a></li>
+<li><a href="#%E4%B8%AD%E6%96%87%E8%BE%93%E5%85%A5%E6%B3%95">中文输入法</a></li>
+<li><a href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E8%AE%BE%E7%BD%AE">字体大小设置</a></li>
+<li><a href="#%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9">共享文件夹</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <!-- # Ubuntu 22.04 with VMWare virtual machine -->
+
+<h2 id="installation">Installation</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration:
+Main system: Windows 11
+Ubuntu 22.04 LTS
+VMWare Workstation 16
+</code></pre></div></div>
+<h3 id="问题描述">问题描述</h3>
+<p>安装时可能遇到的问题是，若 Windows 开启了 Hyper-V 服务，会与虚拟机的虚拟化发生冲突，可能导致系统关机会引发 vcpu-0 等多个不可恢复错误。</p>
+
+<h3 id="解决方案">解决方案</h3>
+<p>实际上，对此问题，VMWare Workstation 已有合适的解决方案。选择修复（Windows 应用管理）或者重装（因为修复需要管理员权限，但是难以定位应用程序无法赋予），会发现 VMWare Workstation 会自动检测到此问题和提示解决方案（开启 Windows 功能中的某一项，可能需要重启生效）。</p>
+
+<h2 id="configuration">Configuration</h2>
+<h3 id="换源">换源</h3>
+<p>Ubuntu 22.04 已支持图形界面换源。选择 <code class="language-plaintext highlighter-rouge">Software &amp; Updates</code> -&gt; <code class="language-plaintext highlighter-rouge">Ubuntu Software</code> 选项卡，在 <code class="language-plaintext highlighter-rouge">Download from</code> 选项选择 <code class="language-plaintext highlighter-rouge">Other</code>，而后在中国区域内选择合适的源。可以自动测试中国区域内速度最快的源。</p>
+
+<h3 id="中文输入法">中文输入法</h3>
+<p>参考 [1] 和 [2] 两篇博客。</p>
+
+<h3 id="字体大小设置">字体大小设置</h3>
+<p>参考 [3] 和 [4] 两篇博客。</p>
+
+<h3 id="共享文件夹">共享文件夹</h3>
+<p>共享文件夹的启用比较简单。但是可能会遇到权限问题很难处理。参考 [5] 博客。</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] https://blog.csdn.net/weixin_44916154/article/details/124582379?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124582379-blog-124932523.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124582379-blog-124932523.pc_relevant_default&amp;utm_relevant_index=2</p>
+
+<p>[2] https://blog.csdn.net/weixin_40762393/article/details/80548799</p>
+
+<p>[3] https://blog.csdn.net/dghcs18/article/details/104420127</p>
+
+<p>[4] https://blog.csdn.net/mythinker2/article/details/86746427</p>
+
+<p>[5] https://jarviswwong.com/ubuntu-vmware-hgfs-permissions-problem.html</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/linux" class="page__taxonomy-item" rel="tag">linux</a><span class="sep">, </span>
+    
+      <a href="/tags/ubuntu" class="page__taxonomy-item" rel="tag">ubuntu</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/code" class="page__taxonomy-item" rel="tag">code</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-11-06T00:00:00+08:00">November 6, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/optics/2022/10/26/FDTD-advanced.html" class="pagination--pager" title="FDTD Note: Advanced FDTD
+">Previous</a>
+    
+    
+      <a href="/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" class="pagination--pager" title="文献阅读管理环境配置不完全指南
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="permalink">文献阅读管理环境配置不完全指南
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-12-06T10:42:00+08:00">December 6, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Part1. 文献阅读
+1.1 精读文献
+BookxNote Pro：参见 Ref. [1].
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/26/FDTD-advanced.html" rel="permalink">FDTD Note: Advanced FDTD
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-26T00:00:00+08:00">October 26, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
     <p class="archive__item-excerpt" itemprop="description">
 1. Determine the optimum resource configuration
 The key parameter is Processes. See Ref. [1].
@@ -319,12 +547,12 @@ The key parameter is Processes. See Ref. [1].
   </article>
 </div>
 
-    
-      
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -339,7 +567,7 @@ The key parameter is Processes. See Ref. [1].
     
       
       <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
         <time datetime="2022-10-20T00:00:00+08:00">October 20, 2022</time>
       </span>
@@ -352,7 +580,7 @@ The key parameter is Processes. See Ref. [1].
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           11 minute read
         
@@ -367,12 +595,12 @@ To achromatically focus a broadband incident light in a diffraction limited spot
   </article>
 </div>
 
-    
-      
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -387,7 +615,7 @@ To achromatically focus a broadband incident light in a diffraction limited spot
     
       
       <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
         <time datetime="2022-10-08T00:00:00+08:00">October 8, 2022</time>
       </span>
@@ -400,7 +628,7 @@ To achromatically focus a broadband incident light in a diffraction limited spot
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           less than 1 minute read
         
@@ -417,157 +645,11 @@ Deterministic and stochastic optimization methods
   </article>
 </div>
 
-    
-      
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/optics/2022/10/08/FDTD-lumopt.html" rel="permalink">FDTD Note: LumOpt
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-        <time datetime="2022-10-08T00:00:00+08:00">October 8, 2022</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-Install
-1. Choose your install directory and run
-</p>
-  </article>
-</div>
-
-    
-      
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/optics/2022/10/06/FDTD-lsf.html" rel="permalink">FDTD Note: lsf Language
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2022-10-06T00:00:00+08:00">October 6, 2022</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          16 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-Useful commands in ScriptPrompt
-```python
-clear;  # clear all the variables in the workspace
-a = 1;
-clear a;  # clear variable a
-</p>
-  </article>
-</div>
-
-    
-      
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/optics/2022/10/04/FDTD-basic.html" rel="permalink">FDTD Note: Basic
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2022-10-04T00:00:00+08:00">October 4, 2022</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          7 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-1. Far-field projections
-If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-fi...</p>
-  </article>
-</div>
-
-    
-  </div>
+      </div>
+    </div>
+  
+  
 </div>
 
     </div>

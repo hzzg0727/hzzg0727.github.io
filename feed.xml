@@ -1,4 +1,239 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-10-26T12:27:45+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.</subtitle><author><name>hzzg0727</name></author><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2022-12-06T12:29:57+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.   &gt;&gt;  欢迎领导莅临本站 : )</subtitle><author><name>hzzg0727</name></author><entry><title type="html">文献阅读管理环境配置不完全指南</title><link href="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="文献阅读管理环境配置不完全指南" /><published>2022-12-06T10:42:00+08:00</published><updated>2022-12-06T10:42:00+08:00</updated><id>https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"><![CDATA[<!-- # 文献阅读管理环境配置不完全指南 -->
+<h2 id="part1-文献阅读">Part1. 文献阅读</h2>
+<h3 id="11-精读文献">1.1 精读文献</h3>
+<p>BookxNote Pro：参见 Ref. [1].</p>
+
+<h3 id="12-速读外文文献">1.2 速读外文文献</h3>
+<p>知云文献翻译：参见 Ref. [2].</p>
+
+<h2 id="part2-文献管理">Part2. 文献管理</h2>
+
+<h3 id="20-zotero-简介">2.0 Zotero 简介</h3>
+<p>几个要点：</p>
+
+<ul>
+  <li>Zotero 的组成：PC 等设备上的独立程序 &amp; 浏览器扩展 （&amp; Microsoft Word 插件）</li>
+  <li>优点1：支持从浏览器网页直接获取文献信息建立文献索引，避免文献信息录入之苦</li>
+  <li>优点2：借助 Zotero 的 Word 插件，方便地撰写和修改论文的参考文献部分内容</li>
+  <li>优点3：与网盘配合可实现跨设备的协同</li>
+  <li>优点4：功能丰富强大</li>
+  <li>优点5：开源免费</li>
+</ul>
+
+<h3 id="21-zotero-安装和一些基本配置">2.1 Zotero 安装和一些基本配置</h3>
+<h4 id="211-下载安装文件">2.1.1 下载安装文件</h4>
+
+<p>下载地址：参见 Ref. [3].</p>
+
+<p>备注：右侧的 Zotero Connector（浏览器插件）可先不安装。</p>
+
+<h4 id="212-安装应用程序和浏览器插件">2.1.2 安装应用程序和浏览器插件</h4>
+<ol>
+  <li>下载完成后，获得 Zotero-6.0.12_setup.exe （版本号可能不同）。</li>
+  <li>运行安装程序。</li>
+  <li>
+    <p>选择自定义安装（如下图），可定义安装于 D 盘。</p>
+
+    <p><img src="/assets/images/20221206-文献阅读管理环境配置-1.png" alt="1" /></p>
+  </li>
+  <li>安装浏览器插件。至少有两种方法：</li>
+</ol>
+
+<ul>
+  <li>
+    <p>方法一：安装完成后默认浏览器会打开插件安装页面，按照提示完成即可。</p>
+  </li>
+  <li>
+    <p>方法二：如下图，Zotero -&gt; Tools -&gt; Install Browser Connector -&gt; Web 中下载 xpi 格式的浏览器插件文件 -&gt; 安装。</p>
+
+    <p><img src="/assets/images/20221206-文献阅读管理环境配置-2.png" alt="2" /></p>
+  </li>
+  <li>
+    <p><em>附：以 Firefox 为例，介绍由 xpi 文件安装插件的方法</em></p>
+    <ul>
+      <li>
+        <p>Step1: 打开插件设置页面，左下角选择 Extensions &amp; Themes</p>
+
+        <p><img src="/assets/images/20221206-文献阅读管理环境配置-3.png" alt="3" /></p>
+
+        <p><img src="/assets/images/20221206-文献阅读管理环境配置-4.png" alt="4" /></p>
+      </li>
+      <li>
+        <p>Step2: 选择从文件安装插件，再选择刚刚下载的 xpi 文件，安装提示安装。</p>
+
+        <p><img src="/assets/images/20221206-文献阅读管理环境配置-5.png" alt="5" /></p>
+      </li>
+      <li>
+        <p>Step3: 安装成功：</p>
+
+        <p><img src="/assets/images/20221206-文献阅读管理环境配置-6.png" alt="6" /></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="213-安装-office-word-插件">2.1.3 安装 Office-Word 插件</h4>
+
+<p>一般默认安装。</p>
+
+<ul>
+  <li>检查方法1：</li>
+</ul>
+
+<p>打开 Microsoft Word，查看标签栏是否有 <code class="language-plaintext highlighter-rouge">Zotero</code> 选项卡。</p>
+
+<p><img src="/assets/images/20221206-文献阅读管理环境配置-7.png" alt="7" /></p>
+
+<ul>
+  <li>检查方法2：</li>
+</ul>
+
+<p>Zotero -&gt; Tools -&gt; Add-ons，在弹出的窗口中（如下图）查看是否下图标注的插件已经开启。</p>
+
+<p><img src="/assets/images/20221206-文献阅读管理环境配置-8.png" alt="8" /></p>
+
+<p>若未默认安装，可参看 Ref. [4] 在 Word 中手动安装 Zotero 插件。</p>
+
+<h4 id="214-将数据存储路径从默认-c-盘更改到-d-盘">2.1.4 将数据存储路径从默认 C 盘更改到 D 盘</h4>
+
+<p>Zotero 默认将数据存储在 C 盘用户目录下。用久文件夹会占用很大存储空间。下将之更改到 D 盘自定义位置。</p>
+
+<p>依次打开 Zotero -&gt; Edit -&gt; Preferences -&gt; Advances -&gt; Files and folders，最终界面如下：</p>
+
+<p><img src="/assets/images/20221206-文献阅读管理环境配置-9.png" alt="9" /></p>
+
+<p>将 Data Directory Location 修改到自定义位置即可。</p>
+
+<h4 id="215-网页快照功能的关闭方法默认开启">2.1.5 网页快照功能的关闭方法（默认开启）</h4>
+
+<p>选项位置：Zotero -&gt; Edit -&gt; Preferences -&gt; General -&gt; File Handling -&gt; Automatically take snapshots when creating items from web pages.</p>
+
+<p>Zotero 会自动在保存网页内容的同时将网页快照保存。不需要可以关闭此功能。</p>
+
+<h3 id="22-zotero-的基本使用">2.2 Zotero 的基本使用</h3>
+
+<p>使用教程有几类供选择：</p>
+
+<ol>
+  <li>入门最正的还是要阅读官方文档，只是上手会比教程慢一些。官方文档：参见 Ref. [5].</li>
+  <li>博客教程。</li>
+  <li>在 <code class="language-plaintext highlighter-rouge">bilibili</code> 上有很多教程视频可供参考，上手较快，比较容易，也推荐这种方式。</li>
+</ol>
+
+<p>下对前两种方式的资源进行整合，做简要的资源梳理，尽量使得两部分的学习内容相互补充不重叠，以便于学习。</p>
+
+<p>若采取最后一种方式，自行搜索学习即可。</p>
+
+<h4 id="221-官方文档阅读摘要">2.2.1 官方文档阅读摘要</h4>
+<p>下按照逻辑顺序摘取比较重要的几篇官方文档。</p>
+
+<p>Zotero 设计里的几个概念对于更好使用 Zotero 很重要，建议在阅读官方文档时注意理解。</p>
+<ul>
+  <li>Item</li>
+  <li>Collection</li>
+  <li>Tag</li>
+</ul>
+
+<h5 id="2211-如何将待管理文献添加到-zotero">2.2.1.1 如何将待管理文献添加到 Zotero？</h5>
+<ol>
+  <li>网络文献资源</li>
+</ol>
+
+<p>Adding Items to Zotero: Ref. [6].</p>
+
+<ol>
+  <li>本地文献资源文件</li>
+</ol>
+
+<p>Adding Files to your Zotero Library: Ref. [7].</p>
+
+<h5 id="2212-文献组织和管理方法">2.2.1.2 文献组织和管理方法</h5>
+<p>这里需要注意的也就是理解 Collection 和 tag 的概念及其使用。</p>
+
+<p>Collections and Tags: Ref.[8].</p>
+
+<h4 id="222-博客教程阅读">2.2.2 博客教程阅读</h4>
+<h5 id="2221-基本操作">2.2.2.1 基本操作</h5>
+<p>Zotero的操作指南：Ref. [9].</p>
+
+<h5 id="2222-word-中参考文献的写作">2.2.2.2 Word 中参考文献的写作</h5>
+<p>在 Word 中插入参考文献：Ref. [10].</p>
+
+<h3 id="23-zotero--onedrive-实现跨设备的文献管理">2.3 Zotero &amp; OneDrive 实现跨设备的文献管理</h3>
+
+<p>其他云盘也是可以的。只是个人倾向于与 Microsoft 的 OneDrive。</p>
+
+<p>配置方法：比较靠谱的，虽然写的比较简略，可参见 Ref.[11].</p>
+
+<p>OneDrive 默认会把本地文件路径放在 C 盘，如果想要更改到 D 盘，方法参见 Red.[12].</p>
+
+<p>同样的，在 <code class="language-plaintext highlighter-rouge">bilibili</code> 上有教程视频可供参考，更加容易些，也推荐这种方式。</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] BookxNote Pro 官网：http://www.bookxnote.com/</p>
+
+<p>[2] 知云文献翻译 官网：https://www.zhiyunwenxian.cn/</p>
+
+<p>[3] Zotero 下载地址：https://www.zotero.org/download/</p>
+
+<p>[4] 在 Word 中手动安装 Zotero 插件：https://zhuanlan.zhihu.com/p/191039036</p>
+
+<p>[5] Zotero 官方文档：https://www.zotero.org/support/</p>
+
+<p>[6] Adding Items to Zotero: https://www.zotero.org/support/adding_items_to_zotero</p>
+
+<p>[7] Adding Files to your Zotero Library: https://www.zotero.org/support/attaching_files</p>
+
+<p>[8] Collections and Tags: https://www.zotero.org/support/collections_and_tags</p>
+
+<p>[9] Zotero的操作指南：https://zhuanlan.zhihu.com/p/98428625?from_voters_page=true</p>
+
+<p>[10] 在 Word 中插入参考文献：https://zhuanlan.zhihu.com/p/62931860</p>
+
+<p>[11] 基于 Zotfile 的 Zotero 同步到 OneDrive：https://blog.csdn.net/weixin_42369069/article/details/115675539</p>
+
+<p>[12] 更改 OneDrive 文件夹的位置：https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%94%B9-onedrive-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E4%BD%8D%E7%BD%AE-f386fb81-1461-40a7-be2c-712676b2c4ae</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="文献阅读" /><category term="文献管理" /><summary type="html"><![CDATA[Part1. 文献阅读 1.1 精读文献 BookxNote Pro：参见 Ref. [1].]]></summary></entry><entry><title type="html">Ubuntu 22.04 with VMWare virtual machine</title><link href="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html" rel="alternate" type="text/html" title="Ubuntu 22.04 with VMWare virtual machine" /><published>2022-11-06T00:00:00+08:00</published><updated>2022-11-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html"><![CDATA[<!-- # Ubuntu 22.04 with VMWare virtual machine -->
+
+<h2 id="installation">Installation</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration:
+Main system: Windows 11
+Ubuntu 22.04 LTS
+VMWare Workstation 16
+</code></pre></div></div>
+<h3 id="问题描述">问题描述</h3>
+<p>安装时可能遇到的问题是，若 Windows 开启了 Hyper-V 服务，会与虚拟机的虚拟化发生冲突，可能导致系统关机会引发 vcpu-0 等多个不可恢复错误。</p>
+
+<h3 id="解决方案">解决方案</h3>
+<p>实际上，对此问题，VMWare Workstation 已有合适的解决方案。选择修复（Windows 应用管理）或者重装（因为修复需要管理员权限，但是难以定位应用程序无法赋予），会发现 VMWare Workstation 会自动检测到此问题和提示解决方案（开启 Windows 功能中的某一项，可能需要重启生效）。</p>
+
+<h2 id="configuration">Configuration</h2>
+<h3 id="换源">换源</h3>
+<p>Ubuntu 22.04 已支持图形界面换源。选择 <code class="language-plaintext highlighter-rouge">Software &amp; Updates</code> -&gt; <code class="language-plaintext highlighter-rouge">Ubuntu Software</code> 选项卡，在 <code class="language-plaintext highlighter-rouge">Download from</code> 选项选择 <code class="language-plaintext highlighter-rouge">Other</code>，而后在中国区域内选择合适的源。可以自动测试中国区域内速度最快的源。</p>
+
+<h3 id="中文输入法">中文输入法</h3>
+<p>参考 [1] 和 [2] 两篇博客。</p>
+
+<h3 id="字体大小设置">字体大小设置</h3>
+<p>参考 [3] 和 [4] 两篇博客。</p>
+
+<h3 id="共享文件夹">共享文件夹</h3>
+<p>共享文件夹的启用比较简单。但是可能会遇到权限问题很难处理。参考 [5] 博客。</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] https://blog.csdn.net/weixin_44916154/article/details/124582379?spm=1001.2101.3001.6650.1&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124582379-blog-124932523.pc_relevant_default&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-124582379-blog-124932523.pc_relevant_default&amp;utm_relevant_index=2</p>
+
+<p>[2] https://blog.csdn.net/weixin_40762393/article/details/80548799</p>
+
+<p>[3] https://blog.csdn.net/dghcs18/article/details/104420127</p>
+
+<p>[4] https://blog.csdn.net/mythinker2/article/details/86746427</p>
+
+<p>[5] https://jarviswwong.com/ubuntu-vmware-hgfs-permissions-problem.html</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">FDTD Note: Advanced FDTD</title><link href="https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced.html" rel="alternate" type="text/html" title="FDTD Note: Advanced FDTD" /><published>2022-10-26T00:00:00+08:00</published><updated>2022-10-26T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced.html"><![CDATA[<!-- # FDTD Note: Advanced FDTD -->
+<h2 id="1-determine-the-optimum-resource-configuration">1. Determine the optimum resource configuration</h2>
+<p>The key parameter is <code class="language-plaintext highlighter-rouge">Processes</code>. See Ref. [1].</p>
+
+<h2 id="reference-resources">Reference (Resources)</h2>
+<p>[1] https://optics.ansys.com/hc/en-us/articles/6491711906195-Determine-the-optimum-resource-configuration-to-run-Lumerical-FDTD-simulations</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[1. Determine the optimum resource configuration The key parameter is Processes. See Ref. [1].]]></summary></entry><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
 <h2 id="achromatic-focusing-theory">Achromatic focusing theory</h2>
 <p>To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</p>
 
@@ -318,6 +553,11 @@ python setup.py -develop
   <li>Use command <code class="language-plaintext highlighter-rouge">get("PROPERTY_NAME", VALUE)</code> to get the property named “PROPERTY_NAME” of selected objects.</li>
   <li>Use command <code class="language-plaintext highlighter-rouge">getnamed("OBJECT_NAME", "PROPERTY_NAME")</code> to get the property named “PROPERTY_NAME” of the object named “OBJECT_NAME”.</li>
 </ul>
+
+<h3 id="delete-objects">Delete objects</h3>
+<p>To delete one object, you first have to select it. And then, run <code class="language-plaintext highlighter-rouge">delete()</code> to delete the selected object.</p>
+
+<p>Use command <code class="language-plaintext highlighter-rouge">deleteall()</code> to delete all the objects.</p>
 
 <h2 id="running-simulations">Running simulations</h2>
 <h3 id="running-a-single-simulation">Running a single simulation</h3>
@@ -743,74 +983,4 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
 <p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486
-fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T19:16:03+08:00</published><updated>2022-08-28T19:16:03+08:00</updated><id>https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/08/28/wps-equation-configure.html"><![CDATA[<!-- # WPS 公式快捷输入的配置方法 -->
-<h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
-<p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
-
-<p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
-
-<p><img src="/assets/images/2022-08-28-wps-equation-configure-1.png" alt="0" /></p>
-
-<h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
-<p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
-
-<p><strong>常用 WPS 公式编辑器快捷键</strong></p>
-<ul>
-  <li>调出选项卡
-    <ul>
-      <li>Alt + F: 文件选项卡</li>
-      <li>Alt + E: 编辑选项卡</li>
-      <li>Alt + V: 视图选项卡</li>
-      <li>Alt + T: 格式选项卡</li>
-      <li>Alt + S: 样式选项卡</li>
-      <li>Alt + Z: 尺寸选项卡</li>
-      <li>Alt + H: 帮助选项卡</li>
-    </ul>
-  </li>
-  <li>退出公式编辑
-    <ul>
-      <li>Alt + F -&gt; X: 即文件选项卡中 <code class="language-plaintext highlighter-rouge">退出</code> 选项</li>
-      <li>其他选项同理</li>
-    </ul>
-  </li>
-  <li>希腊字母
-    <ul>
-      <li>Ctrl + G -&gt; 英文字母: 输入英文字母对应的小写希腊字母</li>
-      <li>Ctrl + G -&gt; Shift -&gt; 英文字母: 输入英文字母对应的大写希腊字母</li>
-    </ul>
-  </li>
-  <li>括号<br />
-<em>由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号</em>
-    <ul>
-      <li>Ctrl + 9 / 0: 小括号</li>
-      <li>Ctrl + [ / ]: 中括号</li>
-      <li>Ctrl + Shift + [ / ]: 大括号</li>
-    </ul>
-  </li>
-  <li>数学公式
-    <ul>
-      <li>Ctrl + F: 上下分式</li>
-      <li>Ctrl + /: 单行倾斜分式</li>
-      <li>Ctrl + R: 根式（省略2）</li>
-      <li>Ctrl + T -&gt; N : 任意阶根式</li>
-      <li>Ctrl + H: 上标</li>
-      <li>Ctrl + L: 下标</li>
-      <li>Ctrl + J: 上下标</li>
-      <li>Ctrl + K -&gt; &lt;: 小于等于</li>
-      <li>Ctrl + K -&gt; &gt;: 大于等于</li>
-      <li>Ctrl + Alt + ‘: 一阶导数</li>
-      <li>Ctrl + Shift + ‘: 二阶导数</li>
-      <li>Ctrl + I: 定积分</li>
-      <li>Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线</li>
-      <li>Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头</li>
-    </ul>
-  </li>
-  <li>其他
-    <ul>
-      <li>Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="reference">Reference</h2>
-<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="WPS" /><category term="排版" /><summary type="html"><![CDATA[1. 设置插入公式快捷键 不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。]]></summary></entry></feed>
+fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry></feed>

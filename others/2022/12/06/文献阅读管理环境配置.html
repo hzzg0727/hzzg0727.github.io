@@ -1,0 +1,892 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="zh" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>文献阅读管理环境配置不完全指南 - hzzg0727 Blog :squirrel:</title>
+<meta name="description" content="Part1. 文献阅读 1.1 精读文献 BookxNote Pro：参见 Ref. [1].">
+
+
+  <meta name="author" content="hzzg0727">
+  
+  <meta property="article:author" content="hzzg0727">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh">
+<meta property="og:site_name" content="hzzg0727 Blog :squirrel:">
+<meta property="og:title" content="文献阅读管理环境配置不完全指南">
+<meta property="og:url" content="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html">
+
+
+  <meta property="og:description" content="Part1. 文献阅读 1.1 精读文献 BookxNote Pro：参见 Ref. [1].">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-12-06T10:42:00+08:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "hzzg0727",
+      "url": "https://hzzg0727.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+</script>
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/categories/code/">Code</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/optics/">Optics</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/life/">Life</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/others/">Others</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/paddington_avatar.jpg" alt="hzzg0727" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">hzzg0727</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>On the road.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Hangzhou, China</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="文献阅读管理环境配置不完全指南">
+    <meta itemprop="description" content="Part1. 文献阅读1.1 精读文献BookxNote Pro：参见 Ref. [1].">
+    <meta itemprop="datePublished" content="2022-12-06T10:42:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">文献阅读管理环境配置不完全指南
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-12-06T10:42:00+08:00">December 6, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu">
+<li>
+<a href="#part1-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB">Part1. 文献阅读</a><ul>
+<li><a href="#11-%E7%B2%BE%E8%AF%BB%E6%96%87%E7%8C%AE">1.1 精读文献</a></li>
+<li><a href="#12-%E9%80%9F%E8%AF%BB%E5%A4%96%E6%96%87%E6%96%87%E7%8C%AE">1.2 速读外文文献</a></li>
+</ul>
+</li>
+<li>
+<a href="#part2-%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86">Part2. 文献管理</a><ul>
+<li><a href="#20-zotero-%E7%AE%80%E4%BB%8B">2.0 Zotero 简介</a></li>
+<li>
+<a href="#21-zotero-%E5%AE%89%E8%A3%85%E5%92%8C%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE">2.1 Zotero 安装和一些基本配置</a><ul>
+<li><a href="#211-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6">2.1.1 下载安装文件</a></li>
+<li><a href="#212-%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%92%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6">2.1.2 安装应用程序和浏览器插件</a></li>
+<li><a href="#213-%E5%AE%89%E8%A3%85-office-word-%E6%8F%92%E4%BB%B6">2.1.3 安装 Office-Word 插件</a></li>
+<li><a href="#214-%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E4%BB%8E%E9%BB%98%E8%AE%A4-c-%E7%9B%98%E6%9B%B4%E6%94%B9%E5%88%B0-d-%E7%9B%98">2.1.4 将数据存储路径从默认 C 盘更改到 D 盘</a></li>
+<li><a href="#215-%E7%BD%91%E9%A1%B5%E5%BF%AB%E7%85%A7%E5%8A%9F%E8%83%BD%E7%9A%84%E5%85%B3%E9%97%AD%E6%96%B9%E6%B3%95%E9%BB%98%E8%AE%A4%E5%BC%80%E5%90%AF">2.1.5 网页快照功能的关闭方法（默认开启）</a></li>
+</ul>
+</li>
+<li>
+<a href="#22-zotero-%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">2.2 Zotero 的基本使用</a><ul>
+<li>
+<a href="#221-%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%98%85%E8%AF%BB%E6%91%98%E8%A6%81">2.2.1 官方文档阅读摘要</a><ul>
+<li><a href="#2211-%E5%A6%82%E4%BD%95%E5%B0%86%E5%BE%85%E7%AE%A1%E7%90%86%E6%96%87%E7%8C%AE%E6%B7%BB%E5%8A%A0%E5%88%B0-zotero">2.2.1.1 如何将待管理文献添加到 Zotero？</a></li>
+<li><a href="#2212-%E6%96%87%E7%8C%AE%E7%BB%84%E7%BB%87%E5%92%8C%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95">2.2.1.2 文献组织和管理方法</a></li>
+</ul>
+</li>
+<li>
+<a href="#222-%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B%E9%98%85%E8%AF%BB">2.2.2 博客教程阅读</a><ul>
+<li><a href="#2221-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">2.2.2.1 基本操作</a></li>
+<li><a href="#2222-word-%E4%B8%AD%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%9A%84%E5%86%99%E4%BD%9C">2.2.2.2 Word 中参考文献的写作</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#23-zotero--onedrive-%E5%AE%9E%E7%8E%B0%E8%B7%A8%E8%AE%BE%E5%A4%87%E7%9A%84%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86">2.3 Zotero &amp; OneDrive 实现跨设备的文献管理</a></li>
+</ul>
+</li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <!-- # 文献阅读管理环境配置不完全指南 -->
+<h2 id="part1-文献阅读">Part1. 文献阅读</h2>
+<h3 id="11-精读文献">1.1 精读文献</h3>
+<p>BookxNote Pro：参见 Ref. [1].</p>
+
+<h3 id="12-速读外文文献">1.2 速读外文文献</h3>
+<p>知云文献翻译：参见 Ref. [2].</p>
+
+<h2 id="part2-文献管理">Part2. 文献管理</h2>
+
+<h3 id="20-zotero-简介">2.0 Zotero 简介</h3>
+<p>几个要点：</p>
+
+<ul>
+  <li>Zotero 的组成：PC 等设备上的独立程序 &amp; 浏览器扩展 （&amp; Microsoft Word 插件）</li>
+  <li>优点1：支持从浏览器网页直接获取文献信息建立文献索引，避免文献信息录入之苦</li>
+  <li>优点2：借助 Zotero 的 Word 插件，方便地撰写和修改论文的参考文献部分内容</li>
+  <li>优点3：与网盘配合可实现跨设备的协同</li>
+  <li>优点4：功能丰富强大</li>
+  <li>优点5：开源免费</li>
+</ul>
+
+<h3 id="21-zotero-安装和一些基本配置">2.1 Zotero 安装和一些基本配置</h3>
+<h4 id="211-下载安装文件">2.1.1 下载安装文件</h4>
+
+<p>下载地址：参见 Ref. [3].</p>
+
+<p>备注：右侧的 Zotero Connector（浏览器插件）可先不安装。</p>
+
+<h4 id="212-安装应用程序和浏览器插件">2.1.2 安装应用程序和浏览器插件</h4>
+<ol>
+  <li>下载完成后，获得 Zotero-6.0.12_setup.exe （版本号可能不同）。</li>
+  <li>运行安装程序。</li>
+  <li>
+    <p>选择自定义安装（如下图），可定义安装于 D 盘。</p>
+
+    <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1.png" alt="1"></p>
+  </li>
+  <li>安装浏览器插件。至少有两种方法：</li>
+</ol>
+
+<ul>
+  <li>
+    <p>方法一：安装完成后默认浏览器会打开插件安装页面，按照提示完成即可。</p>
+  </li>
+  <li>
+    <p>方法二：如下图，Zotero -&gt; Tools -&gt; Install Browser Connector -&gt; Web 中下载 xpi 格式的浏览器插件文件 -&gt; 安装。</p>
+
+    <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-2.png" alt="2"></p>
+  </li>
+  <li>
+    <p><em>附：以 Firefox 为例，介绍由 xpi 文件安装插件的方法</em></p>
+    <ul>
+      <li>
+        <p>Step1: 打开插件设置页面，左下角选择 Extensions &amp; Themes</p>
+
+        <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-3.png" alt="3"></p>
+
+        <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-4.png" alt="4"></p>
+      </li>
+      <li>
+        <p>Step2: 选择从文件安装插件，再选择刚刚下载的 xpi 文件，安装提示安装。</p>
+
+        <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-5.png" alt="5"></p>
+      </li>
+      <li>
+        <p>Step3: 安装成功：</p>
+
+        <p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-6.png" alt="6"></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="213-安装-office-word-插件">2.1.3 安装 Office-Word 插件</h4>
+
+<p>一般默认安装。</p>
+
+<ul>
+  <li>检查方法1：</li>
+</ul>
+
+<p>打开 Microsoft Word，查看标签栏是否有 <code class="language-plaintext highlighter-rouge">Zotero</code> 选项卡。</p>
+
+<p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-7.png" alt="7"></p>
+
+<ul>
+  <li>检查方法2：</li>
+</ul>
+
+<p>Zotero -&gt; Tools -&gt; Add-ons，在弹出的窗口中（如下图）查看是否下图标注的插件已经开启。</p>
+
+<p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-8.png" alt="8"></p>
+
+<p>若未默认安装，可参看 Ref. [4] 在 Word 中手动安装 Zotero 插件。</p>
+
+<h4 id="214-将数据存储路径从默认-c-盘更改到-d-盘">2.1.4 将数据存储路径从默认 C 盘更改到 D 盘</h4>
+
+<p>Zotero 默认将数据存储在 C 盘用户目录下。用久文件夹会占用很大存储空间。下将之更改到 D 盘自定义位置。</p>
+
+<p>依次打开 Zotero -&gt; Edit -&gt; Preferences -&gt; Advances -&gt; Files and folders，最终界面如下：</p>
+
+<p><img src="/assets/images/20221206-%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-9.png" alt="9"></p>
+
+<p>将 Data Directory Location 修改到自定义位置即可。</p>
+
+<h4 id="215-网页快照功能的关闭方法默认开启">2.1.5 网页快照功能的关闭方法（默认开启）</h4>
+
+<p>选项位置：Zotero -&gt; Edit -&gt; Preferences -&gt; General -&gt; File Handling -&gt; Automatically take snapshots when creating items from web pages.</p>
+
+<p>Zotero 会自动在保存网页内容的同时将网页快照保存。不需要可以关闭此功能。</p>
+
+<h3 id="22-zotero-的基本使用">2.2 Zotero 的基本使用</h3>
+
+<p>使用教程有几类供选择：</p>
+
+<ol>
+  <li>入门最正的还是要阅读官方文档，只是上手会比教程慢一些。官方文档：参见 Ref. [5].</li>
+  <li>博客教程。</li>
+  <li>在 <code class="language-plaintext highlighter-rouge">bilibili</code> 上有很多教程视频可供参考，上手较快，比较容易，也推荐这种方式。</li>
+</ol>
+
+<p>下对前两种方式的资源进行整合，做简要的资源梳理，尽量使得两部分的学习内容相互补充不重叠，以便于学习。</p>
+
+<p>若采取最后一种方式，自行搜索学习即可。</p>
+
+<h4 id="221-官方文档阅读摘要">2.2.1 官方文档阅读摘要</h4>
+<p>下按照逻辑顺序摘取比较重要的几篇官方文档。</p>
+
+<p>Zotero 设计里的几个概念对于更好使用 Zotero 很重要，建议在阅读官方文档时注意理解。</p>
+<ul>
+  <li>Item</li>
+  <li>Collection</li>
+  <li>Tag</li>
+</ul>
+
+<h5 id="2211-如何将待管理文献添加到-zotero">2.2.1.1 如何将待管理文献添加到 Zotero？</h5>
+<ol>
+  <li>网络文献资源</li>
+</ol>
+
+<p>Adding Items to Zotero: Ref. [6].</p>
+
+<ol>
+  <li>本地文献资源文件</li>
+</ol>
+
+<p>Adding Files to your Zotero Library: Ref. [7].</p>
+
+<h5 id="2212-文献组织和管理方法">2.2.1.2 文献组织和管理方法</h5>
+<p>这里需要注意的也就是理解 Collection 和 tag 的概念及其使用。</p>
+
+<p>Collections and Tags: Ref.[8].</p>
+
+<h4 id="222-博客教程阅读">2.2.2 博客教程阅读</h4>
+<h5 id="2221-基本操作">2.2.2.1 基本操作</h5>
+<p>Zotero的操作指南：Ref. [9].</p>
+
+<h5 id="2222-word-中参考文献的写作">2.2.2.2 Word 中参考文献的写作</h5>
+<p>在 Word 中插入参考文献：Ref. [10].</p>
+
+<h3 id="23-zotero--onedrive-实现跨设备的文献管理">2.3 Zotero &amp; OneDrive 实现跨设备的文献管理</h3>
+
+<p>其他云盘也是可以的。只是个人倾向于与 Microsoft 的 OneDrive。</p>
+
+<p>配置方法：比较靠谱的，虽然写的比较简略，可参见 Ref.[11].</p>
+
+<p>OneDrive 默认会把本地文件路径放在 C 盘，如果想要更改到 D 盘，方法参见 Red.[12].</p>
+
+<p>同样的，在 <code class="language-plaintext highlighter-rouge">bilibili</code> 上有教程视频可供参考，更加容易些，也推荐这种方式。</p>
+
+<h2 id="reference">Reference</h2>
+<p>[1] BookxNote Pro 官网：http://www.bookxnote.com/</p>
+
+<p>[2] 知云文献翻译 官网：https://www.zhiyunwenxian.cn/</p>
+
+<p>[3] Zotero 下载地址：https://www.zotero.org/download/</p>
+
+<p>[4] 在 Word 中手动安装 Zotero 插件：https://zhuanlan.zhihu.com/p/191039036</p>
+
+<p>[5] Zotero 官方文档：https://www.zotero.org/support/</p>
+
+<p>[6] Adding Items to Zotero: https://www.zotero.org/support/adding_items_to_zotero</p>
+
+<p>[7] Adding Files to your Zotero Library: https://www.zotero.org/support/attaching_files</p>
+
+<p>[8] Collections and Tags: https://www.zotero.org/support/collections_and_tags</p>
+
+<p>[9] Zotero的操作指南：https://zhuanlan.zhihu.com/p/98428625?from_voters_page=true</p>
+
+<p>[10] 在 Word 中插入参考文献：https://zhuanlan.zhihu.com/p/62931860</p>
+
+<p>[11] 基于 Zotfile 的 Zotero 同步到 OneDrive：https://blog.csdn.net/weixin_42369069/article/details/115675539</p>
+
+<p>[12] 更改 OneDrive 文件夹的位置：https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%94%B9-onedrive-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E4%BD%8D%E7%BD%AE-f386fb81-1461-40a7-be2c-712676b2c4ae</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/%E6%96%87%E7%8C%AE%E7%AE%A1%E7%90%86" class="page__taxonomy-item" rel="tag">文献管理</a><span class="sep">, </span>
+    
+      <a href="/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB" class="page__taxonomy-item" rel="tag">文献阅读</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/others" class="page__taxonomy-item" rel="tag">others</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-12-06T10:42:00+08:00">December 6, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/code/2022/11/06/ubuntu-virtual-machine.html" class="pagination--pager" title="Ubuntu 22.04 with VMWare virtual machine
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/code/2022/11/06/ubuntu-virtual-machine.html" rel="permalink">Ubuntu 22.04 with VMWare virtual machine
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-11-06T00:00:00+08:00">November 6, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/26/FDTD-advanced.html" rel="permalink">FDTD Note: Advanced FDTD
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-26T00:00:00+08:00">October 26, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+1. Determine the optimum resource configuration
+The key parameter is Processes. See Ref. [1].
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/20/Metasurface-design.html" rel="permalink">Metasurface design
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-20T00:00:00+08:00">October 20, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          11 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Achromatic focusing theory
+To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequenc...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/optics/2022/10/08/Meta-relatives.html" rel="permalink">Meta relatives
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-10-08T00:00:00+08:00">October 8, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+Optimization
+Deterministic and stochastic optimization methods
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/hzzg0727" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
