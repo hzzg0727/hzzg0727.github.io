@@ -116,29 +116,22 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          hzzg0727 Blog :squirrel:
           
         </a>
-        <ul class="visible-links">
-<li class="masthead__menu-item">
+        <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/categories/code/">Code</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/optics/">Optics</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/life/">Life</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/others/">Others</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/">Categories</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/tags/">Tags</a>
-            </li>
-</ul>
+            </li></ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -316,57 +309,14 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title">
-<i class="fas fa-cog"></i> Table of Contents</h4></header>
-              <ul class="toc__menu">
-<li><a href="#useful-commands-in-scriptprompt">Useful commands in ScriptPrompt</a></li>
-<li>
-<a href="#variables">Variables</a><ul>
-<li><a href="#variable-types">Variable types</a></li>
-<li><a href="#predefined-constants">Predefined constants</a></li>
-<li><a href="#prinf-the-values">Prinf the values</a></li>
-<li><a href="#initialization-of-variables">Initialization of variables</a></li>
-<li><a href="#element-access">Element access</a></li>
-<li><a href="#operations">Operations</a></li>
-</ul>
-</li>
-<li>
-<a href="#simulation-objects">Simulation objects</a><ul>
-<li><a href="#simulation-modes">Simulation modes</a></li>
-<li><a href="#location-group-scope-in-the-objects-tree">Location (group scope) in the objects tree</a></li>
-<li><a href="#add-objects">Add objects</a></li>
-<li><a href="#getset-properties-of-objects">Get/Set properties of objects</a></li>
-<li><a href="#delete-objects">Delete objects</a></li>
-</ul>
-</li>
-<li>
-<a href="#running-simulations">Running simulations</a><ul>
-<li><a href="#running-a-single-simulation">Running a single simulation</a></li>
-<li><a href="#running-multiple-simulations-using-the-job-manager">Running multiple simulations using the job manager</a></li>
-<li><a href="#running-parameter-sweep-and-optimization">Running parameter sweep and optimization</a></li>
-</ul>
-</li>
-<li>
-<a href="#accessing-and-visualizing-simulation-results">Accessing and visualizing simulation results</a><ul>
-<li><a href="#accessing-simulation-results">Accessing simulation results</a></li>
-<li><a href="#visualising-simulation-results">Visualising simulation results</a></li>
-</ul>
-</li>
-<li>
-<a href="#file-io">File I/O</a><ul><li><a href="#manipulating-project-files">Manipulating project files</a></li></ul>
-</li>
-<li><a href="#tips">Tips</a></li>
-<li>
-<a href="#reference">Reference</a><ul><li><a href="#core">Core</a></li></ul>
-</li>
-</ul>
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#useful-commands-in-scriptprompt">Useful commands in ScriptPrompt</a></li><li><a href="#variables">Variables</a><ul><li><a href="#variable-types">Variable types</a></li><li><a href="#predefined-constants">Predefined constants</a></li><li><a href="#prinf-the-values">Prinf the values</a></li><li><a href="#initialization-of-variables">Initialization of variables</a></li><li><a href="#element-access">Element access</a></li><li><a href="#operations">Operations</a></li></ul></li><li><a href="#simulation-objects">Simulation objects</a><ul><li><a href="#simulation-modes">Simulation modes</a></li><li><a href="#location-group-scope-in-the-objects-tree">Location (group scope) in the objects tree</a></li><li><a href="#add-objects">Add objects</a></li><li><a href="#getset-properties-of-objects">Get/Set properties of objects</a></li><li><a href="#delete-objects">Delete objects</a></li></ul></li><li><a href="#running-simulations">Running simulations</a><ul><li><a href="#running-a-single-simulation">Running a single simulation</a></li><li><a href="#running-multiple-simulations-using-the-job-manager">Running multiple simulations using the job manager</a></li><li><a href="#running-parameter-sweep-and-optimization">Running parameter sweep and optimization</a></li></ul></li><li><a href="#accessing-and-visualizing-simulation-results">Accessing and visualizing simulation results</a><ul><li><a href="#accessing-simulation-results">Accessing simulation results</a></li><li><a href="#visualising-simulation-results">Visualising simulation results</a></li></ul></li><li><a href="#file-io">File I/O</a><ul><li><a href="#manipulating-project-files">Manipulating project files</a></li></ul></li><li><a href="#tips">Tips</a></li><li><a href="#reference">Reference</a><ul><li><a href="#core">Core</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
         <!-- # FDTD Note: LSF Language -->
-<h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code>
-</h2>
+<h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
 </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="n">clear</span> <span class="n">a</span><span class="p">;</span>  <span class="c1"># clear variable a
@@ -396,7 +346,7 @@
 </ul>
 
 <h3 id="predefined-constants">Predefined constants</h3>
-<p><img src="/assets/images/2022-10-06-FDTD-lsf-1.png" alt="1"></p>
+<p><img src="/assets/images/2022-10-06-FDTD-lsf-1.png" alt="1" /></p>
 <ul>
   <li>endl - “\n”</li>
 </ul>
@@ -465,7 +415,7 @@
   <li>logical operators (pay attention to function <code class="language-plaintext highlighter-rouge">almostequal()</code>)</li>
 </ul>
 
-<p><img src="/assets/images/2022-10-06-FDTD-lsf-2.png" alt="2"></p>
+<p><img src="/assets/images/2022-10-06-FDTD-lsf-2.png" alt="2" /></p>
 
 <h2 id="simulation-objects">Simulation objects</h2>
 <h3 id="simulation-modes">Simulation modes</h3>
@@ -490,14 +440,10 @@
 
 <p>How to select objects?</p>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">select("NAME")</code>: select the object named “NAME”.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">shiftselect("NAME")</code>: select new object named “NAME” while keeping the current selected objects.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">selectall()</code>: select all the objects.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">selectpartial("PNAME")</code>: select objects with the partial name “PNAME”.</li>
+  <li><code class="language-plaintext highlighter-rouge">select("NAME")</code>: select the object named “NAME”.</li>
+  <li><code class="language-plaintext highlighter-rouge">shiftselect("NAME")</code>: select new object named “NAME” while keeping the current selected objects.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectall()</code>: select all the objects.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectpartial("PNAME")</code>: select objects with the partial name “PNAME”.</li>
 </ul>
 
 <p>How to set property?</p>
@@ -536,8 +482,7 @@
 <p>Notes:</p>
 <ul>
   <li>The job manager can be used to run a parameter sweep by creating all the simulation files and add them to the queue firstly and then running the jobs in the queue.</li>
-  <li>
-<em>(Advantage)</em> The job manager can run more than 1 simulation at a time.</li>
+  <li><em>(Advantage)</em> The job manager can run more than 1 simulation at a time.</li>
 </ul>
 
 <h3 id="running-parameter-sweep-and-optimization">Running parameter sweep and optimization</h3>
@@ -599,8 +544,7 @@
 
 <h3 id="visualising-simulation-results">Visualising simulation results</h3>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">plot</code> creates a line plot. All data sets in its argument should be sampled on the same position vector.</li>
+  <li><code class="language-plaintext highlighter-rouge">plot</code> creates a line plot. All data sets in its argument should be sampled on the same position vector.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
@@ -620,8 +564,7 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">plotxy</code> allows us to use datasets that are sampled on different position vectors.</li>
+  <li><code class="language-plaintext highlighter-rouge">plotxy</code> allows us to use datasets that are sampled on different position vectors.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x1</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
@@ -635,12 +578,9 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">polar</code> visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">polar2</code> adds multiple polar plots sampled on different angle values.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">image</code> creates 2D color plots.</li>
+  <li><code class="language-plaintext highlighter-rouge">polar</code> visualizes results in polar coordinates. All data sets must be sampled on the same array of angle values.</li>
+  <li><code class="language-plaintext highlighter-rouge">polar2</code> adds multiple polar plots sampled on different angle values.</li>
+  <li><code class="language-plaintext highlighter-rouge">image</code> creates 2D color plots.</li>
 </ul>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
@@ -653,18 +593,13 @@
 </span></code></pre></div></div>
 
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">polarimage</code> creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.</li>
+  <li><code class="language-plaintext highlighter-rouge">polarimage</code> creates 2D polar image plots. The first two arguments should be a vector that can go from -1 to +1. When used with farfield projection commands, the first two arguments are associated with the direction cosine of the farfield - hence the limitations on the values they can accept.</li>
   <li>Use command <code class="language-plaintext highlighter-rouge">setplot</code> to get the properties can be set for current figure window.</li>
   <li>Use command <code class="language-plaintext highlighter-rouge">setplot("PROPERTY_NAME", VALUE)</code> to set the property named “PROPERTY_NAME” of the current figure window with value <code class="language-plaintext highlighter-rouge">VALUE</code>.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">holdon</code> switches the plotting mode to hold multiple functions on the same figure.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">holdoff</code> switches off the holdon mode.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">selectfigure(NUMBER)</code> selects a figure with a specified figure number <code class="language-plaintext highlighter-rouge">NUMBER</code>. When used without any argument, it selects the last figure created.</li>
-  <li>
-<code class="language-plaintext highlighter-rouge">exportfigure("FILE_NAME", XRES, YRES)</code> exports the current figure to a JPG image with the name ‘filename’, the x resolution <code class="language-plaintext highlighter-rouge">XRES</code> and the y resolution <code class="language-plaintext highlighter-rouge">YRES</code>. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.</li>
+  <li><code class="language-plaintext highlighter-rouge">holdon</code> switches the plotting mode to hold multiple functions on the same figure.</li>
+  <li><code class="language-plaintext highlighter-rouge">holdoff</code> switches off the holdon mode.</li>
+  <li><code class="language-plaintext highlighter-rouge">selectfigure(NUMBER)</code> selects a figure with a specified figure number <code class="language-plaintext highlighter-rouge">NUMBER</code>. When used without any argument, it selects the last figure created.</li>
+  <li><code class="language-plaintext highlighter-rouge">exportfigure("FILE_NAME", XRES, YRES)</code> exports the current figure to a JPG image with the name ‘filename’, the x resolution <code class="language-plaintext highlighter-rouge">XRES</code> and the y resolution <code class="language-plaintext highlighter-rouge">YRES</code>. If the x/y resolutions are not specified, the exported image will have the same size as the current figure.</li>
 </ul>
 
 <h2 id="file-io">File I/O</h2>
@@ -678,8 +613,7 @@
 
 <h2 id="tips">Tips</h2>
 <ul>
-  <li>
-<code class="language-plaintext highlighter-rouge">""</code> is equal to <code class="language-plaintext highlighter-rouge">''</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">""</code> is equal to <code class="language-plaintext highlighter-rouge">''</code>.</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
@@ -975,15 +909,13 @@ To achromatically focus a broadband incident light in a diffraction limited spot
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap">
-<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
   </form>
-  <div id="results" class="results"></div>
-</div>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -1009,7 +941,7 @@ To achromatically focus a broadband incident light in a diffraction limited spot
   </ul>
 </div>
 
-<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

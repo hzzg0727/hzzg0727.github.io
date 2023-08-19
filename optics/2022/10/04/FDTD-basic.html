@@ -116,29 +116,22 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          hzzg0727 Blog :squirrel:
           
         </a>
-        <ul class="visible-links">
-<li class="masthead__menu-item">
+        <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/categories/code/">Code</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/optics/">Optics</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/life/">Life</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/others/">Others</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/">Categories</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/tags/">Tags</a>
-            </li>
-</ul>
+            </li></ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -316,24 +309,8 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title">
-<i class="fas fa-cog"></i> Table of Contents</h4></header>
-              <ul class="toc__menu">
-<li><a href="#1-far-field-projections">1. Far-field projections</a></li>
-<li><a href="#12-the-mesh-order-property">1.2. The mesh order property</a></li>
-<li>
-<a href="#3-pml-%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6">3. PML 边界条件</a><ul>
-<li><a href="#31-types">3.1 Types</a></li>
-<li><a href="#32-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8">3.2 如何使用</a></li>
-</ul>
-</li>
-<li><a href="#4-simulation-region">4. Simulation Region</a></li>
-<li><a href="#source">Source</a></li>
-<li><a href="#monitor">Monitor</a></li>
-<li><a href="#analysis">Analysis</a></li>
-<li><a href="#tips">Tips</a></li>
-<li><a href="#reference-resources">Reference (Resources)</a></li>
-</ul>
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#1-far-field-projections">1. Far-field projections</a></li><li><a href="#12-the-mesh-order-property">1.2. The mesh order property</a></li><li><a href="#3-pml-边界条件">3. PML 边界条件</a><ul><li><a href="#31-types">3.1 Types</a></li><li><a href="#32-如何使用">3.2 如何使用</a></li></ul></li><li><a href="#4-simulation-region">4. Simulation Region</a></li><li><a href="#source">Source</a></li><li><a href="#monitor">Monitor</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#tips">Tips</a></li><li><a href="#reference-resources">Reference (Resources)</a></li></ul>
 
             </nav>
           </aside>
@@ -361,14 +338,14 @@
 <h3 id="31-types">3.1 Types</h3>
 <p><strong>Standard</strong></p>
 
-<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br>
-如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br>
+<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br />
+如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br />
 通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。</p>
 
 <p><strong>Stabilized</strong></p>
 
-<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br>
-使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br>
+<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br />
+使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br />
 稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。</p>
 
 <p><strong>Steep Angle</strong></p>
@@ -388,7 +365,7 @@
 
 <h2 id="4-simulation-region">4. Simulation Region</h2>
 <ol>
-  <li>Dimension 2D vs 3D:<br>
+  <li>Dimension 2D vs 3D:<br />
 当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。</li>
   <li>Mesh Refinement：
     <ul>
@@ -397,8 +374,8 @@
       <li>其他选项的鲁棒性不好。</li>
     </ul>
   </li>
-  <li>Simulation time:<br>
-较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br>
+  <li>Simulation time:<br />
+较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br />
 仿真时间设置过小的可能结果：
     <ul>
       <li>频域监视器的伪影</li>
@@ -422,18 +399,15 @@
   </li>
   <li>Boundary condition:
     <ul>
-      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code>
-</li>
+      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code></li>
       <li>metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary</li>
       <li>PMC: perfect magnetic boundary that relects all</li>
       <li>Periodic: used when structure, source, and field are all periodic</li>
       <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
-      <li>
-<em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
-      <li>
-<em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br>
- 经验法则（对照 CAD 彩色视图验证）：<br>
- <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="">
+      <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
+      <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
+ 经验法则（对照 CAD 彩色视图验证）：<br />
+ <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="" />
  设置方法：
         <ol>
           <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
@@ -455,15 +429,11 @@
       <li>Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.</li>
       <li>BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.</li>
       <li>Diffracting source type: The source span determines the aperture.</li>
-      <li>
-<em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
-      <li>
-<em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
-      <li>
-<em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br>
+      <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
+      <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
+      <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
 经验选择：
-<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="">
-</li>
+<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
     </ul>
   </li>
   <li>TFSF (total-field scattered field) source</li>
@@ -491,10 +461,8 @@
   <li>Sources of errors (and corresponding solutions):
     <ul>
       <li>Three factors:
-<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="">
-</li>
-      <li>
-<code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
+<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
+      <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
     </ul>
   </li>
   <li>How to judge whether the simulation stop early?
@@ -807,15 +775,13 @@ To achromatically focus a broadband incident light in a diffraction limited spot
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap">
-<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
   </form>
-  <div id="results" class="results"></div>
-</div>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -841,7 +807,7 @@ To achromatically focus a broadband incident light in a diffraction limited spot
   </ul>
 </div>
 
-<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -116,29 +116,22 @@
       <nav id="site-nav" class="greedy-nav">
         
         <a class="site-title" href="/">
-          hzzg0727 Blog <img class="emoji" title=":squirrel:" alt=":squirrel:" src="https://github.githubassets.com/images/icons/emoji/shipit.png" height="20" width="20">
+          hzzg0727 Blog :squirrel:
           
         </a>
-        <ul class="visible-links">
-<li class="masthead__menu-item">
+        <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/categories/code/">Code</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/optics/">Optics</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/life/">Life</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/others/">Others</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/categories/">Categories</a>
-            </li>
-<li class="masthead__menu-item">
+            </li><li class="masthead__menu-item">
               <a href="/tags/">Tags</a>
-            </li>
-</ul>
+            </li></ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -316,22 +309,8 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title">
-<i class="fas fa-cog"></i> Table of Contents</h4></header>
-              <ul class="toc__menu">
-<li><a href="#1-%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">1. 软件安装</a></li>
-<li><a href="#2-github-pages">2. Github Pages</a></li>
-<li><a href="#3-ruby-%E7%9B%B8%E5%85%B3%E5%8C%85%E5%AE%89%E8%A3%85">3. Ruby 相关包安装</a></li>
-<li><a href="#4-%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E5%92%8C%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages">4. 建立博客文件和部署到 Github pages</a></li>
-<li><a href="#5-%E5%BA%94%E7%94%A8%E5%92%8C%E4%BF%AE%E6%94%B9-theme">5. 应用和修改 theme</a></li>
-<li>
-<a href="#6-%E5%85%B6%E4%BB%96">6. 其他</a><ul>
-<li><a href="#61-%E7%9B%B8%E5%85%B3%E5%BA%93">6.1 相关库</a></li>
-<li><a href="#62-remote-theme">6.2 Remote theme</a></li>
-</ul>
-</li>
-<li><a href="#reference">Reference</a></li>
-</ul>
+              <header><h4 class="nav__title"><i class="fas fa-cog"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#1-软件安装">1. 软件安装</a></li><li><a href="#2-github-pages">2. Github Pages</a></li><li><a href="#3-ruby-相关包安装">3. Ruby 相关包安装</a></li><li><a href="#4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</a></li><li><a href="#5-应用和修改-theme">5. 应用和修改 theme</a></li><li><a href="#6-其他">6. 其他</a><ul><li><a href="#61-相关库">6.1 相关库</a></li><li><a href="#62-remote-theme">6.2 Remote theme</a></li></ul></li><li><a href="#reference">Reference</a></li></ul>
 
             </nav>
           </aside>
@@ -361,8 +340,7 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
   <li>bundler</li>
   <li>jekyll</li>
   <li>webrick（也是一个<strong>坑</strong>：Ruby3.0.0 以上不会再自带 WebRick，需要自行添加）
-    <div class="language-ruby highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span> <span class="n">bundler</span>
 <span class="n">gem</span> <span class="n">install</span> <span class="n">webrick</span>
 </code></pre></div>    </div>
   </li>
@@ -371,19 +349,17 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <h2 id="4-建立博客文件和部署到-github-pages">4. 建立博客文件和部署到 Github pages</h2>
 <ol>
   <li>进入自己选定的本地博客目录</li>
-  <li>安装项目依赖的所有 gem 包。运行<br>
-   <code class="language-plaintext highlighter-rouge">bundle install</code>
-</li>
-  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br>
-<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code>
-</li>
-  <li>本地预览。进入博客文件夹内后，运行<br>
-<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br>
-或者（区别在 bundle 的作用）<br>
-<code class="language-plaintext highlighter-rouge">jekyll server</code><br>
+  <li>安装项目依赖的所有 gem 包。运行<br />
+   <code class="language-plaintext highlighter-rouge">bundle install</code></li>
+  <li>创建博客文件夹。设 [blog name] 为博客名称。运行<br />
+<code class="language-plaintext highlighter-rouge">jekyll new [blog name]</code></li>
+  <li>本地预览。进入博客文件夹内后，运行<br />
+<code class="language-plaintext highlighter-rouge">bundle exec jekyll server</code><br />
+或者（区别在 bundle 的作用）<br />
+<code class="language-plaintext highlighter-rouge">jekyll server</code><br />
 浏览器进入网址 http://localhost:4000 查看效果。<code class="language-plaintext highlighter-rouge">Ctrl + c</code> 结束本地预览。</li>
-  <li>运行如下命令生成网页文件<br>
-<code class="language-plaintext highlighter-rouge">jekyll build</code><br>
+  <li>运行如下命令生成网页文件<br />
+<code class="language-plaintext highlighter-rouge">jekyll build</code><br />
 将 _site 文件夹<strong>内</strong>的所有文件复制到本地 Github Pages 仓库根目录下。</li>
   <li>同步到 Github.</li>
   <li>查看 Github Pages 发布状态</li>
@@ -693,15 +669,13 @@ To achromatically focus a broadband incident light in a diffraction limited spot
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap">
-<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
   </form>
-  <div id="results" class="results"></div>
-</div>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -727,7 +701,7 @@ To achromatically focus a broadband incident light in a diffraction limited spot
   </ul>
 </div>
 
-<div class="page__footer-copyright">© 2022 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2023 hzzg0727. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
