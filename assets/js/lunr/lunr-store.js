@@ -64,4 +64,10 @@ var store = [{
         "tags": ["文献阅读","文献管理"],
         "url": "/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html",
         "teaser": null
+      },{
+        "title": "WSL Installation and Use",
+        "excerpt":"Installation Configuration: Main system: Windows 11 启用 Windows 功能 运行启用或关闭 Windows 功能，开启以下功能： Windows 虚拟机监控程序平台 适用于 Linux 的 Windows 子系统 虚拟机平台 注：若未执行此步骤，直接安装 WSL 会有请求超时的报错。 安装 WSL Powershell 运行如下命令 wsl --install 如果没有默认安装 Ubuntu，则按照提示使用如下命令选择想要的 Linux 发行版即可。 wsl --install -d &lt;Distribution Name&gt; 设置 WSL 开发环境 参考 WSL 设置开发环境的官方教程。 Installing MEEP on Linux Subsystem 在...","categories": ["code"],
+        "tags": ["linux","ubuntu"],
+        "url": "/code/2024/08/12/WSL.html",
+        "teaser": null
       }]

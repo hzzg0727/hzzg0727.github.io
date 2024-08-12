@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2023-08-19T21:00:58+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.   &gt;&gt;</subtitle><author><name>hzzg0727</name></author><entry><title type="html">文献阅读管理环境配置不完全指南</title><link href="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="文献阅读管理环境配置不完全指南" /><published>2022-12-06T10:42:00+08:00</published><updated>2022-12-06T10:42:00+08:00</updated><id>https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"><![CDATA[<!-- # 文献阅读管理环境配置不完全指南 -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2024-08-12T20:33:07+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.   &gt;&gt;</subtitle><author><name>hzzg0727</name></author><entry><title type="html">WSL Installation and Use</title><link href="https://hzzg0727.github.io/code/2024/08/12/WSL.html" rel="alternate" type="text/html" title="WSL Installation and Use" /><published>2024-08-12T00:00:00+08:00</published><updated>2024-08-12T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2024/08/12/WSL</id><content type="html" xml:base="https://hzzg0727.github.io/code/2024/08/12/WSL.html"><![CDATA[<!-- # WSL Installation and Use -->
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration:
+Main system: Windows 11
+</code></pre></div></div>
+
+<h3 id="启用-windows-功能">启用 Windows 功能</h3>
+
+<p>运行<code class="language-plaintext highlighter-rouge">启用或关闭 Windows 功能</code>，开启以下功能：</p>
+<ul>
+  <li>Windows 虚拟机监控程序平台</li>
+  <li>适用于 Linux 的 Windows 子系统</li>
+  <li>虚拟机平台</li>
+</ul>
+
+<p><em>注：若未执行此步骤，直接安装 WSL 会有请求超时的报错。</em></p>
+
+<h3 id="安装-wsl">安装 WSL</h3>
+
+<p>Powershell 运行如下命令</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl <span class="nt">--install</span>
+</code></pre></div></div>
+<p>如果没有默认安装 Ubuntu，则按照提示使用如下命令选择想要的 Linux 发行版即可。</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wsl <span class="nt">--install</span> <span class="nt">-d</span> &lt;Distribution Name&gt;
+</code></pre></div></div>
+
+<h3 id="设置-wsl-开发环境">设置 WSL 开发环境</h3>
+
+<p>参考 <a href="https://learn.microsoft.com/zh-cn/windows/wsl/setup/environment">WSL 设置开发环境的官方教程</a>。</p>
+
+<h2 id="installing-meep-on-linux-subsystem">Installing MEEP on Linux Subsystem</h2>
+
+<p>在 Windows 本地安装 MEEP 并不被支持。采用 WSL 的 Linux 子系统安装和使用 MEEP 是一个很实用和便捷的选择。</p>
+
+<p>参考 <a href="https://github.com/NanoComp/meep/discussions/2423">Linux 子系统安装 MEEP 的英文教程</a> 
+和 <a href="https://knifelees3.github.io/2020/06/26/C_%E6%95%99%E7%A8%8B_Windows%E4%B8%AD%E7%9A%84ubuntu%E5%AD%90%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Meep/index.html">Linux 子系统安装 MEEP 的中文教程</a>。</p>
+
+<h2 id="实用-linux-指令">实用 Linux 指令</h2>
+
+<h3 id="shell-重启">shell 重启</h3>
+
+<p>运行如下命令，会在当前进程中启动一个新的 bash shell。
+执行该命令后，当前 shell 会被替换为新的 bash shell，相当于重新启动了 shell [1]。</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exec </span>bash
+</code></pre></div></div>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] <a href="https://worktile.com/kb/ask/346128.html">shell 重启命令</a></p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">文献阅读管理环境配置不完全指南</title><link href="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="文献阅读管理环境配置不完全指南" /><published>2022-12-06T10:42:00+08:00</published><updated>2022-12-06T10:42:00+08:00</updated><id>https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"><![CDATA[<!-- # 文献阅读管理环境配置不完全指南 -->
 <h2 id="part1-文献阅读">Part1. 文献阅读</h2>
 <h3 id="11-精读文献">1.1 精读文献</h3>
 <p>BookxNote Pro：参见 Ref. [1].</p>
@@ -358,7 +408,31 @@ VMWare Workstation 16
 <h2 id="reference">Reference</h2>
 <p>[1] Getting accurate and fast nano-structure simulations: A benchmark of RCWA and FDTD for meta-surface calculation: https://planopsim.com/simulation/getting-accurate-and-fast-nano-structure-simulations-a-benchmark-of-rcwa-and-fdtd-for-meta-surface-calculation/#:~:text=FDTD%20and%20RCWA%20both%20model%20the%20same%20underlying,the%20frequency%20domain%20%28both%20time-frequency%20and%20spatial%20frequency%29.</p>
 
-<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by]]></summary></entry><entry><title type="html">Meta relatives</title><link href="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html"><![CDATA[<!-- # Meta Relatives -->
+<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html"><![CDATA[<!-- # LumOpt Notes -->
+<h2 id="install">Install</h2>
+<h3 id="1-choose-your-install-directory-and-run">1. Choose your install directory and run</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chriskeraly/LumOpt.git
+python setup.py -develop
+</code></pre></div></div>
+
+<h3 id="2-add-the-lumerical-api-lumapi-to-your-python-path">2. Add the Lumerical API lumapi to your Python path</h3>
+<p>In the LumOpt install directory, go into the “lumopt” directory, and then open “<strong>init</strong>.py”. Modify the path of <code class="language-plaintext highlighter-rouge">lumapi</code> according to your platform and install directory, as follows.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># __init__.py
+# ...
+</span><span class="k">if</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Windows'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Program Files/Lumerical/v202/api/python'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Darwin'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Applications/Lumerical/FDTD/FDTD.app/Contents/MacOS/'</span>
+    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Linux'</span><span class="p">:</span>
+        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/opt/lumerical/fdtd/api/python'</span>
+<span class="c1"># ...
+</span></code></pre></div></div>
+
+<p><em>Notes:</em></p>
+<ul>
+  <li>Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.</li>
+</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Install 1. Choose your install directory and run]]></summary></entry><entry><title type="html">Meta relatives</title><link href="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html"><![CDATA[<!-- # Meta Relatives -->
 <h2 id="optimization">Optimization</h2>
 <h3 id="deterministic-and-stochastic-optimization-methods">Deterministic and stochastic optimization methods</h3>
 <p><img src="/assets/images/2022-10-08-Meta-relatives-1.svg" alt="1" /></p>
@@ -387,31 +461,7 @@ VMWare Workstation 16
 <h2 id="references">References</h2>
 <p>[1] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances</p>
 
-<p>[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html"><![CDATA[Optimization Deterministic and stochastic optimization methods]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html"><![CDATA[<!-- # LumOpt Notes -->
-<h2 id="install">Install</h2>
-<h3 id="1-choose-your-install-directory-and-run">1. Choose your install directory and run</h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chriskeraly/LumOpt.git
-python setup.py -develop
-</code></pre></div></div>
-
-<h3 id="2-add-the-lumerical-api-lumapi-to-your-python-path">2. Add the Lumerical API lumapi to your Python path</h3>
-<p>In the LumOpt install directory, go into the “lumopt” directory, and then open “<strong>init</strong>.py”. Modify the path of <code class="language-plaintext highlighter-rouge">lumapi</code> according to your platform and install directory, as follows.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># __init__.py
-# ...
-</span><span class="k">if</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Windows'</span><span class="p">:</span>
-        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Program Files/Lumerical/v202/api/python'</span>
-    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Darwin'</span><span class="p">:</span>
-        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/Applications/Lumerical/FDTD/FDTD.app/Contents/MacOS/'</span>
-    <span class="k">elif</span> <span class="n">current_platform</span> <span class="o">==</span> <span class="s">'Linux'</span><span class="p">:</span>
-        <span class="n">default_api_path</span> <span class="o">=</span> <span class="s">'/opt/lumerical/fdtd/api/python'</span>
-<span class="c1"># ...
-</span></code></pre></div></div>
-
-<p><em>Notes:</em></p>
-<ul>
-  <li>Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.</li>
-</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Install 1. Choose your install directory and run]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
+<p>[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html"><![CDATA[Optimization Deterministic and stochastic optimization methods]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
 <h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
 </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -983,4 +1033,4 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
 <p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486
-fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry><entry><title type="html">Life test</title><link href="https://hzzg0727.github.io/life/2022/08/29/life-test.html" rel="alternate" type="text/html" title="Life test" /><published>2022-08-29T00:00:00+08:00</published><updated>2022-08-29T00:00:00+08:00</updated><id>https://hzzg0727.github.io/life/2022/08/29/life-test</id><content type="html" xml:base="https://hzzg0727.github.io/life/2022/08/29/life-test.html"><![CDATA[<!-- # life test. -->]]></content><author><name>hzzg0727</name></author><category term="life" /><category term="TEST" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry></feed>
