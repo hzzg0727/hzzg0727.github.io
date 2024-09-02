@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2024-08-12T20:33:07+08:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">hzzg0727 Blog :squirrel:</title><subtitle>Record the life, techniques, and others on the road.   &gt;&gt;</subtitle><author><name>hzzg0727</name></author><entry><title type="html">WSL Installation and Use</title><link href="https://hzzg0727.github.io/code/2024/08/12/WSL.html" rel="alternate" type="text/html" title="WSL Installation and Use" /><published>2024-08-12T00:00:00+08:00</published><updated>2024-08-12T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2024/08/12/WSL</id><content type="html" xml:base="https://hzzg0727.github.io/code/2024/08/12/WSL.html"><![CDATA[<!-- # WSL Installation and Use -->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://hzzg0727.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hzzg0727.github.io/" rel="alternate" type="text/html" /><updated>2024-09-01T21:11:45-07:00</updated><id>https://hzzg0727.github.io/feed.xml</id><title type="html">Yubin Gao</title><subtitle></subtitle><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><entry><title type="html">WSL Installation and Use</title><link href="https://hzzg0727.github.io/code/WSL/" rel="alternate" type="text/html" title="WSL Installation and Use" /><published>2024-08-12T00:00:00-07:00</published><updated>2024-08-12T00:00:00-07:00</updated><id>https://hzzg0727.github.io/code/WSL</id><content type="html" xml:base="https://hzzg0727.github.io/code/WSL/"><![CDATA[<p>How to install and use WSL in windows to obtain Linux virtual machine.</p>
+
+<!-- # WSL Installation and Use -->
 
 <h2 id="installation">Installation</h2>
 
@@ -48,7 +50,9 @@ Main system: Windows 11
 
 <h2 id="reference">Reference</h2>
 
-<p>[1] <a href="https://worktile.com/kb/ask/346128.html">shell 重启命令</a></p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">文献阅读管理环境配置不完全指南</title><link href="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="文献阅读管理环境配置不完全指南" /><published>2022-12-06T10:42:00+08:00</published><updated>2022-12-06T10:42:00+08:00</updated><id>https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://hzzg0727.github.io/others/2022/12/06/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE.html"><![CDATA[<!-- # 文献阅读管理环境配置不完全指南 -->
+<p>[1] <a href="https://worktile.com/kb/ask/346128.html">shell 重启命令</a></p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[How to install and use WSL in windows to obtain Linux virtual machine.]]></summary></entry><entry><title type="html">文献阅读管理环境配置不完全指南</title><link href="https://hzzg0727.github.io/academic/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="alternate" type="text/html" title="文献阅读管理环境配置不完全指南" /><published>2022-12-06T00:00:00-07:00</published><updated>2022-12-06T00:00:00-07:00</updated><id>https://hzzg0727.github.io/academic/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="https://hzzg0727.github.io/academic/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><![CDATA[<p>[Chinese] 文献阅读与管理的环境配置。</p>
+
+<!-- # 文献阅读管理环境配置不完全指南 -->
 <h2 id="part1-文献阅读">Part1. 文献阅读</h2>
 <h3 id="11-精读文献">1.1 精读文献</h3>
 <p>BookxNote Pro：参见 Ref. [1].</p>
@@ -84,7 +88,7 @@ Main system: Windows 11
   <li>
     <p>选择自定义安装（如下图），可定义安装于 D 盘。</p>
 
-    <p><img src="/assets/images/20221206-文献阅读管理环境配置-1.png" alt="1" /></p>
+    <p><img src="/images/20221206-文献阅读管理环境配置-1.png" alt="1" /></p>
   </li>
   <li>安装浏览器插件。至少有两种方法：</li>
 </ol>
@@ -96,7 +100,7 @@ Main system: Windows 11
   <li>
     <p>方法二：如下图，Zotero -&gt; Tools -&gt; Install Browser Connector -&gt; Web 中下载 xpi 格式的浏览器插件文件 -&gt; 安装。</p>
 
-    <p><img src="/assets/images/20221206-文献阅读管理环境配置-2.png" alt="2" /></p>
+    <p><img src="/images/20221206-文献阅读管理环境配置-2.png" alt="2" /></p>
   </li>
   <li>
     <p><em>附：以 Firefox 为例，介绍由 xpi 文件安装插件的方法</em></p>
@@ -104,19 +108,19 @@ Main system: Windows 11
       <li>
         <p>Step1: 打开插件设置页面，左下角选择 Extensions &amp; Themes</p>
 
-        <p><img src="/assets/images/20221206-文献阅读管理环境配置-3.png" alt="3" /></p>
+        <p><img src="/images/20221206-文献阅读管理环境配置-3.png" alt="3" /></p>
 
-        <p><img src="/assets/images/20221206-文献阅读管理环境配置-4.png" alt="4" /></p>
+        <p><img src="/images/20221206-文献阅读管理环境配置-4.png" alt="4" /></p>
       </li>
       <li>
         <p>Step2: 选择从文件安装插件，再选择刚刚下载的 xpi 文件，安装提示安装。</p>
 
-        <p><img src="/assets/images/20221206-文献阅读管理环境配置-5.png" alt="5" /></p>
+        <p><img src="/images/20221206-文献阅读管理环境配置-5.png" alt="5" /></p>
       </li>
       <li>
         <p>Step3: 安装成功：</p>
 
-        <p><img src="/assets/images/20221206-文献阅读管理环境配置-6.png" alt="6" /></p>
+        <p><img src="/images/20221206-文献阅读管理环境配置-6.png" alt="6" /></p>
       </li>
     </ul>
   </li>
@@ -132,7 +136,7 @@ Main system: Windows 11
 
 <p>打开 Microsoft Word，查看标签栏是否有 <code class="language-plaintext highlighter-rouge">Zotero</code> 选项卡。</p>
 
-<p><img src="/assets/images/20221206-文献阅读管理环境配置-7.png" alt="7" /></p>
+<p><img src="/images/20221206-文献阅读管理环境配置-7.png" alt="7" /></p>
 
 <ul>
   <li>检查方法2：</li>
@@ -140,7 +144,7 @@ Main system: Windows 11
 
 <p>Zotero -&gt; Tools -&gt; Add-ons，在弹出的窗口中（如下图）查看是否下图标注的插件已经开启。</p>
 
-<p><img src="/assets/images/20221206-文献阅读管理环境配置-8.png" alt="8" /></p>
+<p><img src="/images/20221206-文献阅读管理环境配置-8.png" alt="8" /></p>
 
 <p>若未默认安装，可参看 Ref. [4] 在 Word 中手动安装 Zotero 插件。</p>
 
@@ -150,7 +154,7 @@ Main system: Windows 11
 
 <p>依次打开 Zotero -&gt; Edit -&gt; Preferences -&gt; Advances -&gt; Files and folders，最终界面如下：</p>
 
-<p><img src="/assets/images/20221206-文献阅读管理环境配置-9.png" alt="9" /></p>
+<p><img src="/images/20221206-文献阅读管理环境配置-9.png" alt="9" /></p>
 
 <p>将 Data Directory Location 修改到自定义位置即可。</p>
 
@@ -242,7 +246,9 @@ Main system: Windows 11
 
 <p>[11] 基于 Zotfile 的 Zotero 同步到 OneDrive：https://blog.csdn.net/weixin_42369069/article/details/115675539</p>
 
-<p>[12] 更改 OneDrive 文件夹的位置：https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%94%B9-onedrive-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E4%BD%8D%E7%BD%AE-f386fb81-1461-40a7-be2c-712676b2c4ae</p>]]></content><author><name>hzzg0727</name></author><category term="others" /><category term="文献阅读" /><category term="文献管理" /><summary type="html"><![CDATA[Part1. 文献阅读 1.1 精读文献 BookxNote Pro：参见 Ref. [1].]]></summary></entry><entry><title type="html">Ubuntu 22.04 with VMWare virtual machine</title><link href="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html" rel="alternate" type="text/html" title="Ubuntu 22.04 with VMWare virtual machine" /><published>2022-11-06T00:00:00+08:00</published><updated>2022-11-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/11/06/ubuntu-virtual-machine.html"><![CDATA[<!-- # Ubuntu 22.04 with VMWare virtual machine -->
+<p>[12] 更改 OneDrive 文件夹的位置：https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%94%B9-onedrive-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E4%BD%8D%E7%BD%AE-f386fb81-1461-40a7-be2c-712676b2c4ae</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="academic" /><category term="文献阅读" /><category term="文献管理" /><summary type="html"><![CDATA[[Chinese] 文献阅读与管理的环境配置。]]></summary></entry><entry><title type="html">Ubuntu 22.04 with VMWare virtual machine</title><link href="https://hzzg0727.github.io/code/ubuntu-virtual-machine/" rel="alternate" type="text/html" title="Ubuntu 22.04 with VMWare virtual machine" /><published>2022-11-06T00:00:00-07:00</published><updated>2022-11-06T00:00:00-07:00</updated><id>https://hzzg0727.github.io/code/ubuntu-virtual-machine</id><content type="html" xml:base="https://hzzg0727.github.io/code/ubuntu-virtual-machine/"><![CDATA[<p>Install Ubuntu 22.04 using VMWare virtual machine.</p>
+
+<!-- # Ubuntu 22.04 with VMWare virtual machine -->
 
 <h2 id="installation">Installation</h2>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration:
@@ -278,12 +284,9 @@ VMWare Workstation 16
 
 <p>[4] https://blog.csdn.net/mythinker2/article/details/86746427</p>
 
-<p>[5] https://jarviswwong.com/ubuntu-vmware-hgfs-permissions-problem.html</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">FDTD Note: Advanced FDTD</title><link href="https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced.html" rel="alternate" type="text/html" title="FDTD Note: Advanced FDTD" /><published>2022-10-26T00:00:00+08:00</published><updated>2022-10-26T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/26/FDTD-advanced.html"><![CDATA[<!-- # FDTD Note: Advanced FDTD -->
-<h2 id="1-determine-the-optimum-resource-configuration">1. Determine the optimum resource configuration</h2>
-<p>The key parameter is <code class="language-plaintext highlighter-rouge">Processes</code>. See Ref. [1].</p>
+<p>[5] https://jarviswwong.com/ubuntu-vmware-hgfs-permissions-problem.html</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="code" /><category term="linux" /><category term="ubuntu" /><summary type="html"><![CDATA[Install Ubuntu 22.04 using VMWare virtual machine.]]></summary></entry><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/Metasurface-design/" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00-07:00</published><updated>2022-10-20T00:00:00-07:00</updated><id>https://hzzg0727.github.io/optics/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/Metasurface-design/"><![CDATA[<p>Learning notes for metasurface design with Lumerical FDTD.</p>
 
-<h2 id="reference-resources">Reference (Resources)</h2>
-<p>[1] https://optics.ansys.com/hc/en-us/articles/6491711906195-Determine-the-optimum-resource-configuration-to-run-Lumerical-FDTD-simulations</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[1. Determine the optimum resource configuration The key parameter is Processes. See Ref. [1].]]></summary></entry><entry><title type="html">Metasurface design</title><link href="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html" rel="alternate" type="text/html" title="Metasurface design" /><published>2022-10-20T00:00:00+08:00</published><updated>2022-10-20T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/20/Metasurface-design.html"><![CDATA[<!-- # Metasurface design -->
+<!-- # Metasurface design -->
 <h2 id="achromatic-focusing-theory">Achromatic focusing theory</h2>
 <p>To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by</p>
 
@@ -405,10 +408,41 @@ VMWare Workstation 16
 
 <p>Jones matrix can be utilized to realize polarization synthesis and decomposition. For instance, in this way, a x polarization plane wave (or a y polarization plane wave) can be decomposed into left circularly polarized light and right circularly polarized light to make further analysis.</p>
 
+<h2 id="optimization">Optimization</h2>
+<h3 id="deterministic-and-stochastic-optimization-methods">Deterministic and stochastic optimization methods</h3>
+<p><img src="/images/2022-10-08-Meta-relatives-1.svg" alt="1" /></p>
+
+<p>For more, see Ref.[3].</p>
+
+<h2 id="complex-permittivity-leftrightarrow-complex-refractive-index">Complex permittivity $\leftrightarrow$ complex refractive index</h2>
+<p>Assume dealing with optical frequencies, in which case we can treat $\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies.</p>
+
+<p>In this case, the relationship between the complex relative permittivity (also known as the complex dialectric constant) and the complex refractive index is given by</p>
+
+\[\begin{equation}
+    \epsilon_{\mathrm{real}} + i\ \epsilon_{\mathrm{im}} = (n + i\ k)^2
+\end{equation}\]
+
+\[\begin{equation}
+    \epsilon_{\mathrm{real}} = n^2 - k^2
+\end{equation}\]
+
+\[\begin{equation}
+    \epsilon_{\mathrm{im}} = 2nk
+\end{equation}\]
+
+<p>From Ref.[4].</p>
+
 <h2 id="reference">Reference</h2>
 <p>[1] Getting accurate and fast nano-structure simulations: A benchmark of RCWA and FDTD for meta-surface calculation: https://planopsim.com/simulation/getting-accurate-and-fast-nano-structure-simulations-a-benchmark-of-rcwa-and-fdtd-for-meta-surface-calculation/#:~:text=FDTD%20and%20RCWA%20both%20model%20the%20same%20underlying,the%20frequency%20domain%20%28both%20time-frequency%20and%20spatial%20frequency%29.</p>
 
-<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Achromatic focusing theory To achromatically focus a broadband incident light in a diffraction limited spot, a metalens must impart a spatially and frequency-dependent phase profile given by]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/FDTD-lumopt.html"><![CDATA[<!-- # LumOpt Notes -->
+<p>[2] What is the advantages of Rigorous Coupled Wave Analysis (RCWA) for simulation of electromagnetic field in periodic structures?: https://www.researchgate.net/post/What_is_the_advantages_of_Rigorous_Coupled_Wave_Analysis_RCWA_for_simulation_of_electromagnetic_field_in_periodic_structures</p>
+
+<p>[3] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances</p>
+
+<p>[4] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="optics" /><category term="meta" /><category term="FDTD" /><summary type="html"><![CDATA[Learning notes for metasurface design with Lumerical FDTD.]]></summary></entry><entry><title type="html">FDTD Note: LumOpt</title><link href="https://hzzg0727.github.io/optics/FDTD-lumopt/" rel="alternate" type="text/html" title="FDTD Note: LumOpt" /><published>2022-10-08T00:00:00-07:00</published><updated>2022-10-08T00:00:00-07:00</updated><id>https://hzzg0727.github.io/optics/FDTD-lumopt</id><content type="html" xml:base="https://hzzg0727.github.io/optics/FDTD-lumopt/"><![CDATA[<p>Learning notes for <code class="language-plaintext highlighter-rouge">LumOpt</code> of Lumerical FDTD.</p>
+
+<!-- # LumOpt Notes -->
 <h2 id="install">Install</h2>
 <h3 id="1-choose-your-install-directory-and-run">1. Choose your install directory and run</h3>
 
@@ -432,36 +466,9 @@ python setup.py -develop
 <p><em>Notes:</em></p>
 <ul>
   <li>Some code in Lumopt (utilities/plotter.py) is not compatible with the matplotlib3.5.3. It can be solved through a new environment with python3.6 as the interpreter and relative packages installed.</li>
-</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Install 1. Choose your install directory and run]]></summary></entry><entry><title type="html">Meta relatives</title><link href="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html" rel="alternate" type="text/html" title="Meta relatives" /><published>2022-10-08T00:00:00+08:00</published><updated>2022-10-08T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/08/Meta-relatives.html"><![CDATA[<!-- # Meta Relatives -->
-<h2 id="optimization">Optimization</h2>
-<h3 id="deterministic-and-stochastic-optimization-methods">Deterministic and stochastic optimization methods</h3>
-<p><img src="/assets/images/2022-10-08-Meta-relatives-1.svg" alt="1" /></p>
+</ul>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="optics" /><category term="FDTD" /><category term="lumopt" /><category term="meta" /><summary type="html"><![CDATA[Learning notes for LumOpt of Lumerical FDTD.]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/FDTD-lsf/" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00-07:00</published><updated>2022-10-06T00:00:00-07:00</updated><id>https://hzzg0727.github.io/optics/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/FDTD-lsf/"><![CDATA[<p>Learning notes for <code class="language-plaintext highlighter-rouge">lsf</code> script language of Lumerical FDTD.</p>
 
-<p>For more, see Ref.[1].</p>
-
-<h2 id="complex-permittivity-leftrightarrow-complex-refractive-index">Complex permittivity $\leftrightarrow$ complex refractive index</h2>
-<p>Assume dealing with optical frequencies, in which case we can treat $\mu_r=1$, due to most materials of interest being non-magnetic at optical frequencies.</p>
-
-<p>In this case, the relationship between the complex relative permittivity (also known as the complex dialectric constant) and the complex refractive index is given by</p>
-
-\[\begin{equation}
-    \epsilon_{\mathrm{real}} + i\ \epsilon_{\mathrm{im}} = (n + i\ k)^2
-\end{equation}\]
-
-\[\begin{equation}
-    \epsilon_{\mathrm{real}} = n^2 - k^2
-\end{equation}\]
-
-\[\begin{equation}
-    \epsilon_{\mathrm{im}} = 2nk
-\end{equation}\]
-
-<p>From Ref.[2].</p>
-
-<h2 id="references">References</h2>
-<p>[1] Deterministic and Stochastic Optimization Methods: https://www.baeldung.com/cs/deterministic-stochastic-optimization#:~:text=Thus%2C%20deterministic%20optimization%20refers%20to%20complete%20or%20rigorous,a%20finite%20execution%20time%20and%20considering%20predefined%20tolerances</p>
-
-<p>[2] https://physics.stackexchange.com/questions/397483/converting-a-complex-index-of-refraction-to-a-complex-dielectric-constant#:~:text=In%20that%20case%2C%20the%20relationship%20between%20the%20complex,for%20contributing%20an%20answer%20to%20Physics%20Stack%20Exchange%21</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="meta" /><summary type="html"><![CDATA[Optimization Deterministic and stochastic optimization methods]]></summary></entry><entry><title type="html">FDTD Note: lsf Language</title><link href="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html" rel="alternate" type="text/html" title="FDTD Note: lsf Language" /><published>2022-10-06T00:00:00+08:00</published><updated>2022-10-06T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/06/FDTD-lsf.html"><![CDATA[<!-- # FDTD Note: LSF Language -->
+<!-- # FDTD Note: LSF Language -->
 <h2 id="useful-commands-in-scriptprompt">Useful commands in <code class="language-plaintext highlighter-rouge">ScriptPrompt</code></h2>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">clear</span><span class="p">;</span>  <span class="c1"># clear all the variables in the workspace
 </span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -775,7 +782,9 @@ python setup.py -develop
 <p><em>Note:</em></p>
 <ul>
   <li>You can learn Scripting100 Course using Ref.[3] with Ref.[4].</li>
-</ul>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><category term="meta" /><summary type="html"><![CDATA[Useful commands in ScriptPrompt ```python clear; # clear all the variables in the workspace a = 1; clear a; # clear variable a]]></summary></entry><entry><title type="html">FDTD Note: Basic</title><link href="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html" rel="alternate" type="text/html" title="FDTD Note: Basic" /><published>2022-10-04T00:00:00+08:00</published><updated>2022-10-04T00:00:00+08:00</updated><id>https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/2022/10/04/FDTD-basic.html"><![CDATA[<!-- # FDTD Note: Basic -->
+</ul>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="optics" /><category term="FDTD" /><category term="lsf" /><category term="meta" /><summary type="html"><![CDATA[Learning notes for lsf script language of Lumerical FDTD.]]></summary></entry><entry><title type="html">FDTD Notes</title><link href="https://hzzg0727.github.io/optics/FDTD-basic/" rel="alternate" type="text/html" title="FDTD Notes" /><published>2022-10-04T00:00:00-07:00</published><updated>2022-10-04T00:00:00-07:00</updated><id>https://hzzg0727.github.io/optics/FDTD-basic</id><content type="html" xml:base="https://hzzg0727.github.io/optics/FDTD-basic/"><![CDATA[<p>Learning notes for basics of Lumerical FDTD.</p>
+
+<!-- # FDTD Note: Basic -->
 <h2 id="1-far-field-projections">1. Far-field projections</h2>
 <p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
 
@@ -867,7 +876,7 @@ python setup.py -develop
       <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
       <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
  经验法则（对照 CAD 彩色视图验证）：<br />
- <img src="/assets/images/2022-10-04-FDTD-basic-1.png" alt="" />
+ <img src="/images/2022-10-04-FDTD-basic-1.png" alt="" />
  设置方法：
         <ol>
           <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
@@ -881,7 +890,7 @@ python setup.py -develop
   <li>If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.</li>
 </ol>
 
-<h2 id="source">Source</h2>
+<h2 id="5-source">5. Source</h2>
 <ol>
   <li>The fileds measured in the two cells around the source injeciton plane may be unphysical.</li>
   <li>Plane source:
@@ -893,7 +902,7 @@ python setup.py -develop
       <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
       <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
 经验选择：
-<img src="/assets/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
+<img src="/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
     </ul>
   </li>
   <li>TFSF (total-field scattered field) source</li>
@@ -902,14 +911,14 @@ python setup.py -develop
   <li>Dipole source</li>
 </ol>
 
-<h2 id="monitor">Monitor</h2>
+<h2 id="6-monitor">6. Monitor</h2>
 <ol>
   <li>Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.</li>
   <li>Time monitor can be used to check if the simulation time is long enough.</li>
   <li>Use point time monitor can obtain spectrum.</li>
 </ol>
 
-<h2 id="analysis">Analysis</h2>
+<h2 id="7-analysis">7. Analysis</h2>
 <ol>
   <li>Design workflow:
     <ul>
@@ -921,7 +930,7 @@ python setup.py -develop
   <li>Sources of errors (and corresponding solutions):
     <ul>
       <li>Three factors:
-<img src="/assets/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
+<img src="/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
       <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
     </ul>
   </li>
@@ -934,14 +943,16 @@ python setup.py -develop
   </li>
 </ol>
 
-<h2 id="tips">Tips</h2>
+<h2 id="8-tips">8. Tips</h2>
 <ol>
   <li>要通过收敛性测试实现高精度计算。</li>
   <li>When running, <code class="language-plaintext highlighter-rouge">Force quit</code> is not recommended since it may cause the problem that the license is not released normally.</li>
 </ol>
 
-<h2 id="reference-resources">Reference (Resources)</h2>
-<p><strong>Core</strong></p>
+<h2 id="9-determine-the-optimum-resource-configuration">9. Determine the optimum resource configuration</h2>
+<p>The key parameter is <code class="language-plaintext highlighter-rouge">Processes</code>. See Ref. [1].</p>
+
+<h2 id="reference">Reference</h2>
 
 <p>[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual</p>
 
@@ -953,11 +964,15 @@ python setup.py -develop
 
 <p>[5] ANSYS Forum: https://forum.ansys.com/</p>
 
-<p><strong>Others</strong></p>
+<p>[6] Optimum resource configuration: https://optics.ansys.com/hc/en-us/articles/6491711906195-Determine-the-optimum-resource-configuration-to-run-Lumerical-FDTD-simulations</p>
 
-<p>[1] PML 边界条件设置: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
+<p><strong>Others resources</strong></p>
 
-<p>[2] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>hzzg0727</name></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[1. Far-field projections If your structure is periodic, consider using the grating projections. If your structure is not periodic, consider using the far-field projections.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/2022/08/29/blog-build.html" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T11:33:00+08:00</published><updated>2022-08-29T11:33:00+08:00</updated><id>https://hzzg0727.github.io/code/2022/08/29/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/2022/08/29/blog-build.html"><![CDATA[<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
+<p>[7] PML Boundary condition setting: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
+
+<p>[8] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="optics" /><category term="FDTD" /><category term="meta" /><summary type="html"><![CDATA[Learning notes for basics of Lumerical FDTD.]]></summary></entry><entry><title type="html">基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法</title><link href="https://hzzg0727.github.io/code/blog-build/" rel="alternate" type="text/html" title="基于 Github Pages &amp;amp; Jekyll 的个人博客搭建方法" /><published>2022-08-29T00:00:00-07:00</published><updated>2022-08-29T00:00:00-07:00</updated><id>https://hzzg0727.github.io/code/blog-build</id><content type="html" xml:base="https://hzzg0727.github.io/code/blog-build/"><![CDATA[<p>[Chinese] 利用 Github Pages 以及 Jekyll，快速搭建自己的博客网站。</p>
+
+<!-- # 基于 Github Pages & Jekyll 的个人博客搭建方法 -->
 <h2 id="1-软件安装">1. 软件安装</h2>
 <p><strong>清单</strong></p>
 <ul>
@@ -1033,4 +1048,76 @@ Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的�
 <p>[3] Bundle、Gem、Gemfile关系  https://www.jianshu.com/p/32fcdeb5bbec</p>
 
 <p>[4] Jekyll使用教程笔记  https://juejin.cn/post/6844903623567081486
-fabu</p>]]></content><author><name>hzzg0727</name></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[1. 软件安装 清单 Git Github Desktop (optional) Ruby + Devkit 其中，Ruby 安装有如下注意事项： 安装包下载地址：https://rubyinstaller.org/downloads/ 以管理员身份运行安装文件 安装目录不要包含中文和空格（空格是一个坑，会导致下方的部分命令出现运行时错误） 其他选项可默认执行 MSYS 安装会耗时久一些，耐心 Github Desktop 可以帮助不熟悉 Git 操作的朋友进行 Github 仓库的版本管理。]]></summary></entry></feed>
+fabu</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="code" /><category term="Github" /><category term="Jekyll" /><summary type="html"><![CDATA[[Chinese] 利用 Github Pages 以及 Jekyll，快速搭建自己的博客网站。]]></summary></entry><entry><title type="html">WPS 公式快捷输入的配置方法</title><link href="https://hzzg0727.github.io/academic/wps-equation-configure/" rel="alternate" type="text/html" title="WPS 公式快捷输入的配置方法" /><published>2022-08-28T00:00:00-07:00</published><updated>2022-08-28T00:00:00-07:00</updated><id>https://hzzg0727.github.io/academic/wps-equation-configure</id><content type="html" xml:base="https://hzzg0727.github.io/academic/wps-equation-configure/"><![CDATA[<p>[Chinese] 如何让 WPS 实现类似 Microsoft Office 体验的公式快捷输入。</p>
+
+<!-- # WPS 公式快捷输入的配置方法 -->
+<h2 id="1-设置插入公式快捷键">1. 设置插入公式快捷键</h2>
+<p>不同于 WORD 自带了插入公式快捷键，WPS 中需要我们手动添加。以此选择：文件、自定义功能区、键盘快捷方式（自定义），调出自定义键盘窗口。</p>
+
+<p>在 <code class="language-plaintext highlighter-rouge">类别</code> 中选择 <code class="language-plaintext highlighter-rouge">“插入”选项卡</code>，在 <code class="language-plaintext highlighter-rouge">命令</code> 中选择 <code class="language-plaintext highlighter-rouge">EquationInsert</code>，在 <code class="language-plaintext highlighter-rouge">当前快捷键窗口</code> 可以查看当前已定义的快捷键（默认为空），在 <code class="language-plaintext highlighter-rouge">请按新的快捷键</code> 区域录入新的快捷键。如：Alt + =。</p>
+
+<p><img src="/images/2022-08-28-wps-equation-configure-1.png" alt="0" /></p>
+
+<h2 id="2-掌握-wps-公式编辑器的快捷键">2. 掌握 WPS 公式编辑器的快捷键</h2>
+<p>WPS 公式编辑器无法支持 Latex 语法，鼠标操作速度很慢。因此，掌握常用的快捷键可以大大提高公式插入编辑的速度，甚至在无需鼠标操作的情况下完成几乎所有公式的编辑。</p>
+
+<p><strong>常用 WPS 公式编辑器快捷键</strong></p>
+<ul>
+  <li>调出选项卡
+    <ul>
+      <li>Alt + F: 文件选项卡</li>
+      <li>Alt + E: 编辑选项卡</li>
+      <li>Alt + V: 视图选项卡</li>
+      <li>Alt + T: 格式选项卡</li>
+      <li>Alt + S: 样式选项卡</li>
+      <li>Alt + Z: 尺寸选项卡</li>
+      <li>Alt + H: 帮助选项卡</li>
+    </ul>
+  </li>
+  <li>退出公式编辑
+    <ul>
+      <li>Alt + F -&gt; X: 即文件选项卡中 <code class="language-plaintext highlighter-rouge">退出</code> 选项</li>
+      <li>其他选项同理</li>
+    </ul>
+  </li>
+  <li>希腊字母
+    <ul>
+      <li>Ctrl + G -&gt; 英文字母: 输入英文字母对应的小写希腊字母</li>
+      <li>Ctrl + G -&gt; Shift -&gt; 英文字母: 输入英文字母对应的大写希腊字母</li>
+    </ul>
+  </li>
+  <li>括号<br />
+<em>由于括号中元素尺寸不确定，最好采用如下方式输入的尺寸自适应的括号</em>
+    <ul>
+      <li>Ctrl + 9 / 0: 小括号</li>
+      <li>Ctrl + [ / ]: 中括号</li>
+      <li>Ctrl + Shift + [ / ]: 大括号</li>
+    </ul>
+  </li>
+  <li>数学公式
+    <ul>
+      <li>Ctrl + F: 上下分式</li>
+      <li>Ctrl + /: 单行倾斜分式</li>
+      <li>Ctrl + R: 根式（省略2）</li>
+      <li>Ctrl + T -&gt; N : 任意阶根式</li>
+      <li>Ctrl + H: 上标</li>
+      <li>Ctrl + L: 下标</li>
+      <li>Ctrl + J: 上下标</li>
+      <li>Ctrl + K -&gt; &lt;: 小于等于</li>
+      <li>Ctrl + K -&gt; &gt;: 大于等于</li>
+      <li>Ctrl + Alt + ‘: 一阶导数</li>
+      <li>Ctrl + Shift + ‘: 二阶导数</li>
+      <li>Ctrl + I: 定积分</li>
+      <li>Ctrl + Shift + -: 输入字母后，凭此在字母上添加上横线</li>
+      <li>Ctrl + Alt + -: 输入字母后，凭此在字母上添加矢量箭头</li>
+    </ul>
+  </li>
+  <li>其他
+    <ul>
+      <li>Tab: 元素间跳转（完成某类元素输入后转入后续元素，如由上标输入完成后回归正常尺寸）</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+<p>[1] https://wenku.baidu.com/view/283e6549bcd5b9f3f90f76c66137ee06eff94e3c.html</p>]]></content><author><name>Yubin Gao</name><email>3190101611@zju.edu.cn</email></author><category term="academic" /><category term="Office" /><summary type="html"><![CDATA[[Chinese] 如何让 WPS 实现类似 Microsoft Office 体验的公式快捷输入。]]></summary></entry></feed>

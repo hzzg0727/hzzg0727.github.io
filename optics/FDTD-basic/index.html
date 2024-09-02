@@ -1,0 +1,815 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>FDTD Notes - Yubin Gao</title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-US">
+<meta property="og:site_name" content="Yubin Gao">
+<meta property="og:title" content="FDTD Notes">
+
+
+  <link rel="canonical" href="https://hzzg0727.github.io/optics/FDTD-basic/">
+  <meta property="og:url" content="https://hzzg0727.github.io/optics/FDTD-basic/">
+
+
+
+  <meta property="og:description" content="Learning notes for basics of Lumerical FDTD.">
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2022-10-04T00:00:00-07:00">
+
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Person",
+      "name" : "Yubin Gao",
+      "url" : "https://hzzg0727.github.io",
+      "sameAs" : null
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://hzzg0727.github.io/feed.xml" type="application/atom+xml" rel="alternate" title="Yubin Gao Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hzzg0727.github.io/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    
+
+<!-- start custom head snippets -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://hzzg0727.github.io/images/apple-touch-icon-57x57.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="60x60" href="https://hzzg0727.github.io/images/apple-touch-icon-60x60.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="72x72" href="https://hzzg0727.github.io/images/apple-touch-icon-72x72.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="76x76" href="https://hzzg0727.github.io/images/apple-touch-icon-76x76.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="114x114" href="https://hzzg0727.github.io/images/apple-touch-icon-114x114.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="120x120" href="https://hzzg0727.github.io/images/apple-touch-icon-120x120.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="144x144" href="https://hzzg0727.github.io/images/apple-touch-icon-144x144.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="152x152" href="https://hzzg0727.github.io/images/apple-touch-icon-152x152.png?v=M44lzPylqQ">
+<link rel="apple-touch-icon" sizes="180x180" href="https://hzzg0727.github.io/images/apple-touch-icon-180x180.png?v=M44lzPylqQ">
+<link rel="icon" type="image/png" href="https://hzzg0727.github.io/images/favicon-32x32.png?v=M44lzPylqQ" sizes="32x32">
+<link rel="icon" type="image/png" href="https://hzzg0727.github.io/images/android-chrome-192x192.png?v=M44lzPylqQ" sizes="192x192">
+<link rel="icon" type="image/png" href="https://hzzg0727.github.io/images/favicon-96x96.png?v=M44lzPylqQ" sizes="96x96">
+<link rel="icon" type="image/png" href="https://hzzg0727.github.io/images/favicon-16x16.png?v=M44lzPylqQ" sizes="16x16">
+<link rel="manifest" href="https://hzzg0727.github.io/images/manifest.json?v=M44lzPylqQ">
+<link rel="mask-icon" href="https://hzzg0727.github.io/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
+<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-TileImage" content="https://hzzg0727.github.io/images/mstile-144x144.png?v=M44lzPylqQ">
+<meta name="msapplication-config" content="https://hzzg0727.github.io/images/browserconfig.xml?v=M44lzPylqQ">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://hzzg0727.github.io/assets/css/academicons.css"/>
+
+
+<!-- Support for MatJax -->
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://hzzg0727.github.io/">Yubin Gao</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://hzzg0727.github.io/publications/">Publications</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://hzzg0727.github.io/year-archive/">Blog Posts</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="https://hzzg0727.github.io/cv/">CV</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="https://hzzg0727.github.io/images/profile.png" class="author__avatar" alt="Yubin Gao">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Yubin Gao</h3>
+    
+    <p class="author__bio">Ph.D in Zhejiang University.</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      <!-- Font Awesome icons / Biographic information  -->
+      
+        <li class="author__desktop"><i class="fa-solid fa-location-dot icon-pad-right" aria-hidden="true"></i>Hangzhou, China</li>
+      
+      
+        <li class="author__desktop"><i class="fa fa-solid fa-building-columns icon-pad-right" aria-hidden="true"></i>Zhejiang University</li>
+      
+      
+      
+        <li><a href="mailto:3190101611@zju.edu.cn"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Email</a></li>
+      
+
+      <!-- Font Awesome and Academicons icons / Academic websites -->
+            
+      
+      
+      
+        <li><a href="http://orcid.org/0009-0005-1901-7413"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+      
+                              
+      
+        <li><a href="https://www.researchgate.net/profile/Yubin-Gao-3"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
+      
+
+      <!-- Font Awesome icons / Repositories and software development -->
+      
+            
+            
+      
+        <li><a href="https://github.com/hzzg0727"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>Github</a></li>
+      
+            
+            
+
+      <!-- Font Awesome icons / Social media -->
+      
+      
+            
+      
+                  
+                  
+      
+            
+            
+            
+      
+            
+                  
+            
+      
+            
+            
+      
+              
+      
+                      
+      
+      
+            
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FDTD Notes">
+    <meta itemprop="description" content="Learning notes for basics of Lumerical FDTD.">
+    <meta itemprop="datePublished" content="October 04, 2022">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">FDTD Notes
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  5 minute read
+	
+</p>
+          
+        
+        
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-10-04T00:00:00-07:00">October 04, 2022</time></p>
+            
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Learning notes for basics of Lumerical FDTD.</p>
+
+<!-- # FDTD Note: Basic -->
+<h2 id="1-far-field-projections">1. Far-field projections</h2>
+<p>If your structure is periodic, consider using <code class="language-plaintext highlighter-rouge">the grating projections</code>. If your structure is not periodic, consider using <code class="language-plaintext highlighter-rouge">the far-field projections</code>.</p>
+
+<p>A simple way to understand far field projections is to view them as a decomposition of the near field data using a set of plane waves propagating at different angles as the basis for the decomposition. The end result is that the far field projections functions provide a straightforward, accurate, and numerically efficient method for calculating the EM fields anywhere in the intermediate and far field regions.</p>
+
+<p><em>It seems that grating projections are the special case (for periodic structures) of far-field projections.</em></p>
+
+<p><strong>Application cases:</strong> fileds known on a plane or a closed surface.</p>
+
+<h2 id="12-the-mesh-order-property">1.2. The mesh order property</h2>
+<p><code class="language-plaintext highlighter-rouge">The mesh order property</code> governs how overlapping objects are meshed in the simulation. It serves no role for objects which do not overlap.</p>
+
+<p>The mesh order can be set at the material level (in the material database), or the object level (in the object properties).</p>
+
+<p>Materials with a lower mesh order take priority over materials with a higher priority number. Areas that overlap are assigned the material properties of the higher priority material.</p>
+
+<h2 id="3-pml-边界条件">3. PML 边界条件</h2>
+<p>PML 边界基本上被实现为吸收材料，该吸收材料也与周围的材料阻抗匹配，以最大程度地减少反射。 理想的PML边界会产生零反射，但是实际上，由于底层PML方程的离散化，总会有小反射。</p>
+
+<h3 id="31-types">3.1 Types</h3>
+<p><strong>Standard</strong></p>
+
+<p>设计标准轮廓以相对较少的层数提供良好的整体吸收。大量的PML层会大大增加仿真时间，因此建议在考虑任何其他选择之前尝试使用此配置文件。<br />
+如果模拟不包含贯穿PML区域的材料边界，则几乎可以肯定，此轮廓将是最明智的选择。<br />
+通常，当结构完全延伸通过PML区域时，PML边界性能最佳。每当材料界面穿过PML区域时，可能有必要采用稳定的轮廓。</p>
+
+<p><strong>Stabilized</strong></p>
+
+<p>当材料边界穿过PML区域时，有可能出现数值不稳定性。这些通常表现为PML区域（通常靠近材料界面）内场振幅的局部指数增长。<br />
+使用此配置文件可以消除PML区域内可能发生的大多数数值不稳定性，但是，此配置文件需要比标准配置文件更多的PML层数才能实现相同的吸收性能。<br />
+稳定的轮廓旨在提供增强的稳定性，但必须增加PML层的数量。</p>
+
+<p><strong>Steep Angle</strong></p>
+
+<p>此配置文件与标准配置文件非常相似，并且意在将PML边界与周期性边界条件结合使用时使用。 它设计用于在光线沿几乎平行于PML边界的方向传播的情况下提供增强的吸收。 在非常粗糙的离散化下（每个波长少于十个点），该轮廓通常比标准轮廓的吸收率低。</p>
+
+<p><strong>Custom</strong></p>
+
+<p>标准的，稳定的和陡峭的侧面轮廓具有固定的PML参数。 自定义配置文件允许用户通过对所有PML参数值的完全控制来进行试验。 自定义配置文件的初始值是标准配置文件的初始值。</p>
+
+<h3 id="32-如何使用">3.2 如何使用</h3>
+<ol>
+  <li>boundary conditions 中的 <code class="language-plaintext highlighter-rouge">standard</code> 类型适用于在所有边界上使用PML的模拟。</li>
+  <li>如果是周期性的装置，可以将光的衍射，所以选择 <code class="language-plaintext highlighter-rouge">steep angle</code> 类型。</li>
+  <li>PML 边界与光与物质相互作用的平面的距离至少为均匀材料中光波波长的一半。</li>
+</ol>
+
+<h2 id="4-simulation-region">4. Simulation Region</h2>
+<ol>
+  <li>Dimension 2D vs 3D:<br />
+当仿真区域的某一维度（默认 z 轴）为无限长且均匀，将该维度的截面作为仿真的 2D 区域。设置几何参数时，需要确保该维度上的位置与模拟结构相交。</li>
+  <li>Mesh Refinement：
+    <ul>
+      <li>一般使用 Conformal Variant0 对非金属材质界面应用保形网格。</li>
+      <li>当有金属时可使用 Conformal Variant1 对金属界面应用保形网格。缺点：网格粗糙导致人工金属模态，因此需要加入额外的收敛性测试。</li>
+      <li>其他选项的鲁棒性不好。</li>
+    </ul>
+  </li>
+  <li>Simulation time:<br />
+较大仿真体积和强共振系统需要较长的仿真时间，以令场通过仿真区域传播且完全衰减。<br />
+仿真时间设置过小的可能结果：
+    <ul>
+      <li>频域监视器的伪影</li>
+      <li>投射谱的 artificial ripples</li>
+    </ul>
+  </li>
+  <li>The monitors besides the simulation region will not measure any data.</li>
+  <li>When the simulation is unstable, smaller time step may be helpful.</li>
+  <li>Mesh override region:
+    <ul>
+      <li>It can be used to define finer mesh on :
+        <ul>
+          <li>Small structures, e.g. thin layers and gaps</li>
+          <li>Plasmonic devices</li>
+          <li>The interface between the metal and dieletric materials to have the filed concentrated at the surface</li>
+        </ul>
+      </li>
+      <li>The thickness of a layer is recommended to includes at least 2 mesh cells.</li>
+      <li>The mesh override region contains only an interger number of mesh cells.</li>
+    </ul>
+  </li>
+  <li>Boundary condition:
+    <ul>
+      <li>PML: absorb all; more details see <code class="language-plaintext highlighter-rouge">3. PML 边界条件</code></li>
+      <li>metal: perfect metal boundary that reflects all; the most fast option using when the filed will not incounter the boundary</li>
+      <li>PMC: perfect magnetic boundary that relects all</li>
+      <li>Periodic: used when structure, source, and field are all periodic</li>
+      <li>Symmetry or anti-symmetry: used when structure, source, and field are all symmetric</li>
+      <li><em>Tip:</em> 斜入射平面波必须用 Bloch 边界，斜入射 Guass 光束必须用 PML 边界条件。</li>
+      <li><em>Tip:</em> How to judge symmetry or anti-symmetry?  – Test all the possibilities and choose the true one.<br />
+ 经验法则（对照 CAD 彩色视图验证）：<br />
+ <img src="/images/2022-10-04-FDTD-basic-1.png" alt="" />
+ 设置方法：
+        <ol>
+          <li>2D symmetric structure: Set Symmetry of Anti-symmetry options in <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">y min bc</code>, and set non-symmetry BC (generally PML) in <code class="language-plaintext highlighter-rouge">x max bc</code> and <code class="language-plaintext highlighter-rouge">y max bc</code>.</li>
+          <li>1D symmetric structure (for example, x): Set Symmetry of Anti-symmetry options in both <code class="language-plaintext highlighter-rouge">x min bc</code> and <code class="language-plaintext highlighter-rouge">x max bc</code>.</li>
+          <li>Enable <code class="language-plaintext highlighter-rouge">allow all symmetry on all boundaries</code>.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Mesh accuracy is considered high-accurate at the value 4 or 5.</li>
+  <li>If the boundary of PML is placed too close to the structure, there is couping of evanescent fields and PML materials. And sometimes there is reflection fromt the PML.</li>
+</ol>
+
+<h2 id="5-source">5. Source</h2>
+<ol>
+  <li>The fileds measured in the two cells around the source injeciton plane may be unphysical.</li>
+  <li>Plane source:
+    <ul>
+      <li>Bloch/periodic source type is recommended to be used in single frequency simulation. The light at different frequencies will propogate in different angles if the incident angle is normal.</li>
+      <li>BFAST source type is recommended to be used in broadband simulation. And for single frequency simulation, more time will be used than Bloch source type.</li>
+      <li>Diffracting source type: The source span determines the aperture.</li>
+      <li><em>Tip</em>: The Bloch/periodic or BFAST source will automatically expand to the boundary of simulation region.</li>
+      <li><em>Error:</em> When the non-periodic boundary conditions is used, the Bloch/periodic source at the sides of simulation region will be truncated and the edge effects will appear. In this case, finite-size source (e.g., Guassian source or total-field scattered field source) should be used.</li>
+      <li><em>Error:</em> The BFAST source type is not allowed in non-periodic structure simulation, so the BFAST boundaries will automatically be used and overrite other settings.<br />
+经验选择：
+<img src="/images/2022-10-04-FDTD-basic-2.png" alt="" /></li>
+    </ul>
+  </li>
+  <li>TFSF (total-field scattered field) source</li>
+  <li>Beam source</li>
+  <li>Mode source</li>
+  <li>Dipole source</li>
+</ol>
+
+<h2 id="6-monitor">6. Monitor</h2>
+<ol>
+  <li>Using monitors will not increase the simulation time (but increase the memory requirement) except when using a movie monitor.</li>
+  <li>Time monitor can be used to check if the simulation time is long enough.</li>
+  <li>Use point time monitor can obtain spectrum.</li>
+</ol>
+
+<h2 id="7-analysis">7. Analysis</h2>
+<ol>
+  <li>Design workflow:
+    <ul>
+      <li>Start with a coarse mesh</li>
+      <li>Convergence testing</li>
+      <li>变精度搜索</li>
+    </ul>
+  </li>
+  <li>Sources of errors (and corresponding solutions):
+    <ul>
+      <li>Three factors:
+<img src="/images/2022-10-04-FDTD-basic-3.png" alt="" /></li>
+      <li><code class="language-plaintext highlighter-rouge">Simulation time</code> and <code class="language-plaintext highlighter-rouge">early shutoff</code> - <code class="language-plaintext highlighter-rouge">auto shutoff min</code> (in <code class="language-plaintext highlighter-rouge">Edit FDTD simulation</code>)</li>
+    </ul>
+  </li>
+  <li>How to judge whether the simulation stop early?
+<em>(One method)</em> Status result of the FDTD solver region:
+    <ul>
+      <li>1 - Reached the maximum simulation time</li>
+      <li>2 - Early shut off, reached auto shutoff min threshold</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="8-tips">8. Tips</h2>
+<ol>
+  <li>要通过收敛性测试实现高精度计算。</li>
+  <li>When running, <code class="language-plaintext highlighter-rouge">Force quit</code> is not recommended since it may cause the problem that the license is not released normally.</li>
+</ol>
+
+<h2 id="9-determine-the-optimum-resource-configuration">9. Determine the optimum resource configuration</h2>
+<p>The key parameter is <code class="language-plaintext highlighter-rouge">Processes</code>. See Ref. [1].</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>[1] FDTD product reference manual: https://optics.ansys.com/hc/en-us/articles/360033154434-FDTD-product-reference-manual</p>
+
+<p>[2] Python API: https://optics.ansys.com/hc/en-us/sections/360005039073-Automation-API</p>
+
+<p>[3] lsf Language: https://optics.ansys.com/hc/en-us/articles/360034923553</p>
+
+<p>[4] lsf Language Category: https://optics.ansys.com/hc/en-us/articles/360037228834-Lumerical-scripting-language-By-category</p>
+
+<p>[5] ANSYS Forum: https://forum.ansys.com/</p>
+
+<p>[6] Optimum resource configuration: https://optics.ansys.com/hc/en-us/articles/6491711906195-Determine-the-optimum-resource-configuration-to-run-Lumerical-FDTD-simulations</p>
+
+<p><strong>Others resources</strong></p>
+
+<p>[7] PML Boundary condition setting: https://www.cnblogs.com/lihao-bupt/p/13177884.html</p>
+
+<p>[8] FDTD100 Course Notes: https://blog.csdn.net/weixin_45719141/article/details/125373485</p>
+
+
+        
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="https://hzzg0727.github.io/tags/#fdtd" class="page__taxonomy-item" rel="tag">FDTD</a><span class="sep">, </span>
+    
+      
+      
+      <a href="https://hzzg0727.github.io/tags/#meta" class="page__taxonomy-item" rel="tag">meta</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="https://hzzg0727.github.io/categories/#optics" class="page__taxonomy-item" rel="tag">optics</a>
+    
+    </span>
+  </p>
+
+
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=https://hzzg0727.github.io/optics/FDTD-basic/" class="btn btn--twitter" title="Share on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://hzzg0727.github.io/optics/FDTD-basic/" class="btn btn--facebook" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://hzzg0727.github.io/optics/FDTD-basic/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="https://hzzg0727.github.io/code/blog-build/" class="pagination--pager" title="基于 Github Pages &amp; Jekyll 的个人博客搭建方法
+">Previous</a>
+    
+    
+      <a href="https://hzzg0727.github.io/optics/FDTD-lsf/" class="pagination--pager" title="FDTD Note: lsf Language
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://hzzg0727.github.io/code/WSL/" rel="permalink">WSL Installation and Use
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2024-08-12T00:00:00-07:00">August 12, 2024</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>How to install and use WSL in windows to obtain Linux virtual machine.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://hzzg0727.github.io/academic/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AE%A1%E7%90%86%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" rel="permalink">文献阅读管理环境配置不完全指南
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  2 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-12-06T00:00:00-07:00">December 06, 2022</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>[Chinese] 文献阅读与管理的环境配置。</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://hzzg0727.github.io/code/ubuntu-virtual-machine/" rel="permalink">Ubuntu 22.04 with VMWare virtual machine
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  less than 1 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-11-06T00:00:00-07:00">November 06, 2022</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>Install Ubuntu 22.04 using VMWare virtual machine.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+          
+
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="https://hzzg0727.github.io/optics/Metasurface-design/" rel="permalink">Metasurface design
+</a>
+      
+    </h2>
+    
+    
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  
+	  9 minute read
+	
+</p>
+    
+
+        
+         <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="2022-10-20T00:00:00-07:00">October 20, 2022</time></p>
+        
+
+    
+    <p class="archive__item-excerpt" itemprop="description"><p>Learning notes for metasurface design with Lumerical FDTD.</p>
+
+</p>
+    
+    
+    
+
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+<a href="/sitemap/">Sitemap</a>
+<!-- end custom footer snippets -->
+
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="http://github.com/hzzg0727"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://hzzg0727.github.io/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2024 Yubin Gao. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    <script src="https://hzzg0727.github.io/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  </body>
+</html>
+
